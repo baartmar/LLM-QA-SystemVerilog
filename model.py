@@ -38,6 +38,7 @@ class LLM():
         predictions, references = [], []
         for idx, question in enumerate(data.questions):
             print("Question:", idx)
+            print("Question ID:", question.id)
             prediction, reference = self.answer_question(question)
             predictions.append(prediction)
             references.append(reference)
