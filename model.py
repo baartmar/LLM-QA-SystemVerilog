@@ -41,6 +41,6 @@ class LLM():
             prediction, reference = self.answer_question(question)
             predictions.append(prediction)
             references.append(reference)
-        results = squad_metric.compute(predictions=predictions, references=references)
+        results = squad_metric.compute(predictions={'predictions': predictions}, references=references)
         print(results)
         return results
