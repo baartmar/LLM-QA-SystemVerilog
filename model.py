@@ -23,11 +23,9 @@ class LLM():
             self.llm = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto', torch_dtype=torch.float16 if device == 'cuda' else torch.float32).eval()
 
     def answer_question(self, question:Question):
-        print(question.to_prompt())
         input_ids = self.tokenizer([question.to_prompt()], return_tensors="pt").input_ids.to(self.llm.device)
         output_ids = self.llm.generate(input_ids)
         output = self.tokenizer.batch_decode(output_ids, skip_special_tokens=True)[0]
-        print(output)
         prediction, reference = question.to_squad_format()
         prediction['prediction_text'] = output
         torch.cuda.empty_cache()
@@ -38,7 +36,8 @@ class LLM():
 
     def evaluate_model(self, data:SystemVerilogDataset):
         predictions, references = [], []
-        for question in data.questions:
+        for idx, question in enumerate(data.questions):
+            print("Question:", idx)
             prediction, reference = self.answer_question(question)
             predictions.append(prediction)
             references.append(reference)
