@@ -21,7 +21,7 @@ class Question():
         return f"""Retrieve the span of text from the code which answers the question. If the question cannot be answered, output “No Answer”. Output only the retrieved text from the code, do not give any explanation.\nCode: {self.passage}\nQuestion: {self.question}\nAnswer:"""
     
     def to_squad_format(self):
-        return {'id': str(self.id), 'prediction_text': '', 'no_answer_probability': 0.}, {'answers': {'text': [answer for answer in self.answers], 'answer_start': [0 for _ in range(self.answers)]} , 'id': str(self.id)}
+        return {'id': str(self.id), 'prediction_text': '', 'no_answer_probability': 0.}, {'answers': {'text': [answer for answer in self.answers], 'answer_start': [0 for _ in range(len(self.answers))]} , 'id': str(self.id)}
 
 class SystemVerilogDataset(Dataset):
     def __init__(self, root_dir) -> None:
