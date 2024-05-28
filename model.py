@@ -24,7 +24,7 @@ class LLM():
 
     def answer_question(self, question:Question):
         print(question.to_prompt())
-        input_ids = self.tokenizer(question.to_prompt()).to(self.llm.device)
+        input_ids = self.tokenizer(question.to_prompt()).input_ids.to(self.llm.device)
         output_ids = self.llm.generate(input_ids, temperature=self.temperature)
         output = self.tokenizer.decode(output_ids)
         print(output)
