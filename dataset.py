@@ -35,14 +35,14 @@ class SystemVerilogDataset(Dataset):
         self.no_answers = 0
         self.comments = {}
 
-        for entry in os.listdir(root_dir):
+        for idx1, entry in enumerate(os.listdir(root_dir)):
             fp = os.path.join(root_dir, entry)
             with open(os.path.join(fp, 'questions.json'), 'r', errors='ignore') as f:
                 questions = json.load(f)
             with open(os.path.join(fp, questions['passage']), 'r', errors='ignore') as f:
                 passage = f.read()
-            for index, question in enumerate(questions['questions']):
-                q = Question(passage, question['question'], question['answers'], question['type'], question['difficulty'], question['sv_standard_sections'], question['tags'], index)
+            for idx2, question in enumerate(questions['questions']):
+                q = Question(passage, question['question'], question['answers'], question['type'], question['difficulty'], question['sv_standard_sections'], question['tags'], 4 * idx1 + idx2)
                 for section in q.sections:
                     if section not in self.sv_sections:
                         self.sv_sections[section] = 1
