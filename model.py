@@ -24,7 +24,7 @@ class LLM():
 
     def answer_question(self, question:Question):
         input_ids = self.tokenizer([question.to_prompt()], return_tensors="pt").input_ids.to(self.llm.device)
-        output_ids = self.llm.generate(input_ids)
+        output_ids = self.llm.generate(input_ids, max_new_tokens=50)
         output = self.tokenizer.batch_decode(output_ids, skip_special_tokens=True)[0]
         prediction, reference = question.to_squad_format()
         prediction['prediction_text'] = output
@@ -41,6 +41,6 @@ class LLM():
             prediction, reference = self.answer_question(question)
             predictions.append(prediction)
             references.append(reference)
-        results = squad_metric.compute(predictions={'predictions': predictions}, references=references)
+        results = squad_metric.compute(predictions=predictions, references=references)
         print(results)
         return results
