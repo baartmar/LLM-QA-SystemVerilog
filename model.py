@@ -24,9 +24,9 @@ class LLM():
 
     def answer_question(self, question:Question):
         print(question.to_prompt())
-        input_ids = self.tokenizer(question.to_prompt(), return_tensors="pt").input_ids.to(self.llm.device)
-        output_ids = self.llm.generate(input_ids, temperature=self.temperature)
-        output = self.tokenizer.decode(output_ids)
+        input_ids = self.tokenizer([question.to_prompt()], return_tensors="pt").input_ids.to(self.llm.device)
+        output_ids = self.llm.generate(input_ids)
+        output = self.tokenizer.batch_decode(output_ids)[0]
         print(output)
         prediction, reference = question.to_squad_format()
         prediction['prediction_text'] = output
