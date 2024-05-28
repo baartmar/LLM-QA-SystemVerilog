@@ -26,10 +26,11 @@ class LLM():
         print(question.to_prompt())
         input_ids = self.tokenizer([question.to_prompt()], return_tensors="pt").input_ids.to(self.llm.device)
         output_ids = self.llm.generate(input_ids)
-        output = self.tokenizer.batch_decode(output_ids)[0]
+        output = self.tokenizer.batch_decode(output_ids, skip_special_tokens=True)[0]
         print(output)
         prediction, reference = question.to_squad_format()
         prediction['prediction_text'] = output
+        torch.cuda.empty_cache()
         if 'no answer' in output.lower():
             prediction['no_answer_probability'] = 1.
         return prediction, reference
