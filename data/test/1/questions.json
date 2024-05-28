@@ -1,0 +1,41 @@
+{
+  "passage": "core_instr_bus_adapter.sv",
+  "questions": [
+    {
+      "question": "When the bus is disabled or busy, npc will be assigned the value of which signal?",
+      "answers": ["o_pc", "npc <= o_pc;"],
+      "type": 0,
+      "difficulty": 1,
+      "sv_standard_sections": [10, 12],
+      "tags": []
+    },
+    {
+      "question": "What value will be assigned to bus_busy if a falling edge of rstn occurs between rising clock edges?",
+      "answers": ["1'b0", "0", "'b0", "bus_busy <= 1'b0;"],
+      "type": 0,
+      "difficulty": 1,
+      "sv_standard_sections": [10, 12, 14],
+      "tags": ["timing"]
+    },
+    {
+      "question": "On the first clock edge following a reset, assuming all input signals remain at zero, what value will be assigned to npc?",
+      "answers": ["o_pc + 4", "npc <= o_pc + 4;"],
+      "type": 0,
+      "difficulty": 2,
+      "sv_standard_sections": [10, 12, 14],
+      "tags": ["timing"]
+    },
+    {
+      "question": "What value is assigned to bus_master.rd_data by default?",
+      "answers": [],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [10],
+      "tags": []
+    }
+  ],
+  "type": 0,
+  "comments": 0,
+  "source": "https://github.com/WangXuan95/USTC-RVSoC/blob/master/RTL/cpu/core_instr_bus_adapter.sv",
+  "tags": ["cpu", "bus", "combinational", "sequential", "soc"]
+}

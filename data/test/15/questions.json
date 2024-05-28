@@ -1,0 +1,41 @@
+{
+  "passage": "cov.sv",
+  "questions": [
+    {
+      "question": "The coverpoint for binds_cnd1 is ignored if what condition evaluates to false?",
+      "answers": ["(face == front)", "face == front"],
+      "type": 1,
+      "difficulty": 0,
+      "sv_standard_sections": [19],
+      "tags": []
+    },
+    {
+      "question": "What is the name of the cross coverage bins which are creating by specifying certain bins to not include?",
+      "answers": ["useOfIgn"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [19],
+      "tags": []
+    },
+    {
+      "question": "Which statement of the testbench adds a sample to the coverage model?",
+      "answers": ["cg.sample();"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [19],
+      "tags": []
+    },
+    {
+      "question": "What is the name of the coverage bin which specifies illegal bins?",
+      "answers": [],
+      "type": 1,
+      "difficulty": 0,
+      "sv_standard_sections": [19],
+      "tags": []
+    }
+  ],
+  "type": 1,
+  "comments": 2,
+  "source": "https://github.com/mjhborja/functional_coverage_sv/blob/main/source/sv/testbench.sv",
+  "tags": ["coverage"]
+}

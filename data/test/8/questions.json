@@ -1,0 +1,41 @@
+{
+  "passage": "rr_arbiter.sv",
+  "questions": [
+    {
+      "question": "What is the sensitivity list for updating mask_ff and grant_ff?",
+      "answers": ["posedge clk or posedge arst", "always_ff @ (posedge clk or posedge arst)"],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [12],
+      "tags": []
+    },
+    {
+      "question": "What signal must be asserted for grant_o to change on a rising clock edge?",
+      "answers": ["update_i", "if (update_i)"],
+      "type": 0,
+      "difficulty": 1,
+      "sv_standard_sections": [12],
+      "tags": []
+    },
+    {
+      "question": "How many multiplexers are required to check each master against the mask?",
+      "answers": ["N_OF_INPUTS", "2", "N_OF_INPUTS = 2"],
+      "type": 0,
+      "difficulty": 2,
+      "sv_standard_sections": [12],
+      "tags": ["synthesis"]
+    },
+    {
+      "question": "Which signal disables master priority?",
+      "answers": [],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [],
+      "tags": []
+    }
+  ],
+  "type": 0,
+  "comments": 1,
+  "source": "https://github.com/aignacio/ravenoc/blob/master/src/router/rr_arbiter.sv",
+  "tags": ["noc", "arbiter"]
+}

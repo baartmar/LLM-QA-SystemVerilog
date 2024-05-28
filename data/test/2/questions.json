@@ -1,0 +1,41 @@
+{
+  "passage": "uart_tx_line.sv",
+  "questions": [
+    {
+      "question": "What value is assigned to o_fin at every rising clock edge?",
+      "answers": ["(busy_latch & ~busy)", "busy_latch & ~busy", "o_fin <= (busy_latch & ~busy);"],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [10, 11, 14],
+      "tags": []
+    },
+    {
+      "question": "What bits will always precede each byte from i_data in the tx_buffer?",
+      "answers": ["2'b01", "01"],
+      "type": 0,
+      "difficulty": 1,
+      "sv_standard_sections": [6,7, 10],
+      "tags": []
+    },
+    {
+      "question": "When o_tx is 0, what must have been true about tx_cnt at the last rising clock edge?",
+      "answers": ["tx_cnt>7'd0"],
+      "type": 0,
+      "difficulty": 2,
+      "sv_standard_sections": [7, 10, 11],
+      "tags": []
+    },
+    {
+      "question": "Which signal holds the next state value for the FSM?",
+      "answers": [],
+      "type": 0,
+      "difficulty": 1,
+      "sv_standard_sections": [],
+      "tags": []
+    }
+  ],
+  "type": 0,
+  "comments": 0,
+  "source": "https://github.com/WangXuan95/USTC-RVSoC/blob/master/RTL/uart/uart_tx_line.sv",
+  "tags": ["soc", "uart", "sequential", "communication"]
+}

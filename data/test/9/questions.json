@@ -1,0 +1,41 @@
+{
+  "passage": "traphandler.sv",
+  "questions": [
+    {
+      "question": "What flag must be set in the incoming trap instruction for the trap handler to flush the TLB?",
+      "answers": ["FLAGS_TRAP"],
+      "type": 0,
+      "difficulty": 1,
+      "sv_standard_sections": [8, 12],
+      "tags": []
+    },
+    {
+      "question": "At a rising clock edge, what value will OUT_trapInfo take if IN_trapInstr.valid is 0?",
+      "answers": ["x", "'x", "OUT_trapInfo <= 'x;"],
+      "type": 0,
+      "difficulty": 1,
+      "sv_standard_sections": [10, 12],
+      "tags": []
+    },
+    {
+      "question": "Which signal's value is assigned to OUT_branch.dstPC if the trap/exception/interrupt can be processed at a lower privilege level?",
+      "answers": ["IN_trapControl.stvec"],
+      "type": 0,
+      "difficulty": 2,
+      "sv_standard_sections": [10],
+      "tags": []
+    },
+    {
+      "question": "Where is the next state logic for the trap handler?",
+      "answers": [],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [],
+      "tags": []
+    }
+  ],
+  "type": 0,
+  "comments": 1,
+  "source": "https://github.com/mathis-s/SoomRV/blob/master/src/TrapHandler.sv",
+  "tags": ["soc", "cpu", "superscalar", "risc-v"]
+}

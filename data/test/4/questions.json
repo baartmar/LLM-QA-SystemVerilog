@@ -1,0 +1,41 @@
+{
+  "passage": "fifo.sv",
+  "questions": [
+    {
+      "question": "Which assertion checks that a write will never happen to a full FIFO?",
+      "answers": ["assert property (@(posedge clk) DUT.valid_wr |-> !full);"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [16],
+      "tags": []
+    },
+    {
+      "question": "For how many cycles is the DUT given randomized stimulus?",
+      "answers": ["10000"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [18],
+      "tags": []
+    },
+    {
+      "question": "Which parameter is set using an integer math system function?",
+      "answers": ["ADDR_WIDTH", "ADDR_WIDTH = $clog2(DEPTH)+1;", "localparam int            ADDR_WIDTH = $clog2(DEPTH)+1;"],
+      "type": 3,
+      "difficulty": 2,
+      "sv_standard_sections": [20],
+      "tags": []
+    },
+    {
+      "question": "Which property is an assumption that wr_en and rd_en will never both be 1 at the same time?",
+      "answers": [],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [16],
+      "tags": []
+    }
+  ],
+  "type": 2,
+  "comments": 1,
+  "source": "https://github.com/ARC-Lab-UF/sv-tutorial/blob/main/testbenches/assertions/fifo_tb.sv",
+  "tags": ["fifo", "assertions"]
+}

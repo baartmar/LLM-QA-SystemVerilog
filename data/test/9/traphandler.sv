@@ -1,0 +1,189 @@
+module TrapHandler
+(
+    input wire clk,
+    input wire rst,
+    
+    input Trap_UOp IN_trapInstr,
+
+    output FetchID_t OUT_pcReadAddr,
+    input PCFileEntry IN_pcReadData,
+
+    input TrapControlState IN_trapControl,
+    output TrapInfoUpdate OUT_trapInfo,
+
+    output BPUpdate1 OUT_bpUpdate1,
+    output BranchProv OUT_branch,
+
+    input wire IN_MEM_busy,
+    
+    output reg OUT_flushTLB,
+    output reg OUT_fence,
+    output reg OUT_clearICache,
+    output wire OUT_disableIFetch,
+
+    output reg[31:0] OUT_dbgStallPC
+);
+
+reg memoryWait;
+
+assign OUT_disableIFetch = memoryWait;
+
+assign OUT_pcReadAddr = IN_trapInstr.fetchID;
+wire[30:0] baseIndexPC = {IN_pcReadData.pc[30:3], IN_trapInstr.fetchOffs} - (IN_trapInstr.compressed ? 0 : 1);
+wire[31:0] nextInstr = {baseIndexPC + (IN_trapInstr.compressed ? 31'd1 : 31'd2), 1'b0};
+
+BranchPredInfo baseIndexBPI;
+always_comb begin
+    baseIndexBPI = IN_pcReadData.bpi;
+end
+
+always_ff@(posedge clk) begin
+    
+    OUT_fence <= 0;
+    OUT_clearICache <= 0;
+    
+    OUT_bpUpdate1 <= 'x;
+    OUT_bpUpdate1.valid <= 0;
+    OUT_branch <= 'x;
+    OUT_branch.taken <= 0;
+    OUT_trapInfo <= 'x;
+    OUT_trapInfo.valid <= 0;
+    OUT_flushTLB <= 0;
+    
+    if (rst) begin
+        memoryWait <= 0;
+    end
+    else begin
+        
+        if (memoryWait && !IN_MEM_busy) begin
+            memoryWait <= 0;
+        end
+            
+        // Exception and branch prediction update handling
+        if (IN_trapInstr.valid) begin
+            
+            // Instructions requiring pipeline flush and MRET/SRET handling
+            if (IN_trapInstr.flags == FLAGS_FENCE || 
+                IN_trapInstr.flags == FLAGS_ORDERING || 
+                IN_trapInstr.flags == FLAGS_XRET ||
+                (IN_trapInstr.flags == FLAGS_TRAP && IN_trapInstr.rd == 5'(TRAP_V_SFENCE_VMA)) 
+            ) begin
+                
+                case (IN_trapInstr.flags)
+                    FLAGS_ORDERING: begin
+                        memoryWait <= 1;
+                        OUT_branch.dstPC <= nextInstr;
+                    end
+                    FLAGS_FENCE: begin
+                        OUT_clearICache <= 1;
+                        memoryWait <= 1;
+                        OUT_fence <= 1;
+                        OUT_branch.dstPC <= nextInstr;
+                    end
+                    FLAGS_XRET: begin
+                        OUT_branch.dstPC <= {IN_trapControl.retvec, 1'b0};
+                    end
+
+                    FLAGS_TRAP: begin // TRAP_V_SFENCE_VMA
+                        OUT_flushTLB <= 1;
+                        OUT_branch.dstPC <= nextInstr;
+                    end
+                    default: begin end
+                endcase
+                
+                // When an interrupt is pending after mret/sret or FLAGS_ORDERING (includes CSR write), execute it immediately
+                if (IN_trapInstr.flags == FLAGS_XRET || IN_trapInstr.flags == FLAGS_ORDERING)
+                    if (IN_trapControl.interruptPending) begin
+                        OUT_trapInfo.valid <= 1;
+                        OUT_trapInfo.trapPC <= IN_trapInstr.flags == FLAGS_XRET ? {IN_trapControl.retvec, 1'b0} : nextInstr;
+                        OUT_trapInfo.cause <= IN_trapControl.interruptCause;
+                        OUT_trapInfo.delegate <= IN_trapControl.interruptDelegate;
+                        OUT_trapInfo.isInterrupt <= 1;
+                        OUT_branch.dstPC <= {(IN_trapControl.interruptDelegate) ? IN_trapControl.stvec : IN_trapControl.mtvec, 2'b0};
+                    end
+                
+                OUT_branch.taken <= 1;
+                OUT_branch.sqN <= IN_trapInstr.sqN;
+                OUT_branch.flush <= 1;
+                
+                OUT_branch.storeSqN <= IN_trapInstr.storeSqN;
+                OUT_branch.loadSqN <= IN_trapInstr.loadSqN;
+
+                OUT_branch.fetchID <= IN_trapInstr.fetchID;
+                OUT_branch.histAct <= HIST_NONE;
+                OUT_branch.retAct <= RET_NONE;
+            end
+
+
+            // Traps, Exceptions, Interrupts Handling
+            else if ((IN_trapInstr.flags >= FLAGS_ILLEGAL_INSTR && IN_trapInstr.flags <= FLAGS_ST_PF)) begin
+                
+                reg[3:0] trapCause;
+                reg delegate;
+                reg isInterrupt = IN_trapInstr.flags == FLAGS_TRAP && IN_trapInstr.rd == 5'(TRAP_V_INTERRUPT);
+                        
+                if (isInterrupt) begin
+                    trapCause = IN_trapControl.interruptCause;
+                end
+                else begin
+                    case (IN_trapInstr.flags)
+                        FLAGS_TRAP: trapCause = IN_trapInstr.rd[3:0];
+                        FLAGS_LD_MA: trapCause = RVP_TRAP_LD_MA;
+                        FLAGS_LD_AF: trapCause = RVP_TRAP_LD_AF;
+                        FLAGS_LD_PF: trapCause = RVP_TRAP_LD_PF;
+                        FLAGS_ST_MA: trapCause = RVP_TRAP_ST_MA;
+                        FLAGS_ST_AF: trapCause = RVP_TRAP_ST_AF;
+                        FLAGS_ST_PF: trapCause = RVP_TRAP_ST_PF;
+                        FLAGS_ILLEGAL_INSTR: trapCause = RVP_TRAP_ILLEGAL;
+                        default: ;
+                    endcase
+                    
+                    // Distinguish between ecall in different priv levels
+                    if (trapCause == 4'(TRAP_ECALL_M)) begin
+                        case (IN_trapControl.priv)
+                            PRIV_SUPERVISOR: trapCause = RVP_TRAP_ECALL_S;
+                            PRIV_USER: trapCause = RVP_TRAP_ECALL_U;
+                            default: ;
+                        endcase
+                    end
+                end
+                
+                delegate = (IN_trapControl.priv != PRIV_MACHINE) && 
+                    (isInterrupt ? IN_trapControl.mideleg[trapCause] : IN_trapControl.medeleg[trapCause]);
+                
+                OUT_trapInfo.valid <= 1;
+                OUT_trapInfo.trapPC <= {baseIndexPC, 1'b0};
+                OUT_trapInfo.cause <= trapCause;
+                OUT_trapInfo.delegate <= delegate;
+                OUT_trapInfo.isInterrupt <= isInterrupt;
+
+                OUT_branch.taken <= 1;
+                OUT_branch.dstPC <= {delegate ? IN_trapControl.stvec : IN_trapControl.mtvec, 2'b0};
+                OUT_branch.sqN <= IN_trapInstr.sqN;
+                OUT_branch.flush <= 1;
+
+                OUT_branch.storeSqN <= IN_trapInstr.storeSqN;
+                OUT_branch.loadSqN <= IN_trapInstr.loadSqN;
+
+                if (IN_trapInstr.flags == FLAGS_ST_MA || IN_trapInstr.flags == FLAGS_ST_AF || IN_trapInstr.flags == FLAGS_ST_PF)
+                    OUT_branch.storeSqN <= IN_trapInstr.storeSqN - 1;
+
+                OUT_branch.fetchID <= IN_trapInstr.fetchID;
+                OUT_branch.histAct <= HIST_NONE;
+                OUT_branch.retAct <= RET_NONE;
+            end
+            else if (IN_trapInstr.flags == FLAGS_PRED_TAKEN || IN_trapInstr.flags == FLAGS_PRED_NTAKEN) begin
+                OUT_bpUpdate1.valid <= 1;
+                OUT_bpUpdate1.pc <= IN_pcReadData.pc;
+            end
+            else begin
+                // If the not-executed flag is still set, this is not a trap uop but a request to look up the PC
+                // of the instruction we're stalled on. This is only used for debugging.
+                assert(IN_trapInstr.flags == FLAGS_NX);
+                OUT_dbgStallPC <= {baseIndexPC, 1'b0};
+            end
+        end
+    end
+end
+
+endmodule

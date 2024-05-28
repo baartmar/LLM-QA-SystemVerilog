@@ -1,0 +1,41 @@
+{
+  "passage": "intro_tb.sv",
+  "questions": [
+    {
+      "question": "Which property will fail if gnt4_in_31_cycles_AT holds true?",
+      "answers": ["gnt5_received_in_32_cycles_Fail_C"],
+      "type": 1,
+      "difficulty": 2,
+      "sv_standard_sections": [16],
+      "tags": []
+    },
+    {
+      "question": "What is the name of the property which is made to apply to all requestors?",
+      "answers": ["hold_request_till_grant"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [16, 27],
+      "tags": []
+    },
+    {
+      "question": "What is the name of the property which must always be true?",
+      "answers": ["gnt4_in_31_cycles_P1"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [16],
+      "tags": []
+    },
+    {
+      "question": "Which property will never fail regardless of the design of rr_arbiter?",
+      "answers": [],
+      "type": 1,
+      "difficulty": 0,
+      "sv_standard_sections": [16],
+      "tags": []
+    }
+  ],
+  "type": 1,
+  "comments": 0,
+  "source": "https://github.com/openformal/sva_basics/tree/master",
+  "tags": ["formal"]
+}

@@ -1,0 +1,41 @@
+{
+  "passage": "asyncfifo.sv",
+  "questions": [
+    {
+      "question": "What is the name of the module inside the asynchronous FIFO which takes two clocks as input?",
+      "answers": ["dual_port_memory", "dual_port_memory_instance"],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [],
+      "tags": []
+    },
+    {
+      "question": "What is the name of the module which handles the write pointer crossing into the read domain?",
+      "answers": ["ff_synchronizer_instance_write_to_read", "ff_synchronizer"],
+      "type": 0,
+      "difficulty": 1,
+      "sv_standard_sections": [],
+      "tags": []
+    },
+    {
+      "question": "Which condition can allow the write pointer to go to 0 after a write?",
+      "answers": ["if(wptr[POINTERLENGTH-2] == MEMSIZE-1) begin", "(wptr[POINTERLENGTH-2] == MEMSIZE-1)", "wptr[POINTERLENGTH-2] == MEMSIZE-1"],
+      "type": 0,
+      "difficulty": 2,
+      "sv_standard_sections": [],
+      "tags": []
+    },
+    {
+      "question": "In what module is the reset signal converted to gray code?",
+      "answers": [],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [],
+      "tags": []
+    }
+  ],
+  "type": 0,
+  "comments": 2,
+  "source": "https://github.com/Nutmeg43/Async-FIFO/blob/main/asynchronous_fifo.sv",
+  "tags": ["asynchronous_fifo", "clock domain crossing"]
+}

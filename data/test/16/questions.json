@@ -1,0 +1,41 @@
+{
+  "passage": "cacheinterface.sv",
+  "questions": [
+    {
+      "question": "Which register, when holding a 1, allows for data from the cache to be read into the buffer?",
+      "answers": ["readToBuffer", "reg readToBuffer;"],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [6, 10],
+      "tags": []
+    },
+    {
+      "question": "What will be assigned to OUT_data when readBufferCnt > 0?",
+      "answers": ["readBuffer[readBufferOutputIdx]"],
+      "type": 0,
+      "difficulty": 1,
+      "sv_standard_sections": [6, 10],
+      "tags": []
+    },
+    {
+      "question": "What is the name of the register which holds output data which is updated asynchronously?",
+      "answers": ["OUT_CACHE_data", "output reg[31:0] OUT_CACHE_data"],
+      "type": 0,
+      "difficulty": 2,
+      "sv_standard_sections": [6],
+      "tags": []
+    },
+    {
+      "question": "Which register holds the current FSM state?",
+      "answers": [],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [6],
+      "tags": []
+    }
+  ],
+  "type": 0,
+  "comments": 1,
+  "source": "https://github.com/mathis-s/SoomRV/blob/master/src/CacheInterface.sv",
+  "tags": ["cache interface", "cpu", "riscv"]
+}

@@ -1,0 +1,41 @@
+{
+  "passage": "register.sv",
+  "questions": [
+    {
+      "question": "Which assertion will fail if a new value is successfully written to the register while the enable signal isn't asserted?",
+      "answers": ["assert property(@(posedge clk) disable iff (rst) !en |=> $stable(out));"],
+      "type": 1,
+      "difficulty": 2,
+      "sv_standard_sections": [16],
+      "tags": []
+    },
+    {
+      "question": "What is the name of the design module?",
+      "answers": ["register", "module register"],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [3],
+      "tags": []
+    },
+    {
+      "question": "Which assertion will be trivially satisfied when en is 0?",
+      "answers": ["assert property(@(posedge clk) disable iff (rst) en |=> out == $past(in,1));"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [16],
+      "tags": []
+    },
+    {
+      "question": "Which coverage bin will be hit whenever a new value is written to the register?",
+      "answers": [],
+      "type": 1,
+      "difficulty": 0,
+      "sv_standard_sections": [19],
+      "tags": []
+    }
+  ],
+  "type": 2,
+  "comments": 2,
+  "source": "https://github.com/ARC-Lab-UF/sv-tutorial/blob/main/testbenches/assertions/register_tb.sv",
+  "tags": ["register", "assertions"]
+}

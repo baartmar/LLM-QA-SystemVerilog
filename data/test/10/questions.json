@@ -1,0 +1,41 @@
+{
+  "passage": "safety_liveness.sv",
+  "questions": [
+    {
+      "question": "What is the name of the property which constrains the values of request and grant?",
+      "answers": ["req_stable_AS1"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [16],
+      "tags": ["assume property"]
+    },
+    {
+      "question": "What is the name of the property which is the least complex to prove?",
+      "answers": ["grant_within_32_AT0"],
+      "type": 1,
+      "difficulty": 2,
+      "sv_standard_sections": [16],
+      "tags": ["safety"]
+    },
+    {
+      "question": "What is the name of the property which can fail if an ifinite length trace is found?",
+      "answers": ["grant_within_32_AT3"],
+      "type": 1,
+      "difficulty": 2,
+      "sv_standard_sections": [16],
+      "tags": ["strong/weak properties"]
+    },
+    {
+      "question": "What is the name of the property which checks for strong fairness with respect to req[3]?",
+      "answers": [],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [16],
+      "tags": ["strong/weak properties"]
+    }
+  ],
+  "type": 1,
+  "comments": 0,
+  "source": "https://github.com/openformal/sva_basics/tree/master",
+  "tags": ["formal", "safety", "liveness"]
+}

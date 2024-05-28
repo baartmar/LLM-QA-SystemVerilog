@@ -1,0 +1,41 @@
+{
+  "passage": "predecode.sv",
+  "questions": [
+    {
+      "question": "Which bits of an instruction are in used to determining whether a branch misspeculation has occured?",
+      "answers": ["[1:0]", "1:0", "instr[1:0]"],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [],
+      "tags": []
+    },
+    {
+      "question": "How many free entries are available in the buffer after a branch misprediction?",
+      "answers": ["freeEntries = BUF_SIZE;", "BUF_SIZE"],
+      "type": 0,
+      "difficulty": 1,
+      "sv_standard_sections": [],
+      "tags": []
+    },
+    {
+      "question": "Which condition must always be true for the out instructions to all be 32'bx?",
+      "answers": ["invalidBranch"],
+      "type": 0,
+      "difficulty": 1,
+      "sv_standard_sections": [],
+      "tags": []
+    },
+    {
+      "question": "How many micro-ops are each instruction broken down into?",
+      "answers": [],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [],
+      "tags": []
+    }
+  ],
+  "type": 0,
+  "comments": 1,
+  "source": "https://github.com/mathis-s/SoomRV/blob/master/src/PreDecode.sv",
+  "tags": ["cpu", "riscv", "buffer"]
+}

@@ -1,0 +1,41 @@
+{
+  "passage": "vga_char_86x32.sv",
+  "questions": [
+    {
+      "question": "For cnt to be greater than zero, what condition must always be true?",
+      "answers": ["cnt<(VGA_CLK_DIV-1))"],
+      "type": 0,
+      "difficulty": 1,
+      "sv_standard_sections": [11],
+      "tags": []
+    },
+    {
+      "question": "If req2 is 1, what must have the value of cnt been two clock edges ago?",
+      "answers": ["cnt==10'h0", "10'h0", "h0", "0"],
+      "type": 0,
+      "difficulty": 2,
+      "sv_standard_sections": [10, 11, 14],
+      "tags": ["timing"]
+    },
+    {
+      "question": "What is the select signal for to writing to the RAM?",
+      "answers": ["req1", "if(req1)"],
+      "type": 0,
+      "difficulty": 2,
+      "sv_standard_sections": [12],
+      "tags": []
+    },
+    {
+      "question": "What value is assigned to {red,green,blue} on a reset?",
+      "answers": [],
+      "type": 0,
+      "difficulty": 1,
+      "sv_standard_sections": [7, 10],
+      "tags": []
+    }
+  ],
+  "type": 0,
+  "comments": 0,
+  "source": "https://github.com/WangXuan95/USTC-RVSoC/blob/master/RTL/vga_char_86x32.sv",
+  "tags": ["soc", "vga", "interface"]
+}

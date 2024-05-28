@@ -1,0 +1,41 @@
+{
+  "passage": "mult.sv",
+  "questions": [
+    {
+      "question": "What is the bitwidth of product?",
+      "answers": ["INPUT_WIDTH*2", "[INPUT_WIDTH*2-1:0]"],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [3],
+      "tags": []
+    },
+    {
+      "question": "Which module uses a system function to obtain the bit width?",
+      "answers": ["mult3", "module mult3"],
+      "type": 3,
+      "difficulty": 0,
+      "sv_standard_sections": [21],
+      "tags": []
+    },
+    {
+      "question": "Which statement in the mult2 module is analagous to 'always_comb begin' in the mult1 module?",
+      "answers": ["generate"],
+      "type": 0,
+      "difficulty": 1,
+      "sv_standard_sections": [3],
+      "tags": []
+    },
+    {
+      "question": "Which module will synthesize to a different design?",
+      "answers": [],
+      "type": 0,
+      "difficulty": 2,
+      "sv_standard_sections": [],
+      "tags": ["synthesis"]
+    }
+  ],
+  "type": 0,
+  "comments": 0,
+  "source": "https://github.com/ARC-Lab-UF/sv-tutorial/blob/main/combinational/mult.sv",
+  "tags": ["combinational", "mult"]
+}

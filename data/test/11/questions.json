@@ -1,0 +1,41 @@
+{
+  "passage": "sample_value_functions.sv",
+  "questions": [
+    {
+      "question": "What is the name of the property which checks if request[4] did not change?",
+      "answers": ["req4_stable_on_stall_AT1"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [16, 20],
+      "tags": []
+    },
+    {
+      "question": "What is the name of the property which checks if a predefined sequence is reachable?",
+      "answers": ["gnt4_in_31_cycles_C1"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [16, 20],
+      "tags": ["sequence"]
+    },
+    {
+      "question": "What is the condition for not checking req4_stable_on_stall_AT2?",
+      "answers": ["disable iff (cycle_after_reset)", "iff (cycle_after_reset)", "cycle_after_reset"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [16],
+      "tags": []
+    },
+    {
+      "question": "Which sequence asserts that request can never equal grant?",
+      "answers": [],
+      "type": 1,
+      "difficulty": 0,
+      "sv_standard_sections": [16],
+      "tags": []
+    }
+  ],
+  "type": 1,
+  "comments": 0,
+  "source": "https://github.com/openformal/sva_basics/tree/master",
+  "tags": ["sampled value functions"]
+}

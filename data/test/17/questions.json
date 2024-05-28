@@ -1,0 +1,41 @@
+{
+  "passage": "IntALU.sv",
+  "questions": [
+    {
+      "question": "OUT_uop.valid will always be 0 if which input signal is held at 1?",
+      "answers": ["input wire rst", "rst"],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [],
+      "tags": []
+    },
+    {
+      "question": "Assume the first instruction after a reset sequence is a branch if equal instruction. What will the value of resC (and thus OUT_uop.result) be after this instruction passes through the ALU?",
+      "answers": ["resC = 32'bx;", "32'bx;", "default: resC = 32'bx;"],
+      "type": 0,
+      "difficulty": 2,
+      "sv_standard_sections": [],
+      "tags": []
+    },
+    {
+      "question": "What is the name of the signal which holds a count of leading zeros?",
+      "answers": ["wire[5:0] resLzTz;", "resLzTz"],
+      "type": 0,
+      "difficulty": 2,
+      "sv_standard_sections": [],
+      "tags": []
+    },
+    {
+      "question": "What value of IN_uop.opcode performs a multiply operation?",
+      "answers": [],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [],
+      "tags": []
+    }
+  ],
+  "type": 0,
+  "comments": 1,
+  "source": "https://github.com/mathis-s/SoomRV/blob/master/src/IntALU.sv",
+  "tags": ["alu", "cpu", "riscv"]
+}

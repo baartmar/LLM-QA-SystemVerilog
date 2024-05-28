@@ -1,0 +1,41 @@
+{
+  "passage": "cons_rep.sv",
+  "questions": [
+    {
+      "question": "In the property req4_req5_gnt4_d3_gnt5_C, how many cycles must pass in between a until a request is granted?",
+      "answers": ["3", "[*3]", "(!grant[4])[*3]"],
+      "type": 1,
+      "difficulty": 0,
+      "sv_standard_sections": [16],
+      "tags": []
+    },
+    {
+      "question": "What is the name of the property that makes sure there cannot be 32 !grant[4]'s?",
+      "answers": ["req4_and_not_gnt4_for_31_AT"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [16],
+      "tags": []
+    },
+    {
+      "question": "What is the name of the cover property which allows the following case: request[4] && !grant[4] ##1 !grant[4] ##1 grant[4]?",
+      "answers": ["req4_req5_gnt4_d1_3_gnt5_C"],
+      "type": 1,
+      "difficulty": 2,
+      "sv_standard_sections": [16],
+      "tags": []
+    },
+    {
+      "question": "What is the name of the coverage bin hit if grant[4] is 1 within 32 cycles?",
+      "answers": [],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [16],
+      "tags": []
+    }
+  ],
+  "type": 1,
+  "comments": 0,
+  "source": "https://github.com/openformal/sva_basics/tree/master",
+  "tags": ["formal", "repetition"]
+}

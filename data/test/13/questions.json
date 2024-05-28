@@ -1,0 +1,41 @@
+{
+  "passage": "sequences.sv",
+  "questions": [
+    {
+      "question": "What is the name of the property which checks if two sequences can be matched starting at the same clock cycle?",
+      "answers": ["grant_1_6_5_C"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [16],
+      "tags": []
+    },
+    {
+      "question": "What is the name of the property which checks if a sequence can be matched between the start of the match clock tick and end of the match clock tick for another sequence?",
+      "answers": ["grant_1_2_6_5_C"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [16],
+      "tags": []
+    },
+    {
+      "question": "What is the name of the sequence where grant[5] is true 20 cycles after grant[1] is true?",
+      "answers": ["grant_1_5_S"],
+      "type": 1,
+      "difficulty": 0,
+      "sv_standard_sections": [16],
+      "tags": []
+    },
+    {
+      "question": "What is the name of the signal responsible for pointing to the next free write location?",
+      "answers": [],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [],
+      "tags": []
+    }
+  ],
+  "type": 1,
+  "comments": 0,
+  "source": "https://github.com/openformal/sva_basics/tree/master",
+  "tags": ["formal", "sequences"]
+}

@@ -1,0 +1,41 @@
+{
+  "passage": "core_alu.sv",
+  "questions": [
+    {
+      "question": "What value is assigned to o_branch_jalr when i_opcode is 7'b0000000?",
+      "answers": ["1'b0", "0", "'b0"],
+      "type": 0,
+      "difficulty": 1,
+      "sv_standard_sections": [3, 6, 10, 12],
+      "tags": []
+    },
+    {
+      "question": "Which signal is assigned with the result of an AND operation?",
+      "answers": ["o_res", "output logic [31:0] o_res"],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [3, 10, 11],
+      "tags": []
+    },
+    {
+      "question": "Which value of {i_funct7,i_funct3,i_opcode} will have the longest critical path?",
+      "answers": ["17'b0100000_101_0110011", "0100000_101_0110011", "01000001010110011"],
+      "type": 0,
+      "difficulty": 2,
+      "sv_standard_sections": [10, 11, 12],
+      "tags": ["timing"]
+    },
+    {
+      "question": "When o_branch_jalr_target is 0, what value is assigned to i_opcode?",
+      "answers": [],
+      "type": 0,
+      "difficulty": 1,
+      "sv_standard_sections": [10],
+      "tags": []
+    }
+  ],
+  "type": 0,
+  "comments": 1,
+  "source": "https://github.com/WangXuan95/USTC-RVSoC/blob/master/RTL/cpu/core_alu.sv",
+  "tags": ["cpu", "alu", "combinational", "soc"]
+}

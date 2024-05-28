@@ -1,0 +1,41 @@
+{
+  "passage": "add.sv",
+  "questions": [
+    {
+      "question": "Which coverage bin is hit when the adder outputs a carry bit?",
+      "answers": ["cout", "cout : coverpoint carry_out {bins one = {1}; option.at_least = 10;}"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [19],
+      "tags": []
+    },
+    {
+      "question": "What is the sampling event for the covergroup cg?",
+      "answers": ["posedge clk", "@(posedge clk);"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [19],
+      "tags": []
+    },
+    {
+      "question": "For how many clock cycles is fully random stimulus applied to the DUT?",
+      "answers": ["10000"],
+      "type": 1,
+      "difficulty": 1,
+      "sv_standard_sections": [],
+      "tags": []
+    },
+    {
+      "question": "While coverage bin will raise an error when invalid inputs are sent to the DUT?",
+      "answers": [],
+      "type": 0,
+      "difficulty": 0,
+      "sv_standard_sections": [],
+      "tags": []
+    }
+  ],
+  "type": 2,
+  "comments": 2,
+  "source": "https://github.com/ARC-Lab-UF/sv-tutorial/blob/main/testbenches/coverage/add_tb.sv",
+  "tags": ["adder", "coverage"]
+}
