@@ -1,7 +1,8 @@
 from dataset import SystemVerilogDataset, Question
 from transformers import T5Tokenizer, T5ForConditionalGeneration, AutoTokenizer, AutoConfig, AutoModelForCausalLM
-#from openai import OpenAI
-#import openai
+from openai import OpenAI
+import openai
+import tiktoken
 import torch
 from evaluate import load
 from tqdm import tqdm
@@ -33,7 +34,9 @@ class LLM():
         prediction['prediction_text'] = output
         torch.cuda.empty_cache()
         if 'no answer' in output.lower():
+            prediction['prediction_text'] = []
             prediction['no_answer_probability'] = 1.
+            prediction['answer_start'] = []
         return prediction, reference
 
     def evaluate_model(self, data:SystemVerilogDataset, output_dir):
