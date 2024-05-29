@@ -4,6 +4,9 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration, AutoTokenizer,
 #import openai
 import torch
 from evaluate import load
+import tqdm
+import json
+import os
 
 squad_metric = load("squad_v2")
 
@@ -33,15 +36,15 @@ class LLM():
             prediction['no_answer_probability'] = 1.
         return prediction, reference
         
-
-    def evaluate_model(self, data:SystemVerilogDataset):
+    def evaluate_model(self, data:SystemVerilogDataset, output_dir):
         predictions, references = [], []
-        for idx, question in enumerate(data.questions):
-            print("Question:", idx)
-            print("Question ID:", question.id)
+        for idx, question in enumerate(tqdm(data.questions)):
             prediction, reference = self.answer_question(question)
             predictions.append(prediction)
             references.append(reference)
+        
         results = squad_metric.compute(predictions=predictions, references=references)
-        print(results)
+        with open(os.path.join(output_dir, f'{self.model_name}.json'), 'w') as f:
+            json.dump({'predictions': predictions, 'references': references}, f)
+        results['model'] = self.model_name
         return results
