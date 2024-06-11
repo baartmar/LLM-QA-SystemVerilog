@@ -17,8 +17,19 @@ class Question():
         self.sections = sections
         self.tags = tags
     
-    def to_prompt(self):
-        return f"""Retrieve the span of text from the code which answers the question. If the question cannot be answered, output “No Answer”. Output only the retrieved text from the code, do not give any explanation.\nCode: {self.passage}\nQuestion: {self.question}\nAnswer:"""
+    def to_prompt(self, chat=True):
+        if chat:
+            messages = [
+                {"role": "user", "content": "You are a question-answering chatbot which retrieves the span of text from an excerpt of SystemVerilog code that answers a given question. You output only the retrieved text from the code, and do not give any explanation."},
+                {"role": "assistant", "content": "Message Received."},
+                {"role": "user", "content": f"Code: {self.passage}"},
+                {"role": "assistant", "content": "Code Received."},
+                {"role": "user", "content": f"Question: {self.question}."},
+                {"role": "assistant", "content": "Answer:"},
+            ]
+            return messages
+        else:
+            return f"""Retrieve the span of text from the code which answers the question. If the question cannot be answered, output “No Answer”. Output only the retrieved text from the code, do not give any explanation.\nCode: {self.passage}\nQuestion: {self.question}\nAnswer:"""
     
     def to_squad_format(self):
         return {'id': str(self.id), 'prediction_text': '', 'no_answer_probability': 0.}, {'answers': {'text': [answer for answer in self.answers], 'answer_start': [0 for _ in range(len(self.answers))]} , 'id': str(self.id)}

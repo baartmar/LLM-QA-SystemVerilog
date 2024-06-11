@@ -1,0 +1,930 @@
+05/29/2024 09:08:44 AM Dataset fetched.
+05/29/2024 09:08:44 AM Starting evaluation for 2 models.
+05/29/2024 09:08:44 AM Currently evaluating: google/flan-t5-xl
+05/29/2024 09:08:44 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 09:08:44 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:08:44 AM Attempting to acquire lock 23439024845552 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/9667ceb672e29cf6384d6c7de1bedc87001963dc.lock
+05/29/2024 09:08:44 AM Lock 23439024845552 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/9667ceb672e29cf6384d6c7de1bedc87001963dc.lock
+05/29/2024 09:08:44 AM https://huggingface.co:443 "GET /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 1438
+05/29/2024 09:08:44 AM Attempting to release lock 23439024845552 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/9667ceb672e29cf6384d6c7de1bedc87001963dc.lock
+05/29/2024 09:08:44 AM Lock 23439024845552 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/9667ceb672e29cf6384d6c7de1bedc87001963dc.lock
+05/29/2024 09:08:44 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+05/29/2024 09:08:44 AM Attempting to acquire lock 23439041717232 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/4dab1f6ac3880a9c9da08cf46464664e7e754542.lock
+05/29/2024 09:08:44 AM Lock 23439041717232 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/4dab1f6ac3880a9c9da08cf46464664e7e754542.lock
+05/29/2024 09:08:45 AM https://huggingface.co:443 "GET /google/flan-t5-xl/resolve/main/tokenizer_config.json HTTP/1.1" 200 2539
+05/29/2024 09:08:45 AM Attempting to release lock 23439041717232 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/4dab1f6ac3880a9c9da08cf46464664e7e754542.lock
+05/29/2024 09:08:45 AM Lock 23439041717232 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/4dab1f6ac3880a9c9da08cf46464664e7e754542.lock
+05/29/2024 09:08:45 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/spiece.model HTTP/1.1" 302 0
+05/29/2024 09:08:45 AM Attempting to acquire lock 23439026484864 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86.lock
+05/29/2024 09:08:45 AM Lock 23439026484864 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86.lock
+05/29/2024 09:08:45 AM Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
+05/29/2024 09:08:45 AM https://cdn-lfs.huggingface.co:443 "GET /repos/16/41/16418edd56a7c42307a0f361531c01ee227a92a98628972bd433062c276dad7c/d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27spiece.model%3B+filename%3D%22spiece.model%22%3B&Expires=1717258125&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzI1ODEyNX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy8xNi80MS8xNjQxOGVkZDU2YTdjNDIzMDdhMGYzNjE1MzFjMDFlZTIyN2E5MmE5ODYyODk3MmJkNDMzMDYyYzI3NmRhZDdjL2Q2MGFjYjEyOGNmN2I3ZjI1MzZlOGYzOGE1YjE4YTA1NTM1YzllMTRjN2EzNTU5MDQyNzBlMTViMDk0NWVhODY~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIn1dfQ__&Signature=umB81A6Xy6HdiGOT8I957lzT2sE61rrRdAV3-RMpOgw66paEbfyZPukBWzwNHIz6Hk3oCKwy-Us0bJybDSt1TOToYqtvl5bfPDesdCKWvFib4tcAR4nG49OmMSY9JdmE9UgH9mU3Rxb6XA3K70OBV~I~2UoF8BYu8H0UMC8ziXOdISCXqtkMMFg9~AmUMq8~M5JRziN8MGEqmhDx~AFfP9bfzw7D6Dg1RYo3eZRRUzAgIb89A3AWSBqpEPgKlxwSzWynBFZjW4g99NT-wgPOKWGf-n1UjheP4bweNVB3k3e8osOzoz-2q2N7ud9ttH0~d300Fza0WVulRuASfCDytw__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 791656
+05/29/2024 09:08:45 AM Attempting to release lock 23439026484864 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86.lock
+05/29/2024 09:08:45 AM Lock 23439026484864 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86.lock
+05/29/2024 09:08:45 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/added_tokens.json HTTP/1.1" 404 0
+05/29/2024 09:08:45 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+05/29/2024 09:08:45 AM Attempting to acquire lock 23439024844112 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/2c19eb6e3b583f52d34b903b5978d3d30b6b7682.lock
+05/29/2024 09:08:45 AM Lock 23439024844112 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/2c19eb6e3b583f52d34b903b5978d3d30b6b7682.lock
+05/29/2024 09:08:45 AM https://huggingface.co:443 "GET /google/flan-t5-xl/resolve/main/special_tokens_map.json HTTP/1.1" 200 2201
+05/29/2024 09:08:45 AM Attempting to release lock 23439024844112 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/2c19eb6e3b583f52d34b903b5978d3d30b6b7682.lock
+05/29/2024 09:08:45 AM Lock 23439024844112 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/2c19eb6e3b583f52d34b903b5978d3d30b6b7682.lock
+05/29/2024 09:08:45 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/tokenizer.json HTTP/1.1" 200 0
+05/29/2024 09:08:45 AM Attempting to acquire lock 23439034612096 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/fc669fbad1a6a82119ca3e1fa75db33ee22ca47d.lock
+05/29/2024 09:08:45 AM Lock 23439034612096 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/fc669fbad1a6a82119ca3e1fa75db33ee22ca47d.lock
+05/29/2024 09:08:45 AM https://huggingface.co:443 "GET /google/flan-t5-xl/resolve/main/tokenizer.json HTTP/1.1" 200 2424064
+05/29/2024 09:08:45 AM Attempting to release lock 23439034612096 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/fc669fbad1a6a82119ca3e1fa75db33ee22ca47d.lock
+05/29/2024 09:08:45 AM Lock 23439034612096 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/fc669fbad1a6a82119ca3e1fa75db33ee22ca47d.lock
+05/29/2024 09:08:46 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:08:46 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:08:46 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/model.safetensors HTTP/1.1" 404 0
+05/29/2024 09:08:46 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/model.safetensors.index.json HTTP/1.1" 200 0
+05/29/2024 09:08:46 AM Attempting to acquire lock 23439025107456 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/57fe4c8322237968f5622f0fd0eb915f964cb25e.lock
+05/29/2024 09:08:46 AM Lock 23439025107456 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/57fe4c8322237968f5622f0fd0eb915f964cb25e.lock
+05/29/2024 09:08:46 AM https://huggingface.co:443 "GET /google/flan-t5-xl/resolve/main/model.safetensors.index.json HTTP/1.1" 200 53032
+05/29/2024 09:08:46 AM Attempting to release lock 23439025107456 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/57fe4c8322237968f5622f0fd0eb915f964cb25e.lock
+05/29/2024 09:08:46 AM Lock 23439025107456 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/57fe4c8322237968f5622f0fd0eb915f964cb25e.lock
+05/29/2024 09:08:46 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/model-00001-of-00002.safetensors HTTP/1.1" 302 0
+05/29/2024 09:08:46 AM Attempting to acquire lock 23439025106208 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/99196ddfbe886e8ef860f52de979df64890edfc792c3d94ce0502991f347dd18.lock
+05/29/2024 09:08:46 AM Lock 23439025106208 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/99196ddfbe886e8ef860f52de979df64890edfc792c3d94ce0502991f347dd18.lock
+05/29/2024 09:08:46 AM https://cdn-lfs.huggingface.co:443 "GET /repos/16/41/16418edd56a7c42307a0f361531c01ee227a92a98628972bd433062c276dad7c/99196ddfbe886e8ef860f52de979df64890edfc792c3d94ce0502991f347dd18?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1717258126&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzI1ODEyNn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy8xNi80MS8xNjQxOGVkZDU2YTdjNDIzMDdhMGYzNjE1MzFjMDFlZTIyN2E5MmE5ODYyODk3MmJkNDMzMDYyYzI3NmRhZDdjLzk5MTk2ZGRmYmU4ODZlOGVmODYwZjUyZGU5NzlkZjY0ODkwZWRmYzc5MmMzZDk0Y2UwNTAyOTkxZjM0N2RkMTg~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIn1dfQ__&Signature=g2Xys5AvRIYPjBP~IhZu0t02Ywp4fy9JG5AkVr5Vq8n71--jZGVBaOWz7Tx2Vx-KLlEq2aDhDV3WM8EWg8HNdwNM5lEhDYI0zjKjsK1EIVx6IykINcwjpUeF8Lqf~TLYjY6YAXcGj2s3bxFL~dCuC9yI5eTo4wnduVwOgtFDPRH874gk9XViVhDxydcmAwDSLlK88~tyvmgsLRCr2j2WDFF7yarZXELj7ThRNRRPr~jyXfAsZC5wJE1PYNUun9BBK9UpqxG9YSUOsgNqqc13a6DTK3nolwO4P08N~fU0W0rYamkCW7JP2x57okQlljYhMmeKDjY235kHBu7BnMpTqA__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 9449619912
+05/29/2024 09:09:10 AM Attempting to release lock 23439025106208 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/99196ddfbe886e8ef860f52de979df64890edfc792c3d94ce0502991f347dd18.lock
+05/29/2024 09:09:10 AM Lock 23439025106208 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/99196ddfbe886e8ef860f52de979df64890edfc792c3d94ce0502991f347dd18.lock
+05/29/2024 09:09:10 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/model-00002-of-00002.safetensors HTTP/1.1" 302 0
+05/29/2024 09:09:10 AM Attempting to acquire lock 23439025097952 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/c0c677ddeb21009b6efd97146f37fc3a0396707fb5e63ade7aff64884dce9806.lock
+05/29/2024 09:09:10 AM Lock 23439025097952 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/c0c677ddeb21009b6efd97146f37fc3a0396707fb5e63ade7aff64884dce9806.lock
+05/29/2024 09:09:10 AM https://cdn-lfs.huggingface.co:443 "GET /repos/16/41/16418edd56a7c42307a0f361531c01ee227a92a98628972bd433062c276dad7c/c0c677ddeb21009b6efd97146f37fc3a0396707fb5e63ade7aff64884dce9806?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model-00002-of-00002.safetensors%3B+filename%3D%22model-00002-of-00002.safetensors%22%3B&Expires=1717258150&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzI1ODE1MH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy8xNi80MS8xNjQxOGVkZDU2YTdjNDIzMDdhMGYzNjE1MzFjMDFlZTIyN2E5MmE5ODYyODk3MmJkNDMzMDYyYzI3NmRhZDdjL2MwYzY3N2RkZWIyMTAwOWI2ZWZkOTcxNDZmMzdmYzNhMDM5NjcwN2ZiNWU2M2FkZTdhZmY2NDg4NGRjZTk4MDY~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIn1dfQ__&Signature=jRcNbTF78pNgmjloUsynksOiCjZwHwnD9jqFeOU44bvUDlNoPCJ78Wbd9kiNtQ9GoFrx5ifJ0CV0l5bHn5ijpy4sVDdl0zy3noCQNozLix9TckGjXISweucZyUeUHqiptYHSy4vbLGqesVlUnYFmSLAwQdFVcxg3jfYQ7Sfuv4gKajgJnQV~Oi8mUaI2SAXj~5w~7Y-WAKaVhDC4uoD7OISEFxISUidvfBR-ku9mUQ6l6~uMQ-cJRY0T~KB6EX1cJZq78KtMl2SKCafhISph6yrfeh76NEUVbd0QhzLirhhl8Zyo254c1gSqzuT8~ymDtxpgJJyCOkRuJ0SEpLvsdA__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 1949477672
+05/29/2024 09:09:17 AM Attempting to release lock 23439025097952 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/c0c677ddeb21009b6efd97146f37fc3a0396707fb5e63ade7aff64884dce9806.lock
+05/29/2024 09:09:17 AM Lock 23439025097952 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/c0c677ddeb21009b6efd97146f37fc3a0396707fb5e63ade7aff64884dce9806.lock
+05/29/2024 09:09:33 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/generation_config.json HTTP/1.1" 200 0
+05/29/2024 09:09:33 AM Attempting to acquire lock 23442455861616 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/d52815623b46b7db1c4b957b5a83a8ad30b0146a.lock
+05/29/2024 09:09:33 AM Lock 23442455861616 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/d52815623b46b7db1c4b957b5a83a8ad30b0146a.lock
+05/29/2024 09:09:34 AM https://huggingface.co:443 "GET /google/flan-t5-xl/resolve/main/generation_config.json HTTP/1.1" 200 147
+05/29/2024 09:09:34 AM Attempting to release lock 23442455861616 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/d52815623b46b7db1c4b957b5a83a8ad30b0146a.lock
+05/29/2024 09:09:34 AM Lock 23442455861616 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-t5-xl/d52815623b46b7db1c4b957b5a83a8ad30b0146a.lock
+05/29/2024 09:10:24 AM Dataset fetched.
+05/29/2024 09:10:24 AM Starting evaluation for 2 models.
+05/29/2024 09:10:24 AM Currently evaluating: google/flan-t5-xl
+05/29/2024 09:10:24 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 09:10:24 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:10:25 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+05/29/2024 09:10:25 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:10:25 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:10:31 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/generation_config.json HTTP/1.1" 200 0
+05/29/2024 09:12:07 AM Attempting to acquire lock 22905902826800 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:12:07 AM Lock 22905902826800 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:12:07 AM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+05/29/2024 09:12:07 AM Attempting to release lock 22905902826800 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:12:07 AM Lock 22905902826800 released on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:13:23 AM Dataset fetched.
+05/29/2024 09:13:23 AM Starting evaluation for 2 models.
+05/29/2024 09:13:23 AM Currently evaluating: google/flan-t5-xl
+05/29/2024 09:13:23 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 09:13:23 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:13:23 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+05/29/2024 09:13:24 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:13:24 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:13:30 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/generation_config.json HTTP/1.1" 200 0
+05/29/2024 09:15:05 AM Attempting to acquire lock 23003977066416 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:15:05 AM Lock 23003977066416 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:15:05 AM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+05/29/2024 09:15:05 AM Attempting to release lock 23003977066416 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:15:05 AM Lock 23003977066416 released on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:15:05 AM Currently evaluating: meta-llama/Meta-Llama-3-8B-Instruct
+05/29/2024 09:15:05 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 401 0
+05/29/2024 09:24:29 AM Dataset fetched.
+05/29/2024 09:24:29 AM Starting evaluation for 2 models.
+05/29/2024 09:24:29 AM Currently evaluating: google/flan-t5-xl
+05/29/2024 09:24:29 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 09:24:30 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:24:30 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+05/29/2024 09:24:30 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:24:30 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:28:46 AM Dataset fetched.
+05/29/2024 09:28:46 AM Starting evaluation for 2 models.
+05/29/2024 09:28:46 AM Currently evaluating: google/flan-t5-xl
+05/29/2024 09:28:46 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 09:28:46 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:28:46 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+05/29/2024 09:28:46 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:28:47 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:28:53 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/generation_config.json HTTP/1.1" 200 0
+05/29/2024 09:30:28 AM Attempting to acquire lock 23056391786656 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:30:28 AM Lock 23056391786656 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:30:28 AM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+05/29/2024 09:30:28 AM Attempting to release lock 23056391786656 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:30:28 AM Lock 23056391786656 released on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:30:28 AM Currently evaluating: meta-llama/Meta-Llama-3-8B-Instruct
+05/29/2024 09:30:28 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 403 0
+05/29/2024 09:31:10 AM Dataset fetched.
+05/29/2024 09:31:10 AM Starting evaluation for 2 models.
+05/29/2024 09:31:10 AM Currently evaluating: google/flan-t5-xl
+05/29/2024 09:31:10 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 09:31:10 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:31:10 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+05/29/2024 09:31:11 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:31:11 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:31:17 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/generation_config.json HTTP/1.1" 200 0
+05/29/2024 09:32:52 AM Attempting to acquire lock 22766127583920 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:32:52 AM Lock 22766127583920 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:32:52 AM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+05/29/2024 09:32:52 AM Attempting to release lock 22766127583920 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:32:52 AM Lock 22766127583920 released on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:32:52 AM Currently evaluating: meta-llama/Meta-Llama-3-8B
+05/29/2024 09:32:52 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/config.json HTTP/1.1" 403 0
+05/29/2024 09:35:24 AM Dataset fetched.
+05/29/2024 09:35:24 AM Starting evaluation for 2 models.
+05/29/2024 09:35:24 AM Currently evaluating: google/flan-t5-xl
+05/29/2024 09:35:24 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 09:35:24 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:35:25 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+05/29/2024 09:35:25 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:35:25 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:35:31 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/generation_config.json HTTP/1.1" 200 0
+05/29/2024 09:37:06 AM Attempting to acquire lock 22805713376928 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:37:06 AM Lock 22805713376928 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:37:06 AM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+05/29/2024 09:37:06 AM Attempting to release lock 22805713376928 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:37:06 AM Lock 22805713376928 released on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:37:06 AM Currently evaluating: meta-llama/Meta-Llama-3-8B-Instruct
+05/29/2024 09:37:06 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 403 0
+05/29/2024 09:38:41 AM Dataset fetched.
+05/29/2024 09:38:41 AM Starting evaluation for 2 models.
+05/29/2024 09:38:41 AM Currently evaluating: google/flan-t5-xl
+05/29/2024 09:38:41 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 09:38:41 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:38:41 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+05/29/2024 09:38:42 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:38:42 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:38:48 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/generation_config.json HTTP/1.1" 200 0
+05/29/2024 09:40:23 AM Attempting to acquire lock 22645459874832 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:40:23 AM Lock 22645459874832 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:40:23 AM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+05/29/2024 09:40:23 AM Attempting to release lock 22645459874832 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:40:23 AM Lock 22645459874832 released on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:40:23 AM Currently evaluating: lmsys/vicuna-13b-v1.5
+05/29/2024 09:40:23 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:40:23 AM Attempting to acquire lock 22645463052848 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/d0c0ca4d85e34e2a6c5f55000d403ba09e565b3c.lock
+05/29/2024 09:40:23 AM Lock 22645463052848 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/d0c0ca4d85e34e2a6c5f55000d403ba09e565b3c.lock
+05/29/2024 09:40:23 AM https://huggingface.co:443 "GET /lmsys/vicuna-13b-v1.5/resolve/main/config.json HTTP/1.1" 200 638
+05/29/2024 09:40:23 AM Attempting to release lock 22645463052848 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/d0c0ca4d85e34e2a6c5f55000d403ba09e565b3c.lock
+05/29/2024 09:40:23 AM Lock 22645463052848 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/d0c0ca4d85e34e2a6c5f55000d403ba09e565b3c.lock
+05/29/2024 09:40:23 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+05/29/2024 09:40:23 AM Attempting to acquire lock 22645459018016 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/508754bfb1263631e39be7a2cd3577f6b5657c16.lock
+05/29/2024 09:40:23 AM Lock 22645459018016 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/508754bfb1263631e39be7a2cd3577f6b5657c16.lock
+05/29/2024 09:40:23 AM https://huggingface.co:443 "GET /lmsys/vicuna-13b-v1.5/resolve/main/tokenizer_config.json HTTP/1.1" 200 749
+05/29/2024 09:40:23 AM Attempting to release lock 22645459018016 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/508754bfb1263631e39be7a2cd3577f6b5657c16.lock
+05/29/2024 09:40:23 AM Lock 22645459018016 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/508754bfb1263631e39be7a2cd3577f6b5657c16.lock
+05/29/2024 09:40:23 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/tokenizer.model HTTP/1.1" 302 0
+05/29/2024 09:40:23 AM Attempting to acquire lock 22645342623296 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347.lock
+05/29/2024 09:40:23 AM Lock 22645342623296 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347.lock
+05/29/2024 09:40:23 AM Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
+05/29/2024 09:40:23 AM https://cdn-lfs.huggingface.co:443 "GET /repos/8d/0f/8d0f2419520bb2a42aac5a182f3e9ae84d9c5210220f1c85c36197edcd55cb28/9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27tokenizer.model%3B+filename%3D%22tokenizer.model%22%3B&Expires=1717260023&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzI2MDAyM319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy84ZC8wZi84ZDBmMjQxOTUyMGJiMmE0MmFhYzVhMTgyZjNlOWFlODRkOWM1MjEwMjIwZjFjODVjMzYxOTdlZGNkNTVjYjI4LzllNTU2YWZkNDQyMTNiNmJkMWJlMmI4NTBlYmJiZDk4ZjU0ODE0MzdhODAyMWFmYWY1OGVlN2ZiMTgxOGQzNDc~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIn1dfQ__&Signature=EdwAJxfntya5cHpHNPfmOK9BbRq4t60BGqPh1HCca~i6gw9jDApSRHdfzXtqenJ9BCqiwFcbscy4XvwRnixqBy1Pu7N9fMt0y443670h0WBeXlceZn~9zLE~xegDhMwyc6Kdwh~UPV8a4meRNRtPDzUOOyATgmsu7OVSOgvCoZUA-MKW6F~ZpANaDgiYxlRocosUhL4HUdY7fzfeaMV5rmi7vxhzKcLu1dgr8qf8-9eUzxc1z9iriPjX1wQnrX~Oxf~-nI1DDDWQ53z56QA7hiH4If~8mfCK7H-WIQzKfcvXvaEymXHmh93VeQ6bQKbhEGzgvxdKz4V8vTfR~fOSnw__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 499723
+05/29/2024 09:40:23 AM Attempting to release lock 22645342623296 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347.lock
+05/29/2024 09:40:23 AM Lock 22645342623296 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347.lock
+05/29/2024 09:40:23 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/tokenizer.json HTTP/1.1" 404 0
+05/29/2024 09:40:23 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/added_tokens.json HTTP/1.1" 404 0
+05/29/2024 09:40:24 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+05/29/2024 09:40:24 AM Attempting to acquire lock 22645342625264 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/14761dcf1466dc232bd41de9c21d4c617b15755e.lock
+05/29/2024 09:40:24 AM Lock 22645342625264 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/14761dcf1466dc232bd41de9c21d4c617b15755e.lock
+05/29/2024 09:40:24 AM https://huggingface.co:443 "GET /lmsys/vicuna-13b-v1.5/resolve/main/special_tokens_map.json HTTP/1.1" 200 438
+05/29/2024 09:40:24 AM Attempting to release lock 22645342625264 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/14761dcf1466dc232bd41de9c21d4c617b15755e.lock
+05/29/2024 09:40:24 AM Lock 22645342625264 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/14761dcf1466dc232bd41de9c21d4c617b15755e.lock
+05/29/2024 09:42:07 AM Dataset fetched.
+05/29/2024 09:42:07 AM Starting evaluation for 2 models.
+05/29/2024 09:42:07 AM Currently evaluating: google/flan-t5-xl
+05/29/2024 09:42:07 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 09:42:07 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:42:07 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+05/29/2024 09:42:08 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:42:08 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:42:14 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/generation_config.json HTTP/1.1" 200 0
+05/29/2024 09:43:49 AM Attempting to acquire lock 22739288605856 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:43:49 AM Lock 22739288605856 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:43:49 AM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+05/29/2024 09:43:49 AM Attempting to release lock 22739288605856 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:43:49 AM Lock 22739288605856 released on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:43:49 AM Currently evaluating: lmsys/vicuna-13b-v1.5
+05/29/2024 09:43:50 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:43:50 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+05/29/2024 09:43:50 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:43:51 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/model.safetensors HTTP/1.1" 404 0
+05/29/2024 09:43:51 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/model.safetensors.index.json HTTP/1.1" 404 0
+05/29/2024 09:43:52 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/pytorch_model.bin HTTP/1.1" 404 0
+05/29/2024 09:43:52 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/pytorch_model.bin.index.json HTTP/1.1" 200 0
+05/29/2024 09:43:52 AM Attempting to acquire lock 22738924337584 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/ae8b4645928d6ac04393e9b2498de06338028d9e.lock
+05/29/2024 09:43:52 AM Lock 22738924337584 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/ae8b4645928d6ac04393e9b2498de06338028d9e.lock
+05/29/2024 09:43:52 AM https://huggingface.co:443 "GET /lmsys/vicuna-13b-v1.5/resolve/main/pytorch_model.bin.index.json HTTP/1.1" 200 33444
+05/29/2024 09:43:52 AM Attempting to release lock 22738924337584 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/ae8b4645928d6ac04393e9b2498de06338028d9e.lock
+05/29/2024 09:43:52 AM Lock 22738924337584 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/ae8b4645928d6ac04393e9b2498de06338028d9e.lock
+05/29/2024 09:43:52 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 09:43:52 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/model.safetensors.index.json HTTP/1.1" 404 0
+05/29/2024 09:43:52 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/pytorch_model-00001-of-00003.bin HTTP/1.1" 302 0
+05/29/2024 09:43:52 AM Attempting to acquire lock 22739243602896 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/e9b54ba4bf8f87c6129f1e35c63d1ed248971d827ee5559f1a3bb48b39e43187.lock
+05/29/2024 09:43:52 AM Lock 22739243602896 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/e9b54ba4bf8f87c6129f1e35c63d1ed248971d827ee5559f1a3bb48b39e43187.lock
+05/29/2024 09:43:52 AM Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
+05/29/2024 09:43:52 AM https://cdn-lfs.huggingface.co:443 "GET /repos/8d/0f/8d0f2419520bb2a42aac5a182f3e9ae84d9c5210220f1c85c36197edcd55cb28/e9b54ba4bf8f87c6129f1e35c63d1ed248971d827ee5559f1a3bb48b39e43187?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model-00001-of-00003.bin%3B+filename%3D%22pytorch_model-00001-of-00003.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1717259440&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzI1OTQ0MH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy84ZC8wZi84ZDBmMjQxOTUyMGJiMmE0MmFhYzVhMTgyZjNlOWFlODRkOWM1MjEwMjIwZjFjODVjMzYxOTdlZGNkNTVjYjI4L2U5YjU0YmE0YmY4Zjg3YzYxMjlmMWUzNWM2M2QxZWQyNDg5NzFkODI3ZWU1NTU5ZjFhM2JiNDhiMzllNDMxODc~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=vLwZHnhTi0IcbYAf-Rw02buJ-YRXS77gOaPjzGo9neLhGD2i1eFb385uVT05E1ciyp-Hp1DGasHy1~2wCDOfhR2HqMdW9EZmsOyc2k-8AFi1dWeW9Rt8Op8cc7~BSort2cREXx~VaiBCbTd5MSx7eAXxT3bHFGX3l6TMpMI2VJmrXMUpPYxp~WYT9uH1-04~28blezLM8cAQQqiLKkxKLx5aX3EicLBA3bYZfYvCmdR8fN~13JD7DsS43rQNXRUF0mzZzDwCYB76dOlJ5qP5XFGpVjPUzp3E0Ee854WVZhLnFAzEHuo9554~taGDahzA~Wq1OuJcnsVBh4pRBDfy3g__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 9948728430
+05/29/2024 09:44:19 AM Attempting to release lock 22739243602896 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/e9b54ba4bf8f87c6129f1e35c63d1ed248971d827ee5559f1a3bb48b39e43187.lock
+05/29/2024 09:44:19 AM Lock 22739243602896 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/e9b54ba4bf8f87c6129f1e35c63d1ed248971d827ee5559f1a3bb48b39e43187.lock
+05/29/2024 09:44:19 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/pytorch_model-00002-of-00003.bin HTTP/1.1" 302 0
+05/29/2024 09:44:19 AM Attempting to acquire lock 22739243602896 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/ade40ae3180cbe5553278edb8e61ff4f2059f62be12b06f253b373838c199221.lock
+05/29/2024 09:44:19 AM Lock 22739243602896 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/ade40ae3180cbe5553278edb8e61ff4f2059f62be12b06f253b373838c199221.lock
+05/29/2024 09:44:19 AM https://cdn-lfs.huggingface.co:443 "GET /repos/8d/0f/8d0f2419520bb2a42aac5a182f3e9ae84d9c5210220f1c85c36197edcd55cb28/ade40ae3180cbe5553278edb8e61ff4f2059f62be12b06f253b373838c199221?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model-00002-of-00003.bin%3B+filename%3D%22pytorch_model-00002-of-00003.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1717260259&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzI2MDI1OX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy84ZC8wZi84ZDBmMjQxOTUyMGJiMmE0MmFhYzVhMTgyZjNlOWFlODRkOWM1MjEwMjIwZjFjODVjMzYxOTdlZGNkNTVjYjI4L2FkZTQwYWUzMTgwY2JlNTU1MzI3OGVkYjhlNjFmZjRmMjA1OWY2MmJlMTJiMDZmMjUzYjM3MzgzOGMxOTkyMjE~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=u9svZ1wTmp~OTxWTH9gx9xwwDe-lLY-4N-Fz6pqJ4e3dNP-u0-Sq77eWwSKKzSov6beIIDhYUQKuZKKQ5j3671C~hVx8pyHDmO9XO4xsJSoaXx0V1-qfnzvPwD8LZ-qxDLmOnzK4Rg4Vf1s21jzG5-is5HLDQqgbECmtUodcPZ9UdjBa5HjB4Gjy9ytfTYP96h5VDllneIQWGdBIlHC1avs8g3jhCwhPxk9rPOWiJO4W2V3aszqEewVteUDKouhLl-RuMD-VMg6kcp-SZv4HbkInehI9FPi783aOD9Rw3SAB3NboCUN-OXd5WOxWtWogxKalE63qLwpBYvfjdwvVxg__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 9904165024
+05/29/2024 09:44:50 AM Attempting to release lock 22739243602896 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/ade40ae3180cbe5553278edb8e61ff4f2059f62be12b06f253b373838c199221.lock
+05/29/2024 09:44:50 AM Lock 22739243602896 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/ade40ae3180cbe5553278edb8e61ff4f2059f62be12b06f253b373838c199221.lock
+05/29/2024 09:44:50 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/pytorch_model-00003-of-00003.bin HTTP/1.1" 302 0
+05/29/2024 09:44:50 AM Attempting to acquire lock 22739052748416 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/b4bd8cf2ab7e7bf22aaaf9b35ec5d41602d83f5a97bb82e17662ffe0a20ab215.lock
+05/29/2024 09:44:50 AM Lock 22739052748416 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/b4bd8cf2ab7e7bf22aaaf9b35ec5d41602d83f5a97bb82e17662ffe0a20ab215.lock
+05/29/2024 09:44:50 AM https://cdn-lfs.huggingface.co:443 "GET /repos/8d/0f/8d0f2419520bb2a42aac5a182f3e9ae84d9c5210220f1c85c36197edcd55cb28/b4bd8cf2ab7e7bf22aaaf9b35ec5d41602d83f5a97bb82e17662ffe0a20ab215?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model-00003-of-00003.bin%3B+filename%3D%22pytorch_model-00003-of-00003.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1717260290&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzI2MDI5MH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy84ZC8wZi84ZDBmMjQxOTUyMGJiMmE0MmFhYzVhMTgyZjNlOWFlODRkOWM1MjEwMjIwZjFjODVjMzYxOTdlZGNkNTVjYjI4L2I0YmQ4Y2YyYWI3ZTdiZjIyYWFhZjliMzVlYzVkNDE2MDJkODNmNWE5N2JiODJlMTc2NjJmZmUwYTIwYWIyMTU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=L55v0k9Eo9UiU5qKn38KOLi8T4az7vrb-CedpiwsXPSPWK2keijcsq-6zvxyi-H~gd511kQpohutnuOOh8ZiH-QfTcIjbArUIvgQ87N7H-bucopdf9wB1YaDaAaxDIBOmwo0jww-btkFeNXG5zDkdkhftRXPNiHlrQlTWJA0ZCOyoorJlMU3Wt4~z8et~3tO-83KBV4Rd65akAUOwUbyIvUKKTi-Vc-7XocLf-N856SJlycOHBjEV8~plEWE~tEJ98ovP56MO0e0X6KyRZyhnwMoz0iY5QzmXZ0ZJYyKfpS50pTrfpyjzD926yKIyWq5lCN4P8iTKwowgumYrPPPCA__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 6178983625
+05/29/2024 09:45:11 AM Attempting to release lock 22739052748416 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/b4bd8cf2ab7e7bf22aaaf9b35ec5d41602d83f5a97bb82e17662ffe0a20ab215.lock
+05/29/2024 09:45:11 AM Lock 22739052748416 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/b4bd8cf2ab7e7bf22aaaf9b35ec5d41602d83f5a97bb82e17662ffe0a20ab215.lock
+05/29/2024 09:46:02 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/generation_config.json HTTP/1.1" 200 0
+05/29/2024 09:46:02 AM Attempting to acquire lock 22739164238416 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/1e681585c3bc3def4a5caf111aa29064138aa760.lock
+05/29/2024 09:46:02 AM Lock 22739164238416 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/1e681585c3bc3def4a5caf111aa29064138aa760.lock
+05/29/2024 09:46:02 AM https://huggingface.co:443 "GET /lmsys/vicuna-13b-v1.5/resolve/main/generation_config.json HTTP/1.1" 200 192
+05/29/2024 09:46:02 AM Attempting to release lock 22739164238416 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/1e681585c3bc3def4a5caf111aa29064138aa760.lock
+05/29/2024 09:46:02 AM Lock 22739164238416 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--lmsys--vicuna-13b-v1.5/1e681585c3bc3def4a5caf111aa29064138aa760.lock
+05/29/2024 09:50:54 AM Dataset fetched.
+05/29/2024 09:50:54 AM Starting evaluation for 2 models.
+05/29/2024 09:50:54 AM Currently evaluating: google/flan-t5-xl
+05/29/2024 09:50:54 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 09:50:54 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:50:54 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+05/29/2024 09:50:55 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:50:55 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:51:01 AM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/generation_config.json HTTP/1.1" 200 0
+05/29/2024 09:52:39 AM Attempting to acquire lock 23336377778928 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:52:39 AM Lock 23336377778928 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:52:39 AM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+05/29/2024 09:52:39 AM Attempting to release lock 23336377778928 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:52:39 AM Lock 23336377778928 released on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:52:39 AM Currently evaluating: lmsys/vicuna-13b-v1.5
+05/29/2024 09:52:39 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:52:39 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+05/29/2024 09:52:40 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 09:52:40 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 09:52:40 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/model.safetensors.index.json HTTP/1.1" 404 0
+05/29/2024 09:53:23 AM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/generation_config.json HTTP/1.1" 200 0
+05/29/2024 09:59:06 AM Attempting to acquire lock 23336197175584 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:59:06 AM Lock 23336197175584 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:59:06 AM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+05/29/2024 09:59:06 AM Attempting to release lock 23336197175584 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:59:06 AM Lock 23336197175584 released on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 09:59:06 AM Evaluation complete.
+05/29/2024 10:02:01 AM Dataset fetched.
+05/29/2024 10:02:01 AM Starting evaluation for 1 models.
+05/29/2024 10:02:01 AM Currently evaluating: meta-llama/Meta-Llama-3-8B-Instruct
+05/29/2024 10:02:01 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 10:02:01 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 403 0
+05/29/2024 10:03:16 AM Dataset fetched.
+05/29/2024 10:03:16 AM Starting evaluation for 1 models.
+05/29/2024 10:03:16 AM Currently evaluating: meta-llama/Meta-Llama-3-8B
+05/29/2024 10:03:16 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 10:03:16 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/config.json HTTP/1.1" 403 0
+05/29/2024 10:04:33 AM Dataset fetched.
+05/29/2024 10:04:33 AM Starting evaluation for 1 models.
+05/29/2024 10:04:33 AM Currently evaluating: mistralai/Mixtral-8x7B-Instruct-v0.1
+05/29/2024 10:04:33 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 10:04:33 AM https://huggingface.co:443 "HEAD /mistralai/Mixtral-8x7B-Instruct-v0.1/resolve/main/config.json HTTP/1.1" 403 0
+05/29/2024 10:05:26 AM Dataset fetched.
+05/29/2024 10:05:26 AM Starting evaluation for 1 models.
+05/29/2024 10:05:26 AM Currently evaluating: mistralai/Mixtral-8x7B-Instruct-v0.1
+05/29/2024 10:05:26 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 10:05:26 AM https://huggingface.co:443 "HEAD /mistralai/Mixtral-8x7B-Instruct-v0.1/resolve/main/config.json HTTP/1.1" 403 0
+05/29/2024 10:05:55 AM Dataset fetched.
+05/29/2024 10:05:55 AM Starting evaluation for 1 models.
+05/29/2024 10:05:55 AM Currently evaluating: google/flan-ul2
+05/29/2024 10:05:55 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 10:05:55 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 10:05:55 AM Attempting to acquire lock 22962021050336 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/f54bb5859bd6b997b1d5b714dcf1abf978e82eac.lock
+05/29/2024 10:05:55 AM Lock 22962021050336 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/f54bb5859bd6b997b1d5b714dcf1abf978e82eac.lock
+05/29/2024 10:05:55 AM https://huggingface.co:443 "GET /google/flan-ul2/resolve/main/config.json HTTP/1.1" 200 784
+05/29/2024 10:05:55 AM Attempting to release lock 22962021050336 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/f54bb5859bd6b997b1d5b714dcf1abf978e82eac.lock
+05/29/2024 10:05:55 AM Lock 22962021050336 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/f54bb5859bd6b997b1d5b714dcf1abf978e82eac.lock
+05/29/2024 10:05:55 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+05/29/2024 10:05:55 AM Attempting to acquire lock 22962232791728 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/dcc2215bae5bdd17c7a516c0898c89d2c87dbb98.lock
+05/29/2024 10:05:55 AM Lock 22962232791728 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/dcc2215bae5bdd17c7a516c0898c89d2c87dbb98.lock
+05/29/2024 10:05:55 AM https://huggingface.co:443 "GET /google/flan-ul2/resolve/main/tokenizer_config.json HTTP/1.1" 200 2352
+05/29/2024 10:05:55 AM Attempting to release lock 22962232791728 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/dcc2215bae5bdd17c7a516c0898c89d2c87dbb98.lock
+05/29/2024 10:05:55 AM Lock 22962232791728 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/dcc2215bae5bdd17c7a516c0898c89d2c87dbb98.lock
+05/29/2024 10:05:55 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/spiece.model HTTP/1.1" 302 0
+05/29/2024 10:05:55 AM Attempting to acquire lock 22962021313488 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86.lock
+05/29/2024 10:05:55 AM Lock 22962021313488 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86.lock
+05/29/2024 10:05:55 AM Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
+05/29/2024 10:05:56 AM https://cdn-lfs.huggingface.co:443 "GET /repos/d3/43/d34303423d400d251d4043e952ada6bbb3b180de5372f17da77ccb989e6c76fa/d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27spiece.model%3B+filename%3D%22spiece.model%22%3B&Expires=1717261555&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzI2MTU1NX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy9kMy80My9kMzQzMDM0MjNkNDAwZDI1MWQ0MDQzZTk1MmFkYTZiYmIzYjE4MGRlNTM3MmYxN2RhNzdjY2I5ODllNmM3NmZhL2Q2MGFjYjEyOGNmN2I3ZjI1MzZlOGYzOGE1YjE4YTA1NTM1YzllMTRjN2EzNTU5MDQyNzBlMTViMDk0NWVhODY~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIn1dfQ__&Signature=eIBW1styLg9y9maUCEaFdQQIGMbINEtHeCnR5g7chG6iOB5oC9~eXGTN-YFN0BGtCTDWlZWsZSKeaNDb7E0~u2scdyaK-YKL57u27xnhdzkFnSKKgf9JTGyzXMhEQFZ53mRjBJCa610xhAoteRfunHYfq~Ado6a8up-rgc9kfsqEUaAKFifvdOLwMGylNB965T1KGcRA5FC3EP55cvi136fbDA1ufex29K~Wm~uC7Psb0KwBDVnhpnfS-6jUzY8lI1Trp-qY1v3Xe6M0740k8yp5myX7kgi-LUUsYjHgo2iBhCe71Z2E~oJSVZeV8BGW5K3aA9A9Rct9H9zSXW2zmQ__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 791656
+05/29/2024 10:05:56 AM Attempting to release lock 22962021313488 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86.lock
+05/29/2024 10:05:56 AM Lock 22962021313488 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86.lock
+05/29/2024 10:05:56 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/added_tokens.json HTTP/1.1" 200 0
+05/29/2024 10:05:56 AM Attempting to acquire lock 22962021050336 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/3a426fa236cd482a9f880db861fb5b3a211b4455.lock
+05/29/2024 10:05:56 AM Lock 22962021050336 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/3a426fa236cd482a9f880db861fb5b3a211b4455.lock
+05/29/2024 10:05:56 AM https://huggingface.co:443 "GET /google/flan-ul2/resolve/main/added_tokens.json HTTP/1.1" 200 665
+05/29/2024 10:05:56 AM Attempting to release lock 22962021050336 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/3a426fa236cd482a9f880db861fb5b3a211b4455.lock
+05/29/2024 10:05:56 AM Lock 22962021050336 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/3a426fa236cd482a9f880db861fb5b3a211b4455.lock
+05/29/2024 10:05:57 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+05/29/2024 10:05:57 AM Attempting to acquire lock 22962021049136 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/2c19eb6e3b583f52d34b903b5978d3d30b6b7682.lock
+05/29/2024 10:05:57 AM Lock 22962021049136 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/2c19eb6e3b583f52d34b903b5978d3d30b6b7682.lock
+05/29/2024 10:05:57 AM https://huggingface.co:443 "GET /google/flan-ul2/resolve/main/special_tokens_map.json HTTP/1.1" 200 2201
+05/29/2024 10:05:57 AM Attempting to release lock 22962021049136 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/2c19eb6e3b583f52d34b903b5978d3d30b6b7682.lock
+05/29/2024 10:05:57 AM Lock 22962021049136 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/2c19eb6e3b583f52d34b903b5978d3d30b6b7682.lock
+05/29/2024 10:05:57 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/tokenizer.json HTTP/1.1" 200 0
+05/29/2024 10:05:57 AM Attempting to acquire lock 22962021050336 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/9860fc865e6cce76f3360f6b47bde2d5439b8b67.lock
+05/29/2024 10:05:57 AM Lock 22962021050336 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/9860fc865e6cce76f3360f6b47bde2d5439b8b67.lock
+05/29/2024 10:05:57 AM https://huggingface.co:443 "GET /google/flan-ul2/resolve/main/tokenizer.json HTTP/1.1" 200 2427321
+05/29/2024 10:05:57 AM Attempting to release lock 22962021050336 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/9860fc865e6cce76f3360f6b47bde2d5439b8b67.lock
+05/29/2024 10:05:57 AM Lock 22962021050336 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/9860fc865e6cce76f3360f6b47bde2d5439b8b67.lock
+05/29/2024 10:05:57 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 10:05:57 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 10:05:58 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/model.safetensors HTTP/1.1" 404 0
+05/29/2024 10:05:58 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/model.safetensors.index.json HTTP/1.1" 404 0
+05/29/2024 10:05:58 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/pytorch_model.bin HTTP/1.1" 404 0
+05/29/2024 10:05:58 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/pytorch_model.bin.index.json HTTP/1.1" 200 0
+05/29/2024 10:05:58 AM Attempting to acquire lock 22962021316224 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/1f44932db52729fae94df04fff03fcc5f25bd5d0.lock
+05/29/2024 10:05:58 AM Lock 22962021316224 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/1f44932db52729fae94df04fff03fcc5f25bd5d0.lock
+05/29/2024 10:05:58 AM https://huggingface.co:443 "GET /google/flan-ul2/resolve/main/pytorch_model.bin.index.json HTTP/1.1" 200 67549
+05/29/2024 10:05:58 AM Attempting to release lock 22962021316224 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/1f44932db52729fae94df04fff03fcc5f25bd5d0.lock
+05/29/2024 10:05:58 AM Lock 22962021316224 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/1f44932db52729fae94df04fff03fcc5f25bd5d0.lock
+05/29/2024 10:05:58 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 10:05:58 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/model.safetensors.index.json HTTP/1.1" 404 0
+05/29/2024 10:05:58 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/pytorch_model-00001-of-00008.bin HTTP/1.1" 302 0
+05/29/2024 10:05:58 AM Attempting to acquire lock 22962021318528 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/45bf24c1738fbec52a5a1eefc3b482291a351bab069829a03e775f8fa2822722.lock
+05/29/2024 10:05:58 AM Lock 22962021318528 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/45bf24c1738fbec52a5a1eefc3b482291a351bab069829a03e775f8fa2822722.lock
+05/29/2024 10:05:59 AM https://cdn-lfs.huggingface.co:443 "GET /repos/d3/43/d34303423d400d251d4043e952ada6bbb3b180de5372f17da77ccb989e6c76fa/45bf24c1738fbec52a5a1eefc3b482291a351bab069829a03e775f8fa2822722?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model-00001-of-00008.bin%3B+filename%3D%22pytorch_model-00001-of-00008.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1717261558&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzI2MTU1OH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy9kMy80My9kMzQzMDM0MjNkNDAwZDI1MWQ0MDQzZTk1MmFkYTZiYmIzYjE4MGRlNTM3MmYxN2RhNzdjY2I5ODllNmM3NmZhLzQ1YmYyNGMxNzM4ZmJlYzUyYTVhMWVlZmMzYjQ4MjI5MWEzNTFiYWIwNjk4MjlhMDNlNzc1ZjhmYTI4MjI3MjI~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=da3nSe4Aoo16pl0ZvFlnvFKYqrtwjEmfZ-ZzU0FojbCvCKLSeXqyji3qM~jrw90LYm48ApadqtQTJIUYf1qHv-cw64JNtgxPkSWiiWHJ-UvaEYGANn1ix6bTERV9ZdupusAWyHpwq~eFKmqVSdaO8fKUW7okDDdROYVI1d~fi5eKlcBZ6m-IA6GVoLYzsOjsA5ux~Kmz6mb0LnOaQTLke6tM0l4kxqtI96wa~cBCfQf3I8oSkpalnhW~pswBf7mxyiBIxyYgiEI5V0JLnEXIHtbwDBkm7xUBjLRHacgsF14llBJepH9ajackrrw2-QVfVn7KEgoVS8Pq7wzBEatJVw__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 4692542996
+05/29/2024 10:08:41 AM Attempting to release lock 22962021318528 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/45bf24c1738fbec52a5a1eefc3b482291a351bab069829a03e775f8fa2822722.lock
+05/29/2024 10:08:41 AM Lock 22962021318528 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/45bf24c1738fbec52a5a1eefc3b482291a351bab069829a03e775f8fa2822722.lock
+05/29/2024 10:08:41 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/pytorch_model-00002-of-00008.bin HTTP/1.1" 302 0
+05/29/2024 10:08:41 AM Attempting to acquire lock 22962021307152 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/88bd28a99530e6bf4798e44a5897b64a926211fbe1d1ddb908562e55793c4ede.lock
+05/29/2024 10:08:41 AM Lock 22962021307152 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/88bd28a99530e6bf4798e44a5897b64a926211fbe1d1ddb908562e55793c4ede.lock
+05/29/2024 10:08:42 AM https://cdn-lfs.huggingface.co:443 "GET /repos/d3/43/d34303423d400d251d4043e952ada6bbb3b180de5372f17da77ccb989e6c76fa/88bd28a99530e6bf4798e44a5897b64a926211fbe1d1ddb908562e55793c4ede?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model-00002-of-00008.bin%3B+filename%3D%22pytorch_model-00002-of-00008.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1717261721&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzI2MTcyMX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy9kMy80My9kMzQzMDM0MjNkNDAwZDI1MWQ0MDQzZTk1MmFkYTZiYmIzYjE4MGRlNTM3MmYxN2RhNzdjY2I5ODllNmM3NmZhLzg4YmQyOGE5OTUzMGU2YmY0Nzk4ZTQ0YTU4OTdiNjRhOTI2MjExZmJlMWQxZGRiOTA4NTYyZTU1NzkzYzRlZGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=g~mkCNs8CG-QtFsX6QNgnxntATTz~ay2n~qRvrHT5lhsz~q4sfOeQ6yHdm7ko6jbQg3k5stzG3c9lFA2HCvhvAXuNifMLHXa61OW2DNNdY-wvOrdUc9nRdTYCXdgC6DPnA3r9mfXz8F~b1i~hmkJd3XLNEVBjCYTjq00aSAyNkLVx3aVlCrPsJp3V8EUEaZG4Vh3y~0minIOsS--eGgRG1YSTJer35BrNWITGJyG6m8ErlO4OLaBfLoqIWCsWbieY1QmqpLhYkexRHqVBoV~-P9tW84GD3u7MEssl0boMXxPSIRy5TsG-HKKiGa5mWKVsC5u0zXWkpB6Ce6EIyhemw__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 4966229511
+05/29/2024 10:10:48 AM Attempting to release lock 22962021307152 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/88bd28a99530e6bf4798e44a5897b64a926211fbe1d1ddb908562e55793c4ede.lock
+05/29/2024 10:10:48 AM Lock 22962021307152 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/88bd28a99530e6bf4798e44a5897b64a926211fbe1d1ddb908562e55793c4ede.lock
+05/29/2024 10:10:48 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/pytorch_model-00003-of-00008.bin HTTP/1.1" 302 0
+05/29/2024 10:10:48 AM Attempting to acquire lock 22962021314496 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/9f028a67b2a1aee2d6969a843b7be4448c89682bec5a10ed85ac03537b2a3e0e.lock
+05/29/2024 10:10:48 AM Lock 22962021314496 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/9f028a67b2a1aee2d6969a843b7be4448c89682bec5a10ed85ac03537b2a3e0e.lock
+05/29/2024 10:10:48 AM https://cdn-lfs.huggingface.co:443 "GET /repos/d3/43/d34303423d400d251d4043e952ada6bbb3b180de5372f17da77ccb989e6c76fa/9f028a67b2a1aee2d6969a843b7be4448c89682bec5a10ed85ac03537b2a3e0e?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model-00003-of-00008.bin%3B+filename%3D%22pytorch_model-00003-of-00008.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1717261848&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzI2MTg0OH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy9kMy80My9kMzQzMDM0MjNkNDAwZDI1MWQ0MDQzZTk1MmFkYTZiYmIzYjE4MGRlNTM3MmYxN2RhNzdjY2I5ODllNmM3NmZhLzlmMDI4YTY3YjJhMWFlZTJkNjk2OWE4NDNiN2JlNDQ0OGM4OTY4MmJlYzVhMTBlZDg1YWMwMzUzN2IyYTNlMGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=Y2QjgfR6DGAHKp68Vx8uBClEPzBCnvrYVf-Cxg8qkRFkYoFyyDKqbs5abEPO~f8VHP~msEwaRgVojLwabQnCJYlezHhI-PFwMO1Pz5lcdtB1K4hcteyKYdySHHvgxXYP2RL4pehZIvoYlpUCrqIkoUDnqRIkJEBznaS1kp3JcI~k7UrSEa9vjmXWfnOGbQnYr8B7f8GPzlZ2qZH2Jrfl6e7cpbKDTgCiqAxPgkURrdJNcdhJGiCL1ngwQDdm9SG~ZXIu5ST4xy-04fLMb65luCSXy3OIPN5Ff0nuGy55eT1rNZq8cSovogCuC2bUmcWF1j~1Z25b9fVUJ0L~o6RSIA__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 4966229499
+05/29/2024 10:12:45 AM Attempting to release lock 22962021314496 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/9f028a67b2a1aee2d6969a843b7be4448c89682bec5a10ed85ac03537b2a3e0e.lock
+05/29/2024 10:12:45 AM Lock 22962021314496 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/9f028a67b2a1aee2d6969a843b7be4448c89682bec5a10ed85ac03537b2a3e0e.lock
+05/29/2024 10:12:45 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/pytorch_model-00004-of-00008.bin HTTP/1.1" 302 0
+05/29/2024 10:12:45 AM Attempting to acquire lock 22962020457104 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/3bd08b4ba35a3eb643922118a7fc1e3a29c6163bb9539f7577e688dbe80dcc6b.lock
+05/29/2024 10:12:45 AM Lock 22962020457104 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/3bd08b4ba35a3eb643922118a7fc1e3a29c6163bb9539f7577e688dbe80dcc6b.lock
+05/29/2024 10:12:45 AM https://cdn-lfs.huggingface.co:443 "GET /repos/d3/43/d34303423d400d251d4043e952ada6bbb3b180de5372f17da77ccb989e6c76fa/3bd08b4ba35a3eb643922118a7fc1e3a29c6163bb9539f7577e688dbe80dcc6b?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model-00004-of-00008.bin%3B+filename%3D%22pytorch_model-00004-of-00008.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1717261965&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzI2MTk2NX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy9kMy80My9kMzQzMDM0MjNkNDAwZDI1MWQ0MDQzZTk1MmFkYTZiYmIzYjE4MGRlNTM3MmYxN2RhNzdjY2I5ODllNmM3NmZhLzNiZDA4YjRiYTM1YTNlYjY0MzkyMjExOGE3ZmMxZTNhMjljNjE2M2JiOTUzOWY3NTc3ZTY4OGRiZTgwZGNjNmI~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=XeviSThWsqpdjkkz5c9bao2FSAjkFWaZe8yTZGjIOsoDRd41x1L82-gdg~2-9ReWkSzF2BFa4XrBB0I2mhNayxU4OW19ubqKP05L4JAH~C3AAeKRM64p8noHewjoKnu8Iy9LW0AoDkWrlkomcXWOXBJnDyLu75cyC4SBA9q1DuL9t6j0nrAmT5Hq3WJlz0QskJGTH4Cbhk5we0vmGCKCtyTUSNWn~1UP-vMRXH8n49d0~nTUYLB0k-K6lxk0Jx0B4hveVFh6l~OzHlIrW1Z08XhcI6OM3MjPp25SsXztnxevHGH2P9aw3gkgSInEFY5EVaFnDKwjyYf6dkyWg6dhXA__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 4961006511
+05/29/2024 10:13:04 AM Attempting to release lock 22962020457104 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/3bd08b4ba35a3eb643922118a7fc1e3a29c6163bb9539f7577e688dbe80dcc6b.lock
+05/29/2024 10:13:04 AM Lock 22962020457104 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/3bd08b4ba35a3eb643922118a7fc1e3a29c6163bb9539f7577e688dbe80dcc6b.lock
+05/29/2024 10:13:04 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/pytorch_model-00005-of-00008.bin HTTP/1.1" 302 0
+05/29/2024 10:13:04 AM Attempting to acquire lock 22962020459024 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/dc6b8ffacb7cc29f099cc0b5aec4f7aa61cea81a54e1a7a8621347002f6760f8.lock
+05/29/2024 10:13:04 AM Lock 22962020459024 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/dc6b8ffacb7cc29f099cc0b5aec4f7aa61cea81a54e1a7a8621347002f6760f8.lock
+05/29/2024 10:13:04 AM https://cdn-lfs.huggingface.co:443 "GET /repos/d3/43/d34303423d400d251d4043e952ada6bbb3b180de5372f17da77ccb989e6c76fa/dc6b8ffacb7cc29f099cc0b5aec4f7aa61cea81a54e1a7a8621347002f6760f8?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model-00005-of-00008.bin%3B+filename%3D%22pytorch_model-00005-of-00008.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1717261984&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzI2MTk4NH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy9kMy80My9kMzQzMDM0MjNkNDAwZDI1MWQ0MDQzZTk1MmFkYTZiYmIzYjE4MGRlNTM3MmYxN2RhNzdjY2I5ODllNmM3NmZhL2RjNmI4ZmZhY2I3Y2MyOWYwOTljYzBiNWFlYzRmN2FhNjFjZWE4MWE1NGUxYTdhODYyMTM0NzAwMmY2NzYwZjg~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=klbczm2ThKHlunqMLrejJhVE0l1nyWgOdljI0hMWF9Cvw8hg5a0qERzpPa6JVVeD7sEFqakQws6kIPE7f-fl94DtRc46tG9EvUeB8LTiQMT2hhfOaywsW2abUI-VL5Gilr3N5oNt7k~D8TdsuVRpyqcJqVUhSEUki5jIxYw3hz0xInkRD4A-MWEVXESul2nCGA0CHg-wjlgy5nGL0N1eWid8utFn1TZQCx4duVFDTMLAdus3djq-3TgWEC3GilA4xPMA6r79a-mdQ1Pg6QH6V7~ZIB2D4n171Ar0dxeh2JZH-cjo5RIBmS7UlHGrw827otbre1kMyKWPUPJw8iqOjw__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 4999832641
+05/29/2024 10:15:43 AM Attempting to release lock 22962020459024 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/dc6b8ffacb7cc29f099cc0b5aec4f7aa61cea81a54e1a7a8621347002f6760f8.lock
+05/29/2024 10:15:43 AM Lock 22962020459024 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/dc6b8ffacb7cc29f099cc0b5aec4f7aa61cea81a54e1a7a8621347002f6760f8.lock
+05/29/2024 10:15:43 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/pytorch_model-00006-of-00008.bin HTTP/1.1" 302 0
+05/29/2024 10:15:43 AM Attempting to acquire lock 22962021049136 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/adc1a3c4113f8168a98b19220ddc40b5fd1b0ac3fe41dfbd821d0c7129835ed8.lock
+05/29/2024 10:15:43 AM Lock 22962021049136 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/adc1a3c4113f8168a98b19220ddc40b5fd1b0ac3fe41dfbd821d0c7129835ed8.lock
+05/29/2024 10:15:43 AM https://cdn-lfs.huggingface.co:443 "GET /repos/d3/43/d34303423d400d251d4043e952ada6bbb3b180de5372f17da77ccb989e6c76fa/adc1a3c4113f8168a98b19220ddc40b5fd1b0ac3fe41dfbd821d0c7129835ed8?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model-00006-of-00008.bin%3B+filename%3D%22pytorch_model-00006-of-00008.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1717262143&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzI2MjE0M319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy9kMy80My9kMzQzMDM0MjNkNDAwZDI1MWQ0MDQzZTk1MmFkYTZiYmIzYjE4MGRlNTM3MmYxN2RhNzdjY2I5ODllNmM3NmZhL2FkYzFhM2M0MTEzZjgxNjhhOThiMTkyMjBkZGM0MGI1ZmQxYjBhYzNmZTQxZGZiZDgyMWQwYzcxMjk4MzVlZDg~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=gfuwLNKXp7QAIzSJNGBBXybb96Lc96F7D4ZP5fsEPhGN9TVqvZ72-icjBiW5~pzLJ3Yg2d00PsvvwznzT3NjMVWr9K9Oqad3fIxlwAHPmjaUVmrSsbloQ0TD-UG26XPvnxbPTW6yohGM~l6kq4YUxipQOJNL3-XY973Cb12Qc37dmTGuwVcf7uBAssyi8TFgV9DhQG4t8fcRAvC~ml9wtfFIMOrsrZMeCKX4wIT74cyTD7fjPNOv2uqAS~a25IjNOGkKjF0mU3epBq68XTeeuHZpex9U0kzH7ggldVfmUW0TU84DM18K1TfwcylYi9ZVWHy9kLbo~hiRapwAiuChEA__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 4932714647
+05/29/2024 10:17:27 AM Attempting to release lock 22962021049136 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/adc1a3c4113f8168a98b19220ddc40b5fd1b0ac3fe41dfbd821d0c7129835ed8.lock
+05/29/2024 10:17:27 AM Lock 22962021049136 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/adc1a3c4113f8168a98b19220ddc40b5fd1b0ac3fe41dfbd821d0c7129835ed8.lock
+05/29/2024 10:17:27 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/pytorch_model-00007-of-00008.bin HTTP/1.1" 302 0
+05/29/2024 10:17:27 AM Attempting to acquire lock 22962021052256 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/6d8fb42e6386dbe3a5d14c171d4669793e27042bd6c13e1df57ee889485566f4.lock
+05/29/2024 10:17:27 AM Lock 22962021052256 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/6d8fb42e6386dbe3a5d14c171d4669793e27042bd6c13e1df57ee889485566f4.lock
+05/29/2024 10:17:27 AM https://cdn-lfs.huggingface.co:443 "GET /repos/d3/43/d34303423d400d251d4043e952ada6bbb3b180de5372f17da77ccb989e6c76fa/6d8fb42e6386dbe3a5d14c171d4669793e27042bd6c13e1df57ee889485566f4?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model-00007-of-00008.bin%3B+filename%3D%22pytorch_model-00007-of-00008.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1717262247&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzI2MjI0N319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy9kMy80My9kMzQzMDM0MjNkNDAwZDI1MWQ0MDQzZTk1MmFkYTZiYmIzYjE4MGRlNTM3MmYxN2RhNzdjY2I5ODllNmM3NmZhLzZkOGZiNDJlNjM4NmRiZTNhNWQxNGMxNzFkNDY2OTc5M2UyNzA0MmJkNmMxM2UxZGY1N2VlODg5NDg1NTY2ZjQ~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=zciOv6KJ3IQ~F~93kZeogsuo2BlApocv96SI7-SdxXaXjIMrFgECO-sESDSTCexD1WykVMHuCmlRglCgISJJp6GcG6YgH6DuV4EylQJmjm00MpyYcbJft031dx~afANWL0Er-P4NzwepkIXK19gJcUZVrCO~GYSS1P9SsenMlY9eF1cKVueqfDk1WwSTmaOG~hUzuXJw2h4kQYRake2svvLA83EJu71uBM7M1qycLzkWwgaQfYX5Mb0hVXc5xrRdNnXIa8u0MytlJWeMlai~IYoLpRcKIVdtYR703YmklIU3Snnr9sgU0m1kqYvXxr1R0UaBbVqpungur2y9gL0QqA__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 4999823229
+05/29/2024 10:19:50 AM Attempting to release lock 22962021052256 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/6d8fb42e6386dbe3a5d14c171d4669793e27042bd6c13e1df57ee889485566f4.lock
+05/29/2024 10:19:50 AM Lock 22962021052256 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/6d8fb42e6386dbe3a5d14c171d4669793e27042bd6c13e1df57ee889485566f4.lock
+05/29/2024 10:19:50 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/pytorch_model-00008-of-00008.bin HTTP/1.1" 302 0
+05/29/2024 10:19:50 AM Attempting to acquire lock 22962021044816 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/aa22c462e65c38c2a86ead593f90687dc7e6945819d389720e6eb68097403083.lock
+05/29/2024 10:19:50 AM Lock 22962021044816 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/aa22c462e65c38c2a86ead593f90687dc7e6945819d389720e6eb68097403083.lock
+05/29/2024 10:19:50 AM https://cdn-lfs.huggingface.co:443 "GET /repos/d3/43/d34303423d400d251d4043e952ada6bbb3b180de5372f17da77ccb989e6c76fa/aa22c462e65c38c2a86ead593f90687dc7e6945819d389720e6eb68097403083?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model-00008-of-00008.bin%3B+filename%3D%22pytorch_model-00008-of-00008.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1717262390&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzI2MjM5MH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy9kMy80My9kMzQzMDM0MjNkNDAwZDI1MWQ0MDQzZTk1MmFkYTZiYmIzYjE4MGRlNTM3MmYxN2RhNzdjY2I5ODllNmM3NmZhL2FhMjJjNDYyZTY1YzM4YzJhODZlYWQ1OTNmOTA2ODdkYzdlNjk0NTgxOWQzODk3MjBlNmViNjgwOTc0MDMwODM~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=Xhiz0nUEb3dueOa9y7stUVUvexBECMwTVIVaTGtr4uMtyCuxslgLNsTtOQPjghwbTM2bzsskQ0te9EV8b8PYsGmv0vf~O20VT2S3ku6AjzNDD~TzS2R5th4gvaX028aZHwcmlOWvJC705MggnQnUNCKmdBSMAHZ1l7Ue5lLMQZ9gkaSzDbpJaXWwcblr8cskws06Yy3lCuu4MOt~vesNpIPHzPAtsUy-UQUkKlUKEUEFV5qvdyz6JZyW6C2Chs5L0At4PtAlnhbFe7m2Sx6QQ3sB6RM7lq15GjcM4NhcEN3b7euYz6waRnBkDxySovub3ohs6OFhwH4coaIrOWKu5A__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 4927470284
+05/29/2024 10:21:37 AM Attempting to release lock 22962021044816 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/aa22c462e65c38c2a86ead593f90687dc7e6945819d389720e6eb68097403083.lock
+05/29/2024 10:21:37 AM Lock 22962021044816 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--google--flan-ul2/aa22c462e65c38c2a86ead593f90687dc7e6945819d389720e6eb68097403083.lock
+05/29/2024 10:24:22 AM Resetting dropped connection: huggingface.co
+05/29/2024 10:24:22 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/generation_config.json HTTP/1.1" 404 0
+05/29/2024 10:27:10 AM Attempting to acquire lock 22961832773584 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 10:27:10 AM Lock 22961832773584 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 10:27:10 AM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+05/29/2024 10:27:11 AM Attempting to release lock 22961832773584 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 10:27:11 AM Lock 22961832773584 released on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 10:27:11 AM Evaluation complete.
+05/29/2024 10:38:07 AM Dataset fetched.
+05/29/2024 10:38:07 AM Starting evaluation for 1 models.
+05/29/2024 10:38:07 AM Currently evaluating: google/flan-ul2
+05/29/2024 10:38:07 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 10:38:07 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 10:38:07 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+05/29/2024 10:38:07 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 10:38:07 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/config.json HTTP/1.1" 200 0
+05/29/2024 10:38:07 AM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 10:38:07 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/model.safetensors.index.json HTTP/1.1" 404 0
+05/29/2024 10:39:01 AM https://huggingface.co:443 "HEAD /google/flan-ul2/resolve/main/generation_config.json HTTP/1.1" 404 0
+05/29/2024 10:41:50 AM Attempting to acquire lock 22507324761312 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 10:41:50 AM Lock 22507324761312 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 10:41:50 AM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+05/29/2024 10:41:50 AM Attempting to release lock 22507324761312 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 10:41:50 AM Lock 22507324761312 released on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+05/29/2024 10:41:50 AM Evaluation complete.
+05/29/2024 01:11:35 PM Dataset fetched.
+05/29/2024 01:11:35 PM Starting evaluation for 6 models.
+05/29/2024 01:11:35 PM Currently evaluating: meta-llama/Meta-Llama-3-8B-Instruct
+05/29/2024 01:11:35 PM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 01:11:35 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 403 0
+05/29/2024 01:12:54 PM Dataset fetched.
+05/29/2024 01:12:54 PM Starting evaluation for 6 models.
+05/29/2024 01:12:54 PM Currently evaluating: meta-llama/Meta-Llama-3-8B
+05/29/2024 01:12:54 PM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 01:12:54 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/config.json HTTP/1.1" 403 0
+05/29/2024 01:14:57 PM Dataset fetched.
+05/29/2024 01:14:57 PM Starting evaluation for 5 models.
+05/29/2024 01:14:57 PM Currently evaluating: mistralai/Mixtral-8x7B-Instruct-v0.1
+05/29/2024 01:14:57 PM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 01:14:57 PM https://huggingface.co:443 "HEAD /mistralai/Mixtral-8x7B-Instruct-v0.1/resolve/main/config.json HTTP/1.1" 403 0
+05/29/2024 01:15:44 PM Dataset fetched.
+05/29/2024 01:15:44 PM Starting evaluation for 5 models.
+05/29/2024 01:15:44 PM Currently evaluating: mistralai/Mixtral-8x7B-Instruct-v0.1
+05/29/2024 01:15:44 PM Starting new HTTPS connection (1): huggingface.co:443
+05/29/2024 01:15:44 PM https://huggingface.co:443 "HEAD /mistralai/Mixtral-8x7B-Instruct-v0.1/resolve/main/config.json HTTP/1.1" 403 0
+06/03/2024 11:44:11 AM Dataset fetched.
+06/03/2024 11:44:11 AM Starting evaluation for 1 models.
+06/03/2024 11:44:11 AM Currently evaluating: meta-llama/Meta-Llama-3-8B-Instruct
+06/03/2024 11:44:11 AM Starting new HTTPS connection (1): huggingface.co:443
+06/03/2024 11:44:12 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 401 0
+06/03/2024 11:47:05 AM Dataset fetched.
+06/03/2024 11:47:05 AM Starting evaluation for 1 models.
+06/03/2024 11:47:05 AM Currently evaluating: meta-llama/Meta-Llama-3-8B-Instruct
+06/03/2024 11:47:05 AM Starting new HTTPS connection (1): huggingface.co:443
+06/03/2024 11:47:05 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 401 0
+06/03/2024 11:49:23 AM Dataset fetched.
+06/03/2024 11:49:23 AM Starting evaluation for 1 models.
+06/03/2024 11:49:23 AM Currently evaluating: meta-llama/Meta-Llama-3-8B
+06/03/2024 11:49:23 AM Starting new HTTPS connection (1): huggingface.co:443
+06/03/2024 11:49:23 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/config.json HTTP/1.1" 401 0
+06/03/2024 11:51:01 AM Dataset fetched.
+06/03/2024 11:51:01 AM Starting evaluation for 1 models.
+06/03/2024 11:51:01 AM Currently evaluating: meta-llama/Meta-Llama-3-8B
+06/03/2024 11:51:01 AM Starting new HTTPS connection (1): huggingface.co:443
+06/03/2024 11:51:02 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/config.json HTTP/1.1" 401 0
+06/03/2024 11:55:03 AM Dataset fetched.
+06/03/2024 11:55:03 AM Starting evaluation for 1 models.
+06/03/2024 11:55:03 AM Currently evaluating: meta-llama/Meta-Llama-3-8B
+06/03/2024 11:55:03 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/config.json HTTP/1.1" 403 0
+06/03/2024 11:57:04 AM Dataset fetched.
+06/03/2024 11:57:04 AM Starting evaluation for 1 models.
+06/03/2024 11:57:04 AM Currently evaluating: meta-llama/Meta-Llama-3-8B
+06/03/2024 11:57:04 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/config.json HTTP/1.1" 403 0
+06/03/2024 11:57:27 AM Dataset fetched.
+06/03/2024 11:57:27 AM Starting evaluation for 1 models.
+06/03/2024 11:57:27 AM Currently evaluating: meta-llama/Meta-Llama-3-8B-Instruct
+06/03/2024 11:57:27 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 11:57:27 AM Attempting to acquire lock 22597350619856 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/31553d63b8f18df5d6d440860751533ada3759e4.lock
+06/03/2024 11:57:27 AM Lock 22597350619856 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/31553d63b8f18df5d6d440860751533ada3759e4.lock
+06/03/2024 11:57:27 AM https://huggingface.co:443 "GET /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 200 654
+06/03/2024 11:57:27 AM Attempting to release lock 22597350619856 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/31553d63b8f18df5d6d440860751533ada3759e4.lock
+06/03/2024 11:57:27 AM Lock 22597350619856 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/31553d63b8f18df5d6d440860751533ada3759e4.lock
+06/03/2024 11:57:27 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+06/03/2024 11:57:27 AM Attempting to acquire lock 22597060936576 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/1bfd1146b7bde6168de7bb673bfe0acaea6e684c.lock
+06/03/2024 11:57:27 AM Lock 22597060936576 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/1bfd1146b7bde6168de7bb673bfe0acaea6e684c.lock
+06/03/2024 11:57:27 AM https://huggingface.co:443 "GET /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/tokenizer_config.json HTTP/1.1" 200 50977
+06/03/2024 11:57:27 AM Attempting to release lock 22597060936576 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/1bfd1146b7bde6168de7bb673bfe0acaea6e684c.lock
+06/03/2024 11:57:27 AM Lock 22597060936576 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/1bfd1146b7bde6168de7bb673bfe0acaea6e684c.lock
+06/03/2024 11:57:27 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/tokenizer.json HTTP/1.1" 200 0
+06/03/2024 11:57:27 AM Attempting to acquire lock 22597060948960 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/b197f72effb9d5ed16ee0f5663e11e4cfac2ba62.lock
+06/03/2024 11:57:27 AM Lock 22597060948960 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/b197f72effb9d5ed16ee0f5663e11e4cfac2ba62.lock
+06/03/2024 11:57:28 AM https://huggingface.co:443 "GET /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/tokenizer.json HTTP/1.1" 200 9085698
+06/03/2024 11:57:28 AM Attempting to release lock 22597060948960 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/b197f72effb9d5ed16ee0f5663e11e4cfac2ba62.lock
+06/03/2024 11:57:28 AM Lock 22597060948960 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/b197f72effb9d5ed16ee0f5663e11e4cfac2ba62.lock
+06/03/2024 11:57:28 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/added_tokens.json HTTP/1.1" 404 0
+06/03/2024 11:57:28 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+06/03/2024 11:57:28 AM Attempting to acquire lock 22597060950256 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/d8cd5076496dbe4be2320312abc10adc43097b81.lock
+06/03/2024 11:57:28 AM Lock 22597060950256 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/d8cd5076496dbe4be2320312abc10adc43097b81.lock
+06/03/2024 11:57:28 AM https://huggingface.co:443 "GET /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/special_tokens_map.json HTTP/1.1" 200 73
+06/03/2024 11:57:28 AM Attempting to release lock 22597060950256 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/d8cd5076496dbe4be2320312abc10adc43097b81.lock
+06/03/2024 11:57:28 AM Lock 22597060950256 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/d8cd5076496dbe4be2320312abc10adc43097b81.lock
+06/03/2024 11:57:29 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 11:57:30 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/model.safetensors HTTP/1.1" 404 0
+06/03/2024 11:57:30 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/model.safetensors.index.json HTTP/1.1" 200 0
+06/03/2024 11:57:30 AM Attempting to acquire lock 22597066487520 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/0fd8120f1c6acddc268ebc2583058efaf699a771.lock
+06/03/2024 11:57:30 AM Lock 22597066487520 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/0fd8120f1c6acddc268ebc2583058efaf699a771.lock
+06/03/2024 11:57:30 AM https://huggingface.co:443 "GET /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/model.safetensors.index.json HTTP/1.1" 200 23950
+06/03/2024 11:57:30 AM Attempting to release lock 22597066487520 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/0fd8120f1c6acddc268ebc2583058efaf699a771.lock
+06/03/2024 11:57:30 AM Lock 22597066487520 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/0fd8120f1c6acddc268ebc2583058efaf699a771.lock
+06/03/2024 11:57:30 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/model-00001-of-00004.safetensors HTTP/1.1" 302 0
+06/03/2024 11:57:30 AM Attempting to acquire lock 22597060382208 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/d8cf9c4d0dd972e1a2131bfe656235ee98221679711a3beef6d46dadf0f20b5c.lock
+06/03/2024 11:57:30 AM Lock 22597060382208 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/d8cf9c4d0dd972e1a2131bfe656235ee98221679711a3beef6d46dadf0f20b5c.lock
+06/03/2024 11:57:30 AM Starting new HTTPS connection (1): cdn-lfs-us-1.huggingface.co:443
+06/03/2024 11:57:30 AM https://cdn-lfs-us-1.huggingface.co:443 "GET /repos/55/ac/55acddbb5c2ac2041b89a858eeba82e6130c6160294d75fe51bfa8bd7a4e4518/d8cf9c4d0dd972e1a2131bfe656235ee98221679711a3beef6d46dadf0f20b5c?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model-00001-of-00004.safetensors%3B+filename%3D%22model-00001-of-00004.safetensors%22%3B&Expires=1717687665&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzY4NzY2NX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmh1Z2dpbmdmYWNlLmNvL3JlcG9zLzU1L2FjLzU1YWNkZGJiNWMyYWMyMDQxYjg5YTg1OGVlYmE4MmU2MTMwYzYxNjAyOTRkNzVmZTUxYmZhOGJkN2E0ZTQ1MTgvZDhjZjljNGQwZGQ5NzJlMWEyMTMxYmZlNjU2MjM1ZWU5ODIyMTY3OTcxMWEzYmVlZjZkNDZkYWRmMGYyMGI1Yz9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=XtWBysZ4G0XRen~32FCfJPNC2MjKMqgocUDWWQcrO~1s9y5HFwdnEC84s824tlo~HSqZTdfTs5Ho3~gzBX-ppX7xOR5k1ZfErO4IO1s3Fc3qcPItU~6KuZG3nsvY23G~ZoOGgm~oLiVeRxJXcp1MIDgY5ofjB0fLapRr3db73Cju5kVpK2AGvGylFu5fSfvxUAoAE5us6sjwn6yA6E0GNbdCP-oqVlDhnM2Ro9hoLsRLgFnDn08emAzWxpIIPCqowykvXHO7fvnujICqvBCbFp4OUkbv8Gv8RIwryMfRl3mfy2At3HGOJ8lTZI0EXS4wQLSMWkCUb83Z84xHusX~oQ__&Key-Pair-Id=KCD77M1F0VK2B HTTP/1.1" 200 4976698672
+06/03/2024 11:58:14 AM Attempting to release lock 22597060382208 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/d8cf9c4d0dd972e1a2131bfe656235ee98221679711a3beef6d46dadf0f20b5c.lock
+06/03/2024 11:58:14 AM Lock 22597060382208 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/d8cf9c4d0dd972e1a2131bfe656235ee98221679711a3beef6d46dadf0f20b5c.lock
+06/03/2024 11:58:14 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/model-00002-of-00004.safetensors HTTP/1.1" 302 0
+06/03/2024 11:58:14 AM Attempting to acquire lock 22597060382208 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/8d4782b4a69ef03845159ce1a15e272aadaaf134dc138d68f616098e8531729c.lock
+06/03/2024 11:58:14 AM Lock 22597060382208 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/8d4782b4a69ef03845159ce1a15e272aadaaf134dc138d68f616098e8531729c.lock
+06/03/2024 11:58:14 AM https://cdn-lfs-us-1.huggingface.co:443 "GET /repos/55/ac/55acddbb5c2ac2041b89a858eeba82e6130c6160294d75fe51bfa8bd7a4e4518/8d4782b4a69ef03845159ce1a15e272aadaaf134dc138d68f616098e8531729c?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model-00002-of-00004.safetensors%3B+filename%3D%22model-00002-of-00004.safetensors%22%3B&Expires=1717687407&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzY4NzQwN319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmh1Z2dpbmdmYWNlLmNvL3JlcG9zLzU1L2FjLzU1YWNkZGJiNWMyYWMyMDQxYjg5YTg1OGVlYmE4MmU2MTMwYzYxNjAyOTRkNzVmZTUxYmZhOGJkN2E0ZTQ1MTgvOGQ0NzgyYjRhNjllZjAzODQ1MTU5Y2UxYTE1ZTI3MmFhZGFhZjEzNGRjMTM4ZDY4ZjYxNjA5OGU4NTMxNzI5Yz9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=X0N-0fjsvA21-6nHFFdv8ce9pqPBupvvLEZloM92EibTyO~sNIzOxSJ2AgB2ADCv7wFOm7oR9D~bNhIwmQiWEF8qMnpjX4Y9-E77dv6lElNe8cUCzTpIo7b1QkoQ2hAXYhYF3uSh2EJFpOfiSOR99YyAVxkvVZgpzuE93JFS0jVsGjZg1fBo3SV-fSQZTbMySZZNBY3NPcEG-YynSqCZ4wCRyD~CSmkszBDAK8gWhXJP59mar5HhAwScDDYOx4Z1SoepKY4r-IVtE~BFoPNq2LbBXEv9wGZJIIEFsCY7-M~sgxedap2iG-r8b5KirU~7tkn7SxHoSt~~TE6cJ49j~A__&Key-Pair-Id=KCD77M1F0VK2B HTTP/1.1" 200 4999802720
+06/03/2024 11:58:31 AM Attempting to release lock 22597060382208 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/8d4782b4a69ef03845159ce1a15e272aadaaf134dc138d68f616098e8531729c.lock
+06/03/2024 11:58:31 AM Lock 22597060382208 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/8d4782b4a69ef03845159ce1a15e272aadaaf134dc138d68f616098e8531729c.lock
+06/03/2024 11:58:31 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/model-00003-of-00004.safetensors HTTP/1.1" 302 0
+06/03/2024 11:58:31 AM Attempting to acquire lock 22597060382208 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/3acdd690e65c24f42a24581b8467af98bd3ca357444580f8012aacd2bd607921.lock
+06/03/2024 11:58:31 AM Lock 22597060382208 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/3acdd690e65c24f42a24581b8467af98bd3ca357444580f8012aacd2bd607921.lock
+06/03/2024 11:58:31 AM https://cdn-lfs-us-1.huggingface.co:443 "GET /repos/55/ac/55acddbb5c2ac2041b89a858eeba82e6130c6160294d75fe51bfa8bd7a4e4518/3acdd690e65c24f42a24581b8467af98bd3ca357444580f8012aacd2bd607921?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model-00003-of-00004.safetensors%3B+filename%3D%22model-00003-of-00004.safetensors%22%3B&Expires=1717689511&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzY4OTUxMX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmh1Z2dpbmdmYWNlLmNvL3JlcG9zLzU1L2FjLzU1YWNkZGJiNWMyYWMyMDQxYjg5YTg1OGVlYmE4MmU2MTMwYzYxNjAyOTRkNzVmZTUxYmZhOGJkN2E0ZTQ1MTgvM2FjZGQ2OTBlNjVjMjRmNDJhMjQ1ODFiODQ2N2FmOThiZDNjYTM1NzQ0NDU4MGY4MDEyYWFjZDJiZDYwNzkyMT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=giBA0xDzY2no~UWNFtHBFqKJ5aTNQ~otJV3UupREcnFY0oOxffoOyCvF-OuWbbMiTVMeU3-8fEHA5Wsjw5U50KKxCjrBw-q7oNld3xFytLeCxn9Lj-FzjlyTEqfmacBvXz2OQsinW~Uh-AWh-A9xTiRvMFeI~q~Y3uqiDpeklm6VsyizNHm6f2vsMxlOi1PCdaAnDZwVQjcdd-jMClnqGp7w5e2Wfh2z-u7MsEb0l6OVOxc9KyzWnYpxsP5u3aV-W0mYpHiAlxIH5tEdXjF4vb7hCK0vCD6LdU-dKLpLVHc2vD9JuQdAD5MLnevHWd~roGZb3oaVw8mFJMZiaxRu0Q__&Key-Pair-Id=KCD77M1F0VK2B HTTP/1.1" 200 4915916176
+06/03/2024 11:58:50 AM Attempting to release lock 22597060382208 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/3acdd690e65c24f42a24581b8467af98bd3ca357444580f8012aacd2bd607921.lock
+06/03/2024 11:58:50 AM Lock 22597060382208 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/3acdd690e65c24f42a24581b8467af98bd3ca357444580f8012aacd2bd607921.lock
+06/03/2024 11:58:50 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/model-00004-of-00004.safetensors HTTP/1.1" 302 0
+06/03/2024 11:58:50 AM Attempting to acquire lock 22597061234896 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/67e9ad31c8c32abf3a55ee7fc7217b3ecb35fd3c74d98a5bd233e0e4d6964f46.lock
+06/03/2024 11:58:50 AM Lock 22597061234896 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/67e9ad31c8c32abf3a55ee7fc7217b3ecb35fd3c74d98a5bd233e0e4d6964f46.lock
+06/03/2024 11:58:50 AM https://cdn-lfs-us-1.huggingface.co:443 "GET /repos/55/ac/55acddbb5c2ac2041b89a858eeba82e6130c6160294d75fe51bfa8bd7a4e4518/67e9ad31c8c32abf3a55ee7fc7217b3ecb35fd3c74d98a5bd233e0e4d6964f46?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model-00004-of-00004.safetensors%3B+filename%3D%22model-00004-of-00004.safetensors%22%3B&Expires=1717687996&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzY4Nzk5Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmh1Z2dpbmdmYWNlLmNvL3JlcG9zLzU1L2FjLzU1YWNkZGJiNWMyYWMyMDQxYjg5YTg1OGVlYmE4MmU2MTMwYzYxNjAyOTRkNzVmZTUxYmZhOGJkN2E0ZTQ1MTgvNjdlOWFkMzFjOGMzMmFiZjNhNTVlZTdmYzcyMTdiM2VjYjM1ZmQzYzc0ZDk4YTViZDIzM2UwZTRkNjk2NGY0Nj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=TibFPZF6NVkXKWZBD0iBOK7HELFisz6X87H-UShNPJBytqzKW-SmMIZ0owQzjmuIOexdMK3ckm3jthgOQDNDRmHiQkLv8IdQoMol2SS7efTdg4qrX-qL7Avb4WomMJwTrg--te7JtKstcelwNNVKhxOupSomYuD0aDkYoYlIT08k94pBwbuOYQ5FJFNHCIrUXa7x5f0WR9HWH~SVMe~73KEUTWIYd88wuzEDAuurdOU1l9BO2hlYqK4rDp8djtna5XW65wIyOo3CU46cyOMtyBC8aHRMaS4ui8EYzuhu5yAHT0VDLnKsY97cSOaSxs~Nnchub5ZuFqzJ9uhD6W4j7A__&Key-Pair-Id=KCD77M1F0VK2B HTTP/1.1" 200 1168138808
+06/03/2024 11:58:55 AM Attempting to release lock 22597061234896 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/67e9ad31c8c32abf3a55ee7fc7217b3ecb35fd3c74d98a5bd233e0e4d6964f46.lock
+06/03/2024 11:58:55 AM Lock 22597061234896 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/67e9ad31c8c32abf3a55ee7fc7217b3ecb35fd3c74d98a5bd233e0e4d6964f46.lock
+06/03/2024 11:59:28 AM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 11:59:28 AM Attempting to acquire lock 22597075944560 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/8675015d20a4b12ee2ee0197a0937beba318122a.lock
+06/03/2024 11:59:28 AM Lock 22597075944560 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/8675015d20a4b12ee2ee0197a0937beba318122a.lock
+06/03/2024 11:59:28 AM https://huggingface.co:443 "GET /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/generation_config.json HTTP/1.1" 200 187
+06/03/2024 11:59:28 AM Attempting to release lock 22597075944560 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/8675015d20a4b12ee2ee0197a0937beba318122a.lock
+06/03/2024 11:59:28 AM Lock 22597075944560 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B-Instruct/8675015d20a4b12ee2ee0197a0937beba318122a.lock
+06/03/2024 12:04:40 PM Attempting to acquire lock 22596943566832 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 12:04:40 PM Lock 22596943566832 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 12:04:40 PM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+06/03/2024 12:06:32 PM Dataset fetched.
+06/03/2024 12:06:32 PM Starting evaluation for 8 models.
+06/03/2024 12:06:32 PM Currently evaluating: google/flan-t5-xl
+06/03/2024 12:06:32 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:06:32 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+06/03/2024 12:06:33 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:06:33 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:08:18 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:09:48 PM Attempting to acquire lock 23371619000176 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 12:09:48 PM Lock 23371619000176 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 12:09:48 PM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+06/03/2024 12:09:49 PM Attempting to release lock 23371619000176 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 12:09:49 PM Lock 23371619000176 released on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 12:09:49 PM Currently evaluating: google/flan-t5-xxl
+06/03/2024 12:09:49 PM https://huggingface.co:443 "HEAD /google/flan-t5-xxl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:09:49 PM https://huggingface.co:443 "HEAD /google/flan-t5-xxl/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+06/03/2024 12:09:49 PM https://huggingface.co:443 "HEAD /google/flan-t5-xxl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:09:49 PM https://huggingface.co:443 "HEAD /google/flan-t5-xxl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:10:18 PM Dataset fetched.
+06/03/2024 12:10:18 PM Starting evaluation for 1 models.
+06/03/2024 12:10:18 PM Currently evaluating: meta-llama/Meta-Llama-3-8B-Instruct
+06/03/2024 12:10:18 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:10:19 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+06/03/2024 12:10:19 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:10:46 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:12:46 PM Dataset fetched.
+06/03/2024 12:12:46 PM Starting evaluation for 1 models.
+06/03/2024 12:12:46 PM Currently evaluating: meta-llama/Meta-Llama-3-8B
+06/03/2024 12:12:46 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/config.json HTTP/1.1" 403 0
+06/03/2024 12:13:23 PM Dataset fetched.
+06/03/2024 12:13:23 PM Starting evaluation for 1 models.
+06/03/2024 12:13:23 PM Currently evaluating: meta-llama/Meta-Llama-3-8B
+06/03/2024 12:13:23 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:13:23 PM Attempting to acquire lock 22373022038592 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/7784fbf6342de338b736f884a49b08f270c5e9c8.lock
+06/03/2024 12:13:24 PM Lock 22373022038592 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/7784fbf6342de338b736f884a49b08f270c5e9c8.lock
+06/03/2024 12:13:24 PM https://huggingface.co:443 "GET /meta-llama/Meta-Llama-3-8B/resolve/main/config.json HTTP/1.1" 200 654
+06/03/2024 12:13:24 PM Attempting to release lock 22373022038592 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/7784fbf6342de338b736f884a49b08f270c5e9c8.lock
+06/03/2024 12:13:24 PM Lock 22373022038592 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/7784fbf6342de338b736f884a49b08f270c5e9c8.lock
+06/03/2024 12:14:18 PM Dataset fetched.
+06/03/2024 12:14:18 PM Starting evaluation for 1 models.
+06/03/2024 12:14:18 PM Currently evaluating: meta-llama/Meta-Llama-3-8B
+06/03/2024 12:14:18 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:14:18 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+06/03/2024 12:14:18 PM Attempting to acquire lock 23314286142880 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/72193e9eb5cb6126087980deffb4930ec27a72a9.lock
+06/03/2024 12:14:18 PM Lock 23314286142880 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/72193e9eb5cb6126087980deffb4930ec27a72a9.lock
+06/03/2024 12:14:18 PM https://huggingface.co:443 "GET /meta-llama/Meta-Llama-3-8B/resolve/main/tokenizer_config.json HTTP/1.1" 200 50566
+06/03/2024 12:14:18 PM Attempting to release lock 23314286142880 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/72193e9eb5cb6126087980deffb4930ec27a72a9.lock
+06/03/2024 12:14:18 PM Lock 23314286142880 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/72193e9eb5cb6126087980deffb4930ec27a72a9.lock
+06/03/2024 12:14:18 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/tokenizer.json HTTP/1.1" 200 0
+06/03/2024 12:14:18 PM Attempting to acquire lock 23314285579872 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/b197f72effb9d5ed16ee0f5663e11e4cfac2ba62.lock
+06/03/2024 12:14:19 PM Lock 23314285579872 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/b197f72effb9d5ed16ee0f5663e11e4cfac2ba62.lock
+06/03/2024 12:14:19 PM https://huggingface.co:443 "GET /meta-llama/Meta-Llama-3-8B/resolve/main/tokenizer.json HTTP/1.1" 200 9085698
+06/03/2024 12:14:19 PM Attempting to release lock 23314285579872 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/b197f72effb9d5ed16ee0f5663e11e4cfac2ba62.lock
+06/03/2024 12:14:19 PM Lock 23314285579872 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/b197f72effb9d5ed16ee0f5663e11e4cfac2ba62.lock
+06/03/2024 12:14:19 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/added_tokens.json HTTP/1.1" 404 0
+06/03/2024 12:14:19 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+06/03/2024 12:14:19 PM Attempting to acquire lock 23314285420448 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/d8cd5076496dbe4be2320312abc10adc43097b81.lock
+06/03/2024 12:14:19 PM Lock 23314285420448 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/d8cd5076496dbe4be2320312abc10adc43097b81.lock
+06/03/2024 12:14:19 PM https://huggingface.co:443 "GET /meta-llama/Meta-Llama-3-8B/resolve/main/special_tokens_map.json HTTP/1.1" 200 73
+06/03/2024 12:14:19 PM Attempting to release lock 23314285420448 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/d8cd5076496dbe4be2320312abc10adc43097b81.lock
+06/03/2024 12:14:19 PM Lock 23314285420448 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/d8cd5076496dbe4be2320312abc10adc43097b81.lock
+06/03/2024 12:14:20 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:14:20 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/model.safetensors HTTP/1.1" 404 0
+06/03/2024 12:14:20 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/model.safetensors.index.json HTTP/1.1" 200 0
+06/03/2024 12:14:20 PM Attempting to acquire lock 23314381699648 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/0fd8120f1c6acddc268ebc2583058efaf699a771.lock
+06/03/2024 12:14:20 PM Lock 23314381699648 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/0fd8120f1c6acddc268ebc2583058efaf699a771.lock
+06/03/2024 12:14:20 PM https://huggingface.co:443 "GET /meta-llama/Meta-Llama-3-8B/resolve/main/model.safetensors.index.json HTTP/1.1" 200 23950
+06/03/2024 12:14:20 PM Attempting to release lock 23314381699648 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/0fd8120f1c6acddc268ebc2583058efaf699a771.lock
+06/03/2024 12:14:20 PM Lock 23314381699648 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/0fd8120f1c6acddc268ebc2583058efaf699a771.lock
+06/03/2024 12:14:20 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/model-00001-of-00004.safetensors HTTP/1.1" 302 0
+06/03/2024 12:14:20 PM Attempting to acquire lock 23314173285424 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/f2c144103072514542e327fa8080bd375cb300f2d453fba9ca3aea81d0d4cf33.lock
+06/03/2024 12:14:20 PM Lock 23314173285424 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/f2c144103072514542e327fa8080bd375cb300f2d453fba9ca3aea81d0d4cf33.lock
+06/03/2024 12:14:20 PM Starting new HTTPS connection (1): cdn-lfs-us-1.huggingface.co:443
+06/03/2024 12:14:20 PM https://cdn-lfs-us-1.huggingface.co:443 "GET /repos/ba/83/ba837357c37c4c572f89ebcdffc2867477dbb4768779d332eb303f848c60d0de/f2c144103072514542e327fa8080bd375cb300f2d453fba9ca3aea81d0d4cf33?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model-00001-of-00004.safetensors%3B+filename%3D%22model-00001-of-00004.safetensors%22%3B&Expires=1717690460&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzY5MDQ2MH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmh1Z2dpbmdmYWNlLmNvL3JlcG9zL2JhLzgzL2JhODM3MzU3YzM3YzRjNTcyZjg5ZWJjZGZmYzI4Njc0NzdkYmI0NzY4Nzc5ZDMzMmViMzAzZjg0OGM2MGQwZGUvZjJjMTQ0MTAzMDcyNTE0NTQyZTMyN2ZhODA4MGJkMzc1Y2IzMDBmMmQ0NTNmYmE5Y2EzYWVhODFkMGQ0Y2YzMz9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=PfAGnyohWutsJzp3h9bZ~s8aE9qbr9CofxMFXajsmgy83vhpVrLpz44jmGECIwUxlCcPWaM1WTNcdjfpzg5rSdps7kDNUI-pNPCKLZybW5iN1-CzpBRnl7C-rDGHa0duUXqg72s4BWOtrjAP6lAu7k5~CYbzyN0V2vBvaTs5qm2s8n0JCdy2FsawJP4sm2xbaxyBee8Y3J-iLIwBCPHvVhcTQUVASxGLNTPf5MxNpzcPmLxtxriLwVedn2c-x2kHaTNMpiN4XxU1sX~irGUL0FRc81R7F7ZnKJxMin9159YdwCVta1iy6U~uTT4kJ9QLSGyheYYLGl3mX6rfN-wHcg__&Key-Pair-Id=KCD77M1F0VK2B HTTP/1.1" 200 4976698672
+06/03/2024 12:14:45 PM Attempting to release lock 23314173285424 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/f2c144103072514542e327fa8080bd375cb300f2d453fba9ca3aea81d0d4cf33.lock
+06/03/2024 12:14:45 PM Lock 23314173285424 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/f2c144103072514542e327fa8080bd375cb300f2d453fba9ca3aea81d0d4cf33.lock
+06/03/2024 12:14:45 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/model-00002-of-00004.safetensors HTTP/1.1" 302 0
+06/03/2024 12:14:45 PM Attempting to acquire lock 23314173450320 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/d9eee5f23d94405d90b7e9ff88b9443fee42f8528a658f54214c2aba7530d80c.lock
+06/03/2024 12:14:45 PM Lock 23314173450320 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/d9eee5f23d94405d90b7e9ff88b9443fee42f8528a658f54214c2aba7530d80c.lock
+06/03/2024 12:14:46 PM https://cdn-lfs-us-1.huggingface.co:443 "GET /repos/ba/83/ba837357c37c4c572f89ebcdffc2867477dbb4768779d332eb303f848c60d0de/d9eee5f23d94405d90b7e9ff88b9443fee42f8528a658f54214c2aba7530d80c?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model-00002-of-00004.safetensors%3B+filename%3D%22model-00002-of-00004.safetensors%22%3B&Expires=1717690485&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzY5MDQ4NX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmh1Z2dpbmdmYWNlLmNvL3JlcG9zL2JhLzgzL2JhODM3MzU3YzM3YzRjNTcyZjg5ZWJjZGZmYzI4Njc0NzdkYmI0NzY4Nzc5ZDMzMmViMzAzZjg0OGM2MGQwZGUvZDllZWU1ZjIzZDk0NDA1ZDkwYjdlOWZmODhiOTQ0M2ZlZTQyZjg1MjhhNjU4ZjU0MjE0YzJhYmE3NTMwZDgwYz9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=jS1k9bVmh-3gKPmIFwxAdttibpOgJqONNKPJrFj8KvJZA9QCCu1wozpkZ~jCm3BrO8gpCDYPYzrgn-7-pu0CB9PjdO1UqI1g~PGfMlzbnXi6E-6MSyOdE4BAFgrPpgn3OX-Lm6uaYVlQ~-Sl-EAcoQFC2ZtXmOjbXH6OJj0AZCAZXPxpI7J0TXrxUTkwknGhlmzqPrKckB3A8bhpg-RHeAM~mv4Smyo3LiqDycHa4~~~35fvl2w4KpxRzX6hJZczfqLSzxt7o9hUxRowWGkn76v0UKifvrZFuozP0Gm6AsbVo0ioEGfRf3Ll5LtIF66MgAHWx2yKbeas8LRGgR7bWQ__&Key-Pair-Id=KCD77M1F0VK2B HTTP/1.1" 200 4999802720
+06/03/2024 12:15:09 PM Attempting to release lock 23314173450320 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/d9eee5f23d94405d90b7e9ff88b9443fee42f8528a658f54214c2aba7530d80c.lock
+06/03/2024 12:15:09 PM Lock 23314173450320 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/d9eee5f23d94405d90b7e9ff88b9443fee42f8528a658f54214c2aba7530d80c.lock
+06/03/2024 12:15:10 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/model-00003-of-00004.safetensors HTTP/1.1" 302 0
+06/03/2024 12:15:10 PM Attempting to acquire lock 23314390172160 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/4b8fbc5e113f69768dd8de84661ea20af8a32b734a9976144b4236c447b40ccc.lock
+06/03/2024 12:15:10 PM Lock 23314390172160 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/4b8fbc5e113f69768dd8de84661ea20af8a32b734a9976144b4236c447b40ccc.lock
+06/03/2024 12:15:10 PM https://cdn-lfs-us-1.huggingface.co:443 "GET /repos/ba/83/ba837357c37c4c572f89ebcdffc2867477dbb4768779d332eb303f848c60d0de/4b8fbc5e113f69768dd8de84661ea20af8a32b734a9976144b4236c447b40ccc?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model-00003-of-00004.safetensors%3B+filename%3D%22model-00003-of-00004.safetensors%22%3B&Expires=1717690509&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzY5MDUwOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmh1Z2dpbmdmYWNlLmNvL3JlcG9zL2JhLzgzL2JhODM3MzU3YzM3YzRjNTcyZjg5ZWJjZGZmYzI4Njc0NzdkYmI0NzY4Nzc5ZDMzMmViMzAzZjg0OGM2MGQwZGUvNGI4ZmJjNWUxMTNmNjk3NjhkZDhkZTg0NjYxZWEyMGFmOGEzMmI3MzRhOTk3NjE0NGI0MjM2YzQ0N2I0MGNjYz9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=e-1AuRYtOXpAsLNXZdpUfEO38LDD-JxNYO8OqSTnkPjC~KTvH1FhDdPC9frietBw-qRSBTmv5YAzyuuYY7-ffZbl7M249Fm-i2XnQCt1CSpuA7M-TSYoID4SqNEKS2QKX4Qf3k9A25XzWBxxTSyj3F9BVMo-PAo6E5Cz4Qnw4ELpaBaE2aAOrobki9-~BzzllOraqdvFEs6yp6IY8bQp-eqbVijKq5z9G9pv6oFigq9Cs9qeF1D2MW6n-toeWG3YH3Gi8eJZqbKd4gNc2b-2y8Q5HIXaVkOnbbZ3DWQE2RagO33SlUW-QHjW2edQ4ICFcHzjeQQiRxjRSQV8MPdj-A__&Key-Pair-Id=KCD77M1F0VK2B HTTP/1.1" 200 4915916176
+06/03/2024 12:15:41 PM Attempting to release lock 23314390172160 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/4b8fbc5e113f69768dd8de84661ea20af8a32b734a9976144b4236c447b40ccc.lock
+06/03/2024 12:15:41 PM Lock 23314390172160 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/4b8fbc5e113f69768dd8de84661ea20af8a32b734a9976144b4236c447b40ccc.lock
+06/03/2024 12:15:41 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/model-00004-of-00004.safetensors HTTP/1.1" 302 0
+06/03/2024 12:15:41 PM Attempting to acquire lock 23314390172160 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/5dc34e6bdf2da9e35f0d93b5c333c870f3677dc43dc3a91ea3a8ad28a1fe1acb.lock
+06/03/2024 12:15:41 PM Lock 23314390172160 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/5dc34e6bdf2da9e35f0d93b5c333c870f3677dc43dc3a91ea3a8ad28a1fe1acb.lock
+06/03/2024 12:15:41 PM https://cdn-lfs-us-1.huggingface.co:443 "GET /repos/ba/83/ba837357c37c4c572f89ebcdffc2867477dbb4768779d332eb303f848c60d0de/5dc34e6bdf2da9e35f0d93b5c333c870f3677dc43dc3a91ea3a8ad28a1fe1acb?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model-00004-of-00004.safetensors%3B+filename%3D%22model-00004-of-00004.safetensors%22%3B&Expires=1717688955&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzY4ODk1NX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmh1Z2dpbmdmYWNlLmNvL3JlcG9zL2JhLzgzL2JhODM3MzU3YzM3YzRjNTcyZjg5ZWJjZGZmYzI4Njc0NzdkYmI0NzY4Nzc5ZDMzMmViMzAzZjg0OGM2MGQwZGUvNWRjMzRlNmJkZjJkYTllMzVmMGQ5M2I1YzMzM2M4NzBmMzY3N2RjNDNkYzNhOTFlYTNhOGFkMjhhMWZlMWFjYj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=KSoRWm17eiDkgzgI7tLxyVzVv64XoBd1-De8GHxKeoA6KcpJQICFbE3YH5MkwaKh7f02-AM13XvHkNVEjz-uUMI-PPZy2-0Pei~W~dgryntO4L~NN-tX4m-ff4zHr3G407O8~RhBEJFPAL~v~TBSzXmiKkXIzk4jy8PVWdC1eIIs05So902a7cJLq6-WyhqEFxEA92EovLPGG38qN1w~CepV6XSmWpqxXmXMz65zVh9YrW2aj7KUOILZwQ5RBAFlen0Yr9ppKcusJS-DGycetzTv-r~4TzcJkJY8jqoVDBPKHNF4qTzCV~78S4fysDds78ZTd6y0xL~6IiBKT2TsPg__&Key-Pair-Id=KCD77M1F0VK2B HTTP/1.1" 200 1168138808
+06/03/2024 12:15:47 PM Attempting to release lock 23314390172160 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/5dc34e6bdf2da9e35f0d93b5c333c870f3677dc43dc3a91ea3a8ad28a1fe1acb.lock
+06/03/2024 12:15:47 PM Lock 23314390172160 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/5dc34e6bdf2da9e35f0d93b5c333c870f3677dc43dc3a91ea3a8ad28a1fe1acb.lock
+06/03/2024 12:16:19 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:16:19 PM Attempting to acquire lock 23317719157360 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/22550a806e8cfce3b346a520348e14b765287805.lock
+06/03/2024 12:16:19 PM Lock 23317719157360 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/22550a806e8cfce3b346a520348e14b765287805.lock
+06/03/2024 12:16:19 PM https://huggingface.co:443 "GET /meta-llama/Meta-Llama-3-8B/resolve/main/generation_config.json HTTP/1.1" 200 177
+06/03/2024 12:16:19 PM Attempting to release lock 23317719157360 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/22550a806e8cfce3b346a520348e14b765287805.lock
+06/03/2024 12:16:19 PM Lock 23317719157360 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--meta-llama--Meta-Llama-3-8B/22550a806e8cfce3b346a520348e14b765287805.lock
+06/03/2024 12:19:09 PM Dataset fetched.
+06/03/2024 12:19:09 PM Starting evaluation for 1 models.
+06/03/2024 12:19:09 PM Currently evaluating: mistralai/Mistral-7B-Instruct-v0.3
+06/03/2024 12:19:09 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 403 0
+06/03/2024 12:19:44 PM Dataset fetched.
+06/03/2024 12:19:44 PM Starting evaluation for 1 models.
+06/03/2024 12:19:44 PM Currently evaluating: mistralai/Mistral-7B-Instruct-v0.3
+06/03/2024 12:19:45 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:19:45 PM Attempting to acquire lock 22636627720624 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/9f913dc05d66cfb23c16e3c93b3cc4899813dfa6.lock
+06/03/2024 12:19:45 PM Lock 22636627720624 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/9f913dc05d66cfb23c16e3c93b3cc4899813dfa6.lock
+06/03/2024 12:19:45 PM https://huggingface.co:443 "GET /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 601
+06/03/2024 12:19:45 PM Attempting to release lock 22636627720624 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/9f913dc05d66cfb23c16e3c93b3cc4899813dfa6.lock
+06/03/2024 12:19:45 PM Lock 22636627720624 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/9f913dc05d66cfb23c16e3c93b3cc4899813dfa6.lock
+06/03/2024 12:19:45 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+06/03/2024 12:19:45 PM Attempting to acquire lock 22636337996448 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/34f96d27f58b67c9f0391fd9f393a852b72f1e8c.lock
+06/03/2024 12:19:45 PM Lock 22636337996448 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/34f96d27f58b67c9f0391fd9f393a852b72f1e8c.lock
+06/03/2024 12:19:45 PM https://huggingface.co:443 "GET /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/tokenizer_config.json HTTP/1.1" 200 137190
+06/03/2024 12:19:45 PM Attempting to release lock 22636337996448 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/34f96d27f58b67c9f0391fd9f393a852b72f1e8c.lock
+06/03/2024 12:19:45 PM Lock 22636337996448 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/34f96d27f58b67c9f0391fd9f393a852b72f1e8c.lock
+06/03/2024 12:19:45 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/tokenizer.model HTTP/1.1" 302 0
+06/03/2024 12:19:45 PM Attempting to acquire lock 22636442404048 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89.lock
+06/03/2024 12:19:45 PM Lock 22636442404048 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89.lock
+06/03/2024 12:19:45 PM Starting new HTTPS connection (1): cdn-lfs-us-1.huggingface.co:443
+06/03/2024 12:19:45 PM https://cdn-lfs-us-1.huggingface.co:443 "GET /repos/15/9d/159dd586229b89e8982a625075ea44e6ca7d4b0f0d41668017b16e470c63ca4b/37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27tokenizer.model%3B+filename%3D%22tokenizer.model%22%3B&Expires=1717690785&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzY5MDc4NX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmh1Z2dpbmdmYWNlLmNvL3JlcG9zLzE1LzlkLzE1OWRkNTg2MjI5Yjg5ZTg5ODJhNjI1MDc1ZWE0NGU2Y2E3ZDRiMGYwZDQxNjY4MDE3YjE2ZTQ3MGM2M2NhNGIvMzdmMDAzNzRkZWE0ODY1OGVlOGY1ZDBmMjE4OTViOWJjNTVjYjAxMDM5Mzk2MDdjODE4NWJmZDFjNmNhMWY4OT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=SCS-6xqMpxX8Am3IQFyhdvrqMAcQESQtkwfsTDqjcd8sYs8jAYqxUbvyAODzwO4dgEYuUu-IMH93pffvUKNRiFbrhWhTzvWZJmmIISxjagqTg3iBxqd8--~aZN7FXIO9Bz0p20Fda0e6cTv7mw~jZjgWPAabuLO01kjw~Y7gQy42R2hDTcMGTDbThEpTkI5nHd~uywHAkIZNuNn03v~BlFMdjvvzWvxrBBLqGXV3T44Y7B0u-lyaFjr~jlXSTqao0Z3oovY3TySFj4tGnN6VHm-~eWiM7vjbi0dAvlMHfEQGYlw53NpdYbYylb6PiLNhhHnCcClClYB3nv0R6uxtnw__&Key-Pair-Id=KCD77M1F0VK2B HTTP/1.1" 200 587404
+06/03/2024 12:19:45 PM Attempting to release lock 22636442404048 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89.lock
+06/03/2024 12:19:45 PM Lock 22636442404048 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89.lock
+06/03/2024 12:19:45 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/tokenizer.json HTTP/1.1" 200 0
+06/03/2024 12:19:45 PM Attempting to acquire lock 22636339158464 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/8d7d23136b474a3df1182ed829db19984e295ee7.lock
+06/03/2024 12:19:45 PM Lock 22636339158464 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/8d7d23136b474a3df1182ed829db19984e295ee7.lock
+06/03/2024 12:19:45 PM https://huggingface.co:443 "GET /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/tokenizer.json HTTP/1.1" 200 1961548
+06/03/2024 12:19:45 PM Attempting to release lock 22636339158464 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/8d7d23136b474a3df1182ed829db19984e295ee7.lock
+06/03/2024 12:19:45 PM Lock 22636339158464 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/8d7d23136b474a3df1182ed829db19984e295ee7.lock
+06/03/2024 12:19:45 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/added_tokens.json HTTP/1.1" 404 0
+06/03/2024 12:19:46 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+06/03/2024 12:19:46 PM Attempting to acquire lock 22636339158464 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/451134b2ddc2e78555d1e857518c54b4bdc2e87d.lock
+06/03/2024 12:19:46 PM Lock 22636339158464 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/451134b2ddc2e78555d1e857518c54b4bdc2e87d.lock
+06/03/2024 12:19:46 PM https://huggingface.co:443 "GET /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/special_tokens_map.json HTTP/1.1" 200 414
+06/03/2024 12:19:46 PM Attempting to release lock 22636339158464 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/451134b2ddc2e78555d1e857518c54b4bdc2e87d.lock
+06/03/2024 12:19:46 PM Lock 22636339158464 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/451134b2ddc2e78555d1e857518c54b4bdc2e87d.lock
+06/03/2024 12:19:47 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:19:47 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/model.safetensors HTTP/1.1" 404 0
+06/03/2024 12:19:47 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/model.safetensors.index.json HTTP/1.1" 200 0
+06/03/2024 12:19:47 PM Attempting to acquire lock 22636223557616 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/050e5515d49376fc01e4837d031902c63af98111.lock
+06/03/2024 12:19:47 PM Lock 22636223557616 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/050e5515d49376fc01e4837d031902c63af98111.lock
+06/03/2024 12:19:47 PM https://huggingface.co:443 "GET /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/model.safetensors.index.json HTTP/1.1" 200 23950
+06/03/2024 12:19:47 PM Attempting to release lock 22636223557616 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/050e5515d49376fc01e4837d031902c63af98111.lock
+06/03/2024 12:19:47 PM Lock 22636223557616 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/050e5515d49376fc01e4837d031902c63af98111.lock
+06/03/2024 12:19:47 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/model-00001-of-00003.safetensors HTTP/1.1" 302 0
+06/03/2024 12:19:47 PM Attempting to acquire lock 22636153214864 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/ce6fb6f6f4d0183f4813cbf4ece24109da629a08d4210da46f77e1d8b0bd5c19.lock
+06/03/2024 12:19:47 PM Lock 22636153214864 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/ce6fb6f6f4d0183f4813cbf4ece24109da629a08d4210da46f77e1d8b0bd5c19.lock
+06/03/2024 12:19:47 PM https://cdn-lfs-us-1.huggingface.co:443 "GET /repos/15/9d/159dd586229b89e8982a625075ea44e6ca7d4b0f0d41668017b16e470c63ca4b/ce6fb6f6f4d0183f4813cbf4ece24109da629a08d4210da46f77e1d8b0bd5c19?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model-00001-of-00003.safetensors%3B+filename%3D%22model-00001-of-00003.safetensors%22%3B&Expires=1717690224&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzY5MDIyNH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmh1Z2dpbmdmYWNlLmNvL3JlcG9zLzE1LzlkLzE1OWRkNTg2MjI5Yjg5ZTg5ODJhNjI1MDc1ZWE0NGU2Y2E3ZDRiMGYwZDQxNjY4MDE3YjE2ZTQ3MGM2M2NhNGIvY2U2ZmI2ZjZmNGQwMTgzZjQ4MTNjYmY0ZWNlMjQxMDlkYTYyOWEwOGQ0MjEwZGE0NmY3N2UxZDhiMGJkNWMxOT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=iUHzOAMg42aFu2pnmt43IPoCUXjVNbH5rvUqpG1uu3gJzIywhUp7xqTAiFy3SqkWYadQYarQ9-G5IhEHFyxDTnU7-BHskvGcZvFugJMDkFEu0UClOSme6g3RQWEbrUQzTYEiZAYXl5m~oh4EOI~rw6Yx9nPqjsaT7933SEGy3iV7bX1NdTIHVahsTfigMA7DU0OOIl5-IxRZCnp6O-51cALxbHhcnvsskWCP0iH~nXbXj4XMWi7uJjd2H7LfhE3WO9ixmRwVSNR8PpI1SSBmyOdJljPmHPDvT4mx8S9KQiYhqWWm6hF-qHkG2oI4ePyxxMuVZUxs1yzi9UIVCYB~UQ__&Key-Pair-Id=KCD77M1F0VK2B HTTP/1.1" 200 4949453792
+06/03/2024 12:20:05 PM Attempting to release lock 22636153214864 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/ce6fb6f6f4d0183f4813cbf4ece24109da629a08d4210da46f77e1d8b0bd5c19.lock
+06/03/2024 12:20:05 PM Lock 22636153214864 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/ce6fb6f6f4d0183f4813cbf4ece24109da629a08d4210da46f77e1d8b0bd5c19.lock
+06/03/2024 12:20:05 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/model-00002-of-00003.safetensors HTTP/1.1" 302 0
+06/03/2024 12:20:05 PM Attempting to acquire lock 22636355647344 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/8c0e72f148366b6a3709e002a98706a33d31aec8515090c856c95b2044f92ae0.lock
+06/03/2024 12:20:05 PM Lock 22636355647344 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/8c0e72f148366b6a3709e002a98706a33d31aec8515090c856c95b2044f92ae0.lock
+06/03/2024 12:20:05 PM https://cdn-lfs-us-1.huggingface.co:443 "GET /repos/15/9d/159dd586229b89e8982a625075ea44e6ca7d4b0f0d41668017b16e470c63ca4b/8c0e72f148366b6a3709e002a98706a33d31aec8515090c856c95b2044f92ae0?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model-00002-of-00003.safetensors%3B+filename%3D%22model-00002-of-00003.safetensors%22%3B&Expires=1717690805&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzY5MDgwNX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmh1Z2dpbmdmYWNlLmNvL3JlcG9zLzE1LzlkLzE1OWRkNTg2MjI5Yjg5ZTg5ODJhNjI1MDc1ZWE0NGU2Y2E3ZDRiMGYwZDQxNjY4MDE3YjE2ZTQ3MGM2M2NhNGIvOGMwZTcyZjE0ODM2NmI2YTM3MDllMDAyYTk4NzA2YTMzZDMxYWVjODUxNTA5MGM4NTZjOTViMjA0NGY5MmFlMD9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=L79eQFhNbOYZHdHvffSlE4naJTcq1OijuADo78k-gxmGVfbBo9zIL3Kc-1pA9VkN2gfNwg~Mrc5C25Z6RXn8OES5afVLJEQmj-JjWCEzulPV60KOXnSGwQX3KMPf8RFTgoQ3KgiDKrtqxpK3pzwA5GJM95eYx67tnSEKLzFpHYxqyqL4lSJdqr-7~gtNT~HaS3iTy9dArt~MF4epmalyKer9BU-Xi66855VYbaK4DNH~lMnVLrTm~O3oYfi1rm1MuJVIBqQuUYi-xu6OW6kCFFwSmuTnPIRXUHmQ-uGgDnOHGZwJZkEwbMxP-KXHZMZRk7S0QLSKZEaOa9lnMjUo7w__&Key-Pair-Id=KCD77M1F0VK2B HTTP/1.1" 200 4999819336
+06/03/2024 12:20:22 PM Attempting to release lock 22636355647344 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/8c0e72f148366b6a3709e002a98706a33d31aec8515090c856c95b2044f92ae0.lock
+06/03/2024 12:20:22 PM Lock 22636355647344 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/8c0e72f148366b6a3709e002a98706a33d31aec8515090c856c95b2044f92ae0.lock
+06/03/2024 12:20:22 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/model-00003-of-00003.safetensors HTTP/1.1" 302 0
+06/03/2024 12:20:22 PM Attempting to acquire lock 22636153214864 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/905dd405363e43d95779c1c1155a2dbfd36155914ae95dbd934e12e490cfb4ca.lock
+06/03/2024 12:20:22 PM Lock 22636153214864 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/905dd405363e43d95779c1c1155a2dbfd36155914ae95dbd934e12e490cfb4ca.lock
+06/03/2024 12:20:22 PM https://cdn-lfs-us-1.huggingface.co:443 "GET /repos/15/9d/159dd586229b89e8982a625075ea44e6ca7d4b0f0d41668017b16e470c63ca4b/905dd405363e43d95779c1c1155a2dbfd36155914ae95dbd934e12e490cfb4ca?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model-00003-of-00003.safetensors%3B+filename%3D%22model-00003-of-00003.safetensors%22%3B&Expires=1717690822&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzY5MDgyMn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmh1Z2dpbmdmYWNlLmNvL3JlcG9zLzE1LzlkLzE1OWRkNTg2MjI5Yjg5ZTg5ODJhNjI1MDc1ZWE0NGU2Y2E3ZDRiMGYwZDQxNjY4MDE3YjE2ZTQ3MGM2M2NhNGIvOTA1ZGQ0MDUzNjNlNDNkOTU3NzljMWMxMTU1YTJkYmZkMzYxNTU5MTRhZTk1ZGJkOTM0ZTEyZTQ5MGNmYjRjYT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=HXg7jtVf0Jtm~jxl7eGYFs6waOHcqNNhrmvu3WltRsquIv384miNabdeO0tUSV84dsIBRsOgasUOLcQGB49odU2GE7MLhm6g8t-xO7MdfPiaFurNr8xsNWHgK9-yzTxKz4jDmAjf-4iyKi2F4dG72~zUJhHe91IM7gZXHzsWRtgUDI5QTRGcaqxHSjwL1fXChsiyulAnJOLtxSGbwT1XxcXCxOtDlCsYCvCaxDJZSjJTwjTjrEEgYvq3weVSRk6Z2AA1g08v36Q1M1dX6miseKIbTQX5s~HmvARiyu5nx14m-EqMnyhQtdrjLpO5-b1cAlzFnLyKvARAs~Gtsf69ZQ__&Key-Pair-Id=KCD77M1F0VK2B HTTP/1.1" 200 4546807800
+06/03/2024 12:20:39 PM Attempting to release lock 22636153214864 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/905dd405363e43d95779c1c1155a2dbfd36155914ae95dbd934e12e490cfb4ca.lock
+06/03/2024 12:20:39 PM Lock 22636153214864 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/905dd405363e43d95779c1c1155a2dbfd36155914ae95dbd934e12e490cfb4ca.lock
+06/03/2024 12:21:10 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:21:10 PM Attempting to acquire lock 22636338272144 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/b6bea2642bc3fe80f392111d52af91d1563a8de2.lock
+06/03/2024 12:21:10 PM Lock 22636338272144 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/b6bea2642bc3fe80f392111d52af91d1563a8de2.lock
+06/03/2024 12:21:10 PM https://huggingface.co:443 "GET /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/generation_config.json HTTP/1.1" 200 116
+06/03/2024 12:21:10 PM Attempting to release lock 22636338272144 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/b6bea2642bc3fe80f392111d52af91d1563a8de2.lock
+06/03/2024 12:21:10 PM Lock 22636338272144 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mistral-7B-Instruct-v0.3/b6bea2642bc3fe80f392111d52af91d1563a8de2.lock
+06/03/2024 12:24:41 PM Dataset fetched.
+06/03/2024 12:24:41 PM Starting evaluation for 1 models.
+06/03/2024 12:24:41 PM Currently evaluating: mistralai/Mistral-7B-Instruct-v0.3
+06/03/2024 12:24:41 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:24:41 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+06/03/2024 12:24:42 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:25:08 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:28:59 PM Dataset fetched.
+06/03/2024 12:28:59 PM Starting evaluation for 1 models.
+06/03/2024 12:28:59 PM Currently evaluating: mistralai/Mistral-7B-Instruct-v0.3
+06/03/2024 12:28:59 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:29:00 PM https://huggingface.co:443 "GET /api/models/mistralai/Mistral-7B-Instruct-v0.3 HTTP/1.1" 200 5393
+06/03/2024 12:29:07 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:30:46 PM Dataset fetched.
+06/03/2024 12:30:46 PM Starting evaluation for 1 models.
+06/03/2024 12:30:46 PM Currently evaluating: mistralai/Mistral-7B-Instruct-v0.3
+06/03/2024 12:30:46 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:30:54 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:32:16 PM Dataset fetched.
+06/03/2024 12:32:16 PM Starting evaluation for 1 models.
+06/03/2024 12:32:16 PM Currently evaluating: mistralai/Mistral-7B-Instruct-v0.3
+06/03/2024 12:32:16 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:32:23 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:34:29 PM Dataset fetched.
+06/03/2024 12:34:29 PM Starting evaluation for 1 models.
+06/03/2024 12:34:29 PM Currently evaluating: mistralai/Mistral-7B-Instruct-v0.3
+06/03/2024 12:34:29 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:34:37 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:35:18 PM Dataset fetched.
+06/03/2024 12:35:18 PM Starting evaluation for 1 models.
+06/03/2024 12:35:18 PM Currently evaluating: mistralai/Mistral-7B-Instruct-v0.3
+06/03/2024 12:35:18 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:35:26 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:36:34 PM Dataset fetched.
+06/03/2024 12:36:34 PM Starting evaluation for 1 models.
+06/03/2024 12:36:34 PM Currently evaluating: mistralai/Mistral-7B-Instruct-v0.3
+06/03/2024 12:36:34 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:36:42 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:37:19 PM Dataset fetched.
+06/03/2024 12:37:19 PM Starting evaluation for 1 models.
+06/03/2024 12:37:19 PM Currently evaluating: mistralai/Mistral-7B-Instruct-v0.3
+06/03/2024 12:37:19 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:37:27 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:39:08 PM Dataset fetched.
+06/03/2024 12:39:08 PM Starting evaluation for 1 models.
+06/03/2024 12:39:08 PM Currently evaluating: meta-llama/Meta-Llama-8B-Instruct
+06/03/2024 12:39:08 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-8B-Instruct/resolve/main/config.json HTTP/1.1" 404 0
+06/03/2024 12:39:30 PM Dataset fetched.
+06/03/2024 12:39:30 PM Starting evaluation for 1 models.
+06/03/2024 12:39:30 PM Currently evaluating: meta-llama/Meta-Llama-3-8B-Instruct
+06/03/2024 12:39:31 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:39:38 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:42:41 PM Dataset fetched.
+06/03/2024 12:42:41 PM Starting evaluation for 1 models.
+06/03/2024 12:42:41 PM Currently evaluating: meta-llama/Meta-Llama-3-8B-Instruct
+06/03/2024 12:42:41 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:42:48 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:45:36 PM Dataset fetched.
+06/03/2024 12:45:36 PM Starting evaluation for 1 models.
+06/03/2024 12:45:36 PM Currently evaluating: meta-llama/Meta-Llama-3-8B
+06/03/2024 12:45:36 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:45:43 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:49:22 PM Dataset fetched.
+06/03/2024 12:49:22 PM Starting evaluation for 1 models.
+06/03/2024 12:49:22 PM Currently evaluating: meta-llama/Meta-Llama-3-8B-Instruct
+06/03/2024 12:49:22 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:49:29 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:49:52 PM Dataset fetched.
+06/03/2024 12:49:52 PM Starting evaluation for 1 models.
+06/03/2024 12:49:52 PM Currently evaluating: meta-llama/Meta-Llama-3-8B-Instruct
+06/03/2024 12:49:52 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:49:59 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:55:01 PM Dataset fetched.
+06/03/2024 12:55:01 PM Starting evaluation for 1 models.
+06/03/2024 12:55:01 PM Currently evaluating: meta-llama/Meta-Llama-3-8B-Instruct
+06/03/2024 12:55:01 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:55:09 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 12:56:49 PM Dataset fetched.
+06/03/2024 12:56:49 PM Starting evaluation for 1 models.
+06/03/2024 12:56:49 PM Currently evaluating: google/flan-t5-xl
+06/03/2024 12:56:49 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:56:50 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 12:56:58 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 01:01:38 PM Dataset fetched.
+06/03/2024 01:01:38 PM Starting evaluation for 1 models.
+06/03/2024 01:01:38 PM Currently evaluating: google/flan-t5-xl
+06/03/2024 01:01:38 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:01:38 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:01:46 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 01:01:47 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:01:47 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+06/03/2024 01:01:47 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:01:47 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:01:53 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 01:03:20 PM Dataset fetched.
+06/03/2024 01:03:20 PM Starting evaluation for 1 models.
+06/03/2024 01:03:20 PM Currently evaluating: google/flan-t5-xl
+06/03/2024 01:03:21 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:03:21 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+06/03/2024 01:03:21 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:03:21 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:03:28 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 01:04:02 PM Dataset fetched.
+06/03/2024 01:04:02 PM Starting evaluation for 1 models.
+06/03/2024 01:04:02 PM Currently evaluating: mistralai/Mistral-7B-Instruct-v0.3
+06/03/2024 01:04:02 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:04:02 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:04:10 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 01:05:46 PM Dataset fetched.
+06/03/2024 01:05:46 PM Starting evaluation for 1 models.
+06/03/2024 01:05:46 PM Currently evaluating: mistralai/Mistral-7B-Instruct-v0.3
+06/03/2024 01:05:46 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:05:46 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:05:54 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 01:07:51 PM Dataset fetched.
+06/03/2024 01:07:51 PM Starting evaluation for 1 models.
+06/03/2024 01:07:51 PM Currently evaluating: mistralai/Mistral-7B-Instruct-v0.3
+06/03/2024 01:07:52 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:07:52 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:08:00 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 01:08:47 PM Dataset fetched.
+06/03/2024 01:08:47 PM Starting evaluation for 1 models.
+06/03/2024 01:08:47 PM Currently evaluating: meta-llama/Llama-3-8B-Instruct
+06/03/2024 01:08:47 PM https://huggingface.co:443 "HEAD /meta-llama/Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 404 0
+06/03/2024 01:09:03 PM Dataset fetched.
+06/03/2024 01:09:03 PM Starting evaluation for 1 models.
+06/03/2024 01:09:03 PM Currently evaluating: meta-llama/Meta-Llama-3-8B-Instruct
+06/03/2024 01:09:03 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:09:03 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:09:10 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 01:10:08 PM Dataset fetched.
+06/03/2024 01:10:08 PM Starting evaluation for 1 models.
+06/03/2024 01:10:08 PM Currently evaluating: lmsys/vicuna-13b-v1.5
+06/03/2024 01:10:08 PM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:10:08 PM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:10:08 PM Starting new HTTPS connection (1): huggingface.co:443
+06/03/2024 01:10:08 PM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/model.safetensors.index.json HTTP/1.1" 404 0
+06/03/2024 01:13:06 PM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 01:18:47 PM Dataset fetched.
+06/03/2024 01:18:47 PM Starting evaluation for 1 models.
+06/03/2024 01:18:47 PM Currently evaluating: lmsys/vicuna-13b-v1.5
+06/03/2024 01:18:47 PM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:18:48 PM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:18:48 PM Starting new HTTPS connection (1): huggingface.co:443
+06/03/2024 01:18:48 PM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/model.safetensors.index.json HTTP/1.1" 404 0
+06/03/2024 01:19:37 PM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 01:21:41 PM Dataset fetched.
+06/03/2024 01:21:41 PM Starting evaluation for 1 models.
+06/03/2024 01:21:41 PM Currently evaluating: lmsys/vicuna-13b-v1.5
+06/03/2024 01:21:41 PM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:21:41 PM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:21:42 PM Starting new HTTPS connection (1): huggingface.co:443
+06/03/2024 01:21:42 PM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/model.safetensors.index.json HTTP/1.1" 404 0
+06/03/2024 01:22:20 PM https://huggingface.co:443 "HEAD /lmsys/vicuna-13b-v1.5/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 01:24:18 PM Dataset fetched.
+06/03/2024 01:24:18 PM Starting evaluation for 1 models.
+06/03/2024 01:24:18 PM Currently evaluating: mistralai/Mixtral-8x7B-Instruct-v0.1
+06/03/2024 01:24:19 PM https://huggingface.co:443 "HEAD /mistralai/Mixtral-8x7B-Instruct-v0.1/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:24:19 PM Attempting to acquire lock 22678441812832 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mixtral-8x7B-Instruct-v0.1/de132a80b25c9d12c674dbd84cedc1d6f35fb756.lock
+06/03/2024 01:24:19 PM Lock 22678441812832 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mixtral-8x7B-Instruct-v0.1/de132a80b25c9d12c674dbd84cedc1d6f35fb756.lock
+06/03/2024 01:24:19 PM https://huggingface.co:443 "GET /mistralai/Mixtral-8x7B-Instruct-v0.1/resolve/main/config.json HTTP/1.1" 200 720
+06/03/2024 01:24:19 PM Attempting to release lock 22678441812832 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mixtral-8x7B-Instruct-v0.1/de132a80b25c9d12c674dbd84cedc1d6f35fb756.lock
+06/03/2024 01:24:19 PM Lock 22678441812832 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mixtral-8x7B-Instruct-v0.1/de132a80b25c9d12c674dbd84cedc1d6f35fb756.lock
+06/03/2024 01:24:19 PM https://huggingface.co:443 "HEAD /mistralai/Mixtral-8x7B-Instruct-v0.1/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:24:19 PM https://huggingface.co:443 "HEAD /mistralai/Mixtral-8x7B-Instruct-v0.1/resolve/main/model.safetensors HTTP/1.1" 404 0
+06/03/2024 01:24:19 PM https://huggingface.co:443 "HEAD /mistralai/Mixtral-8x7B-Instruct-v0.1/resolve/main/model.safetensors.index.json HTTP/1.1" 200 0
+06/03/2024 01:24:19 PM Attempting to acquire lock 22678442311312 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mixtral-8x7B-Instruct-v0.1/fc6de58e070254aaf6fe4a23c825f87fd16aa816.lock
+06/03/2024 01:24:19 PM Lock 22678442311312 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mixtral-8x7B-Instruct-v0.1/fc6de58e070254aaf6fe4a23c825f87fd16aa816.lock
+06/03/2024 01:24:19 PM https://huggingface.co:443 "GET /mistralai/Mixtral-8x7B-Instruct-v0.1/resolve/main/model.safetensors.index.json HTTP/1.1" 200 92658
+06/03/2024 01:24:19 PM Attempting to release lock 22678442311312 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mixtral-8x7B-Instruct-v0.1/fc6de58e070254aaf6fe4a23c825f87fd16aa816.lock
+06/03/2024 01:24:19 PM Lock 22678442311312 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mixtral-8x7B-Instruct-v0.1/fc6de58e070254aaf6fe4a23c825f87fd16aa816.lock
+06/03/2024 01:24:19 PM https://huggingface.co:443 "HEAD /mistralai/Mixtral-8x7B-Instruct-v0.1/resolve/main/model-00001-of-00019.safetensors HTTP/1.1" 302 0
+06/03/2024 01:24:19 PM Attempting to acquire lock 22678441807600 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mixtral-8x7B-Instruct-v0.1/54669c5aec29fe5e4edd8098f7b564a137ba36be22ad25a194cd93f2bb54c940.lock
+06/03/2024 01:24:19 PM Lock 22678441807600 acquired on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mixtral-8x7B-Instruct-v0.1/54669c5aec29fe5e4edd8098f7b564a137ba36be22ad25a194cd93f2bb54c940.lock
+06/03/2024 01:24:19 PM Starting new HTTPS connection (1): cdn-lfs-us-1.huggingface.co:443
+06/03/2024 01:24:19 PM https://cdn-lfs-us-1.huggingface.co:443 "GET /repos/56/dd/56dddba94664e0d83f2b33a201ebd592ec49ebaefd116e268abfb7cc19cbdf5c/54669c5aec29fe5e4edd8098f7b564a137ba36be22ad25a194cd93f2bb54c940?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model-00001-of-00019.safetensors%3B+filename%3D%22model-00001-of-00019.safetensors%22%3B&Expires=1717694659&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxNzY5NDY1OX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmh1Z2dpbmdmYWNlLmNvL3JlcG9zLzU2L2RkLzU2ZGRkYmE5NDY2NGUwZDgzZjJiMzNhMjAxZWJkNTkyZWM0OWViYWVmZDExNmUyNjhhYmZiN2NjMTljYmRmNWMvNTQ2NjljNWFlYzI5ZmU1ZTRlZGQ4MDk4ZjdiNTY0YTEzN2JhMzZiZTIyYWQyNWExOTRjZDkzZjJiYjU0Yzk0MD9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=iueNwEn53Ko31Cg1-osA2HpXbvFkF5rU5SfrA5Qd3OXgaPczHZs2a9gbVfGqveP2WzHgxyzIPT8pTmt4p4oKRficwrzIBk1EWhtv87Pzszzk5P9K0bTGEbj8~O8SWSEmwRTzkfNATfDJFlXYjOwVsYPyyOqsjsS1QJzvung5vLXwL3Bk0XcF61OGrAje9IimZ24UsuuQ5s6bQfhxdA02TnY-p3KZNzJjqAacmujo~6LZzSHqk8Rts5tgcF7OhH~MuUwB0x907Dj0fQ4FZnkQ5KNFNoAi4yHPZfs1j-oscvPX0yZakdBsovW8uPQdc0SfcQ7NI3bVwRJkN-eWISh9vg__&Key-Pair-Id=KCD77M1F0VK2B HTTP/1.1" 200 4892809584
+06/03/2024 01:24:38 PM Attempting to release lock 22678441807600 on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mixtral-8x7B-Instruct-v0.1/54669c5aec29fe5e4edd8098f7b564a137ba36be22ad25a194cd93f2bb54c940.lock
+06/03/2024 01:24:38 PM Lock 22678441807600 released on /nfs/stak/users/baartmar/hpc-share/LLM-QA-SystemVerilog/.cache/.locks/models--mistralai--Mixtral-8x7B-Instruct-v0.1/54669c5aec29fe5e4edd8098f7b564a137ba36be22ad25a194cd93f2bb54c940.lock
+06/03/2024 01:26:31 PM Dataset fetched.
+06/03/2024 01:26:31 PM Starting evaluation for 4 models.
+06/03/2024 01:26:31 PM Currently evaluating: google/flan-t5-xl
+06/03/2024 01:26:31 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:26:31 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+06/03/2024 01:26:32 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:26:32 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:26:39 PM https://huggingface.co:443 "HEAD /google/flan-t5-xl/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 01:28:08 PM Attempting to acquire lock 23404867907376 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 01:28:08 PM Lock 23404867907376 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 01:28:08 PM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+06/03/2024 01:28:09 PM Attempting to release lock 23404867907376 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 01:28:09 PM Lock 23404867907376 released on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 01:28:09 PM Currently evaluating: google/flan-t5-xxl
+06/03/2024 01:28:09 PM https://huggingface.co:443 "HEAD /google/flan-t5-xxl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:28:09 PM https://huggingface.co:443 "HEAD /google/flan-t5-xxl/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+06/03/2024 01:28:09 PM https://huggingface.co:443 "HEAD /google/flan-t5-xxl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:28:09 PM https://huggingface.co:443 "HEAD /google/flan-t5-xxl/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:32:45 PM Resetting dropped connection: huggingface.co
+06/03/2024 01:32:45 PM https://huggingface.co:443 "HEAD /google/flan-t5-xxl/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 01:35:43 PM Attempting to acquire lock 23404754374144 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 01:35:43 PM Lock 23404754374144 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 01:35:43 PM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+06/03/2024 01:35:43 PM Attempting to release lock 23404754374144 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 01:35:43 PM Lock 23404754374144 released on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 01:35:43 PM Currently evaluating: meta-llama/Meta-Llama-3-8B-Instruct
+06/03/2024 01:35:43 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:35:43 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:37:10 PM https://huggingface.co:443 "HEAD /meta-llama/Meta-Llama-3-8B-Instruct/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 01:40:26 PM Attempting to acquire lock 23408298957216 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 01:40:26 PM Lock 23408298957216 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 01:40:26 PM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+06/03/2024 01:40:26 PM Attempting to release lock 23408298957216 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 01:40:26 PM Lock 23408298957216 released on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 01:40:26 PM Currently evaluating: mistralai/Mistral-7B-Instruct-v0.3
+06/03/2024 01:40:26 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:40:26 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/config.json HTTP/1.1" 200 0
+06/03/2024 01:41:47 PM https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-Instruct-v0.3/resolve/main/generation_config.json HTTP/1.1" 200 0
+06/03/2024 01:46:38 PM Attempting to acquire lock 23404870838336 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 01:46:38 PM Lock 23404870838336 acquired on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 01:46:38 PM open file: /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow
+06/03/2024 01:46:38 PM Attempting to release lock 23404870838336 on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 01:46:38 PM Lock 23404870838336 released on /nfs/stak/users/baartmar/.cache/huggingface/metrics/squad_v2/default/default_experiment-1-0.arrow.lock
+06/03/2024 01:46:38 PM Evaluation complete.

@@ -7,7 +7,7 @@ import csv
 import logging
 import time
 
-torch.seed(919)
+#torch.seed(919)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--models", nargs='*')

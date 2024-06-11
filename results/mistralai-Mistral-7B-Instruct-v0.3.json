@@ -1,0 +1,1302 @@
+{
+    "predictions": [
+        {
+            "id": "0",
+            "prediction_text": "\n Code: module asynchronous_fifo#(\n    BITSIZE = 8,        //Length of data in memory\n    MEMSIZE = 32,       //Number of locations in memory\n    POINTERLENGTH = 6   //Number of bits needeed to address memory (logbase2(MEMSIZE) + 1)\n)(\n    input w_clk,                                  //Clock for writing data\n    input r_clk,                                ",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "1",
+            "prediction_text": " fence_synchronizer_instance_write_to_read.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "2",
+            "prediction_text": "\n `if(wptr[POINTERLENGTH-2] == MEMSIZE-1) begin\n                wptr[POINTERLENGTH-2:0] <= 0;  //Set lower bits to zero\n                wptr[POINTERLENGTH-1] <= ~wptr[POINTERLENGTH-1]; //Flip MSB\n            end`",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "3",
+            "prediction_text": " binary_to_gray #(.BITSIZE(POINTERLENGTH)) binary_to_gray_instance_read_to_write(\n.binary(rptr),\n.gray(gray_rptr)\n);",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "4",
+            "prediction_text": " OUT_uop.valid will always be 0 if rst is held at 1.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "5",
+            "prediction_text": " ResC will be 'x (unknown) after the first instruction (branch if equal) passes through the ALU following a reset sequence, as the source operands (srcA and srcB) are not defined in the given code.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "6",
+            "prediction_text": " ResLzTz.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "7",
+            "prediction_text": " ATOMIC_AMOML_W, ATOMIC_AMOMUL_W, INT_MUL, INT_MULH, INT_MULHSU, INT_MULHU are the opcodes that perform a multiply operation in the given SystemVerilog code.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "8",
+            "prediction_text": "\n cout : coverpoint carry_out {bins one = {1}; option.at_least = 10;}",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "9",
+            "prediction_text": " The sampling event for the covergroup cg is at the positive edge of the clk signal.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "10",
+            "prediction_text": " For the given code, the number of clock cycles for which fully random stimulus is applied to the DUT is determined by the variable RANDOM\\_TESTS. In this case, it is set to 10000. So, the fully random stimulus is applied for 10000 clock cycles.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "11",
+            "prediction_text": "\n Code Received.\n\nmodule add_tb;\n\n   localparam WIDTH = 16;\n\n   // To achieve 100% coverage for a WIDTH of 16, this parameter had to be\n   // increased to ensure that cross coverage has achieved for the input\n   // combinations.\n   localparam RANDOM_TESTS = 10000;\n   //localparam RANDOM_TESTS",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "12",
+            "prediction_text": "\n `invalidBranch` is determined by checking the first two bits of an instruction (`instr[1:0]`). If these bits are equal to `2'b11` and the instruction is a predicted branch (`buffer[bufIndexOut].predTaken` is true and `buffer[bufIndexOut].predPos` is equal to `subIndexOut`), then a branch misspeculation has occurred.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "13",
+            "prediction_text": " The number of free entries in the buffer after a branch misprediction is not explicitly defined in the provided code. However, it can be inferred that the number of free entries would be reduced by at least one, as the mispredicted instruction would still be present in the buffer. The exact number of free entries would depend on the buffer size and the number of instructions that have been fetched and processed before the misprediction.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "14",
+            "prediction_text": "\n `OUT_instrs[i].instr <= invalidBranch? 32'bx : {16'bx, instr}`\n\nThe condition for `OUT_instrs[i].instr` to be 32'bx is `invalidBranch`. So, the condition that must always be true for all out instructions to be 32'bx is `invalidBranch` for all out instructions.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "15",
+            "prediction_text": " The number of micro-ops each instruction is broken down into is not explicitly stated in the provided code. However, the code defines an array of `OUT_instrs` with a size of `NUM_INSTRS_OUT`, which suggests that each instruction is broken down into at least that many micro-ops. The actual number of micro-ops for each instruction would depend on the specific instruction and its implementation in the code.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "16",
+            "prediction_text": " `o_fin <= (busy_latch & ~busy);`\n\nThe value assigned to `o_fin` at every rising clock edge is `(busy_latch & ~busy)`. This means that `o_fin` will be `1` when `busy_latch` is `1` and `busy` is `0`.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "17",
+            "prediction_text": " 2'b11, 2'b01",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "18",
+            "prediction_text": " `tx_cnt` must have been less than `7'd0` at the last rising clock edge when `o_tx` is 0.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "19",
+            "prediction_text": " `tx_cnt` is the signal that holds the next state value for the FSM.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "20",
+            "prediction_text": " gnt5_received_in_32_cycles_Fail_C",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "21",
+            "prediction_text": " gnt4_in_31_cycles_P0",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "22",
+            "prediction_text": "\n gnt4_in_31_cycles_AT: assert property (\n    @(posedge clock) (gnt4_in_31_cycles_P0)\n  );",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "23",
+            "prediction_text": "\n gnt4_in_31_cycles_AT: assert property (\n    @(posedge clock) (gnt4_in_31_cycles_P0)\n  );",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "24",
+            "prediction_text": " `always_ff @ (posedge clk or posedge arst)`",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "25",
+            "prediction_text": "\n update_i",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "26",
+            "prediction_text": " One multiplexer is required to check each master against the mask.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "27",
+            "prediction_text": "\n `arst` signal disables master priority.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "28",
+            "prediction_text": " `cnt <= (cnt<(VGA_CLK_DIV-1))? cnt + 10'h1 : 10'h0`\n\nIn this always block, `cnt` is incremented by 10'h1 if it is less than `VGA_CLK_DIV-1`, otherwise it is set to 10'h0. So, for `cnt` to be greater than zero, the following condition must always be",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "29",
+            "prediction_text": " `cnt` must have been `(VGA_CLK_DIV - 2)` two clock edges ago.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "30",
+            "prediction_text": "\n `if(req1)`",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "31",
+            "prediction_text": " 3'h0.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "32",
+            "prediction_text": "\n \"assert property(@(posedge clk) disable iff (rst)!en |=> $stable(out));\"",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "33",
+            "prediction_text": "\n register",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "34",
+            "prediction_text": "\n \"assert property(@(posedge clk) disable iff (rst)!en |=> $stable(out))\"",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "35",
+            "prediction_text": "\n `for (int i=0; i < NUM_TESTS; i++) begin\n in <= $random;\n en <= $random;\n @(posedge clk);`",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "36",
+            "prediction_text": " `req4_wait_for_grant_P`",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "37",
+            "prediction_text": "\n `gnt4_in_31_cycles_C1` is the name of the property which checks if a predefined sequence is reachable.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "38",
+            "prediction_text": " The condition for not checking req4_stable_on_stall_AT2 is cycle_after_reset.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "39",
+            "prediction_text": " The sequence or assertion that asserts that request can never equal grant is not present in the provided code.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "40",
+            "prediction_text": " The guard expression for bins\\_cnd1 evaluates to false.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "41",
+            "prediction_text": "\n \"useOfIgn\" is a labeled cross coverage of implicit coverpoints \"dat1\" and \"dat2\" with a specific ignore bin selected with the \"binsof()\" and \"intersect()\" methods, and automatically generated unspecified legal bins.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "42",
+            "prediction_text": "\n`cg.sample();`",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "43",
+            "prediction_text": "\\<ignore\\_bins ign\\>",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "44",
+            "prediction_text": " \\(INPUT\\_WIDTH\\*2-1\\)",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "45",
+            "prediction_text": " mult3",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "46",
+            "prediction_text": "\n `generate` statement in the `mult2` module is analogous to the `always_comb` block in the `mult1` module. Both are used to define combinational logic.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "47",
+            "prediction_text": "\nCode Received.\n\nQuestion: Which module will synthesize to a different design?\n\nAnswer: The module'mult3' will synthesize to a different design compared to'mult1' and'mult2' because it uses a function to perform multiplication, whereas the other two modules perform multiplication directly in the always_comb or generate blocks. This difference in implementation could lead to a different synthesized design.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "48",
+            "prediction_text": "\n grant_2_6_S within grant_1_5_S",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "49",
+            "prediction_text": " `grant_2_6_S within grant_1_5_S`",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "50",
+            "prediction_text": " grant\\_1\\_5\\_S",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "51",
+            "prediction_text": " The name of the signal responsible for pointing to the next free write location is not provided in the given SystemVerilog code.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "52",
+            "prediction_text": " 3 cycles must pass in between a request and its grant in the property req4_req5_gnt4_d3_gnt5_C.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "53",
+            "prediction_text": " req4_and_not_gnt4_for_32_AT",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "54",
+            "prediction_text": " req4\\_and\\_not\\_gnt4\\_within\\_32\\_AT.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "55",
+            "prediction_text": " gnt4_within_32_AT1: assert property (\n    request[4] |-> (!grant[4])[*0:31] ##1 grant[4]\n  );",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "56",
+            "prediction_text": "\n `readToBuffer`",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "57",
+            "prediction_text": " OUT_data will be assigned to the value stored in the readBuffer[readBufferOutputIdx] when readBufferCnt > 0.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "58",
+            "prediction_text": " OUT_data",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "59",
+            "prediction_text": " `reg active;`",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "60",
+            "prediction_text": " The flag that must be set in the incoming trap instruction for the trap handler to flush the TLB is FLAGS_TRAP when the trap type is TRAP_V_SFENCE_VMA.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "61",
+            "prediction_text": " OUT_trapInfo <= 'x;",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "62",
+            "prediction_text": " OUT_branch.dstPC is assigned the value of {delegate? IN_trapControl.stvec : IN_trapControl.mtvec, 2'b0} if the trap/exception/interrupt can be processed at a lower privilege level.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "63",
+            "prediction_text": "\n The next state logic for the trap handler is in the following block:\n\nalways\\_ff@(posedge clk) begin\n\n...\n\nend",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "64",
+            "prediction_text": " 1'b0.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "65",
+            "prediction_text": " \\(o\\_res\\) is assigned with the result of an AND operation.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "66",
+            "prediction_text": " The critical path in a digital circuit is determined by the longest delay from the earliest input to the latest output. In this SystemVerilog code, the critical path is not explicitly calculated, but we can infer that the longest delay would occur when the combinational logic has the most gates and the longest gate delay.\n\nLooking at the `casex({i_funct7,i_funct3,i_opcode})` block, the most complex operations are the multi",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "67",
+            "prediction_text": " The value assigned to i_opcode when o_branch_jalr_target is 0 is not explicitly defined in the provided code. The default case in the always_comb case statement for i_opcode does not assign any specific value to i_opcode when the condition is met. However, it is important to note that the default case sets o_branch_jalr to 0 and o_branch_jalr_target to 0, which means that the branch or jump is",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "68",
+            "prediction_text": "\n assert property (@(posedge clk) DUT.valid_wr |->!full);",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "69",
+            "prediction_text": "\nThe DUT is given randomized stimulus for 10000 cycles. This is from the line:\n\nfor (int i=0; i < 10000; i++) begin\n\nThis loop runs for 10000 iterations, and each iteration corresponds to one cycle of the clock.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "70",
+            "prediction_text": " \\(ADDR\\_WIDTH = $clog2(DEPTH)+1;\\)",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "71",
+            "prediction_text": "\n `assert property (@(posedge clk) DUT.valid_wr |->!full);\n assert property (@(posedge clk) DUT.valid_rd |->!empty);`\n\nThe property `assert property (@(posedge clk) DUT.valid_wr |->!full);` is an assumption that `DUT.valid_wr` will never be 1 when `full` is 1. However, the property `assert property (@",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "72",
+            "prediction_text": " req_stable_AS1: assume property (\n    @(posedge clock) disable iff (cycle_after_reset) (\n      &((~($past(request) & (~$past(grant)))) | request)\n    )\n  );",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "73",
+            "prediction_text": "\n grant_within_32_AT0: assert property (\n    @(posedge clock) request[4] |-> ##[0:31] grant[4]\n  );",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "74",
+            "prediction_text": "\n grant_within_32_AT3: assert property (\n    @(posedge clock) request[4] |-> strong(##[0:$] grant[4])\n  );",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "75",
+            "prediction_text": "\n grant_within_32_AT3: assert property (\n    @(posedge clock) request[4] |-> strong(##[0:$] grant[4])\n  );",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "76",
+            "prediction_text": " When the bus is disabled or busy, npc will be assigned the value of o_pc.",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "77",
+            "prediction_text": " 1'b0",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "78",
+            "prediction_text": "\n `o_pc <= {i_boot_addr[31:2],2'b00} - 4;`",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "79",
+            "prediction_text": " 0.",
+            "no_answer_probability": 0.0
+        }
+    ],
+    "references": [
+        {
+            "answers": {
+                "text": [
+                    "dual_port_memory",
+                    "dual_port_memory_instance"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "0"
+        },
+        {
+            "answers": {
+                "text": [
+                    "ff_synchronizer_instance_write_to_read",
+                    "ff_synchronizer"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "1"
+        },
+        {
+            "answers": {
+                "text": [
+                    "if(wptr[POINTERLENGTH-2] == MEMSIZE-1) begin",
+                    "(wptr[POINTERLENGTH-2] == MEMSIZE-1)",
+                    "wptr[POINTERLENGTH-2] == MEMSIZE-1"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "2"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "3"
+        },
+        {
+            "answers": {
+                "text": [
+                    "input wire rst",
+                    "rst"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "4"
+        },
+        {
+            "answers": {
+                "text": [
+                    "resC = 32'bx;",
+                    "32'bx;",
+                    "default: resC = 32'bx;"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "5"
+        },
+        {
+            "answers": {
+                "text": [
+                    "wire[5:0] resLzTz;",
+                    "resLzTz"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "6"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "7"
+        },
+        {
+            "answers": {
+                "text": [
+                    "cout",
+                    "cout : coverpoint carry_out {bins one = {1}; option.at_least = 10;}"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "8"
+        },
+        {
+            "answers": {
+                "text": [
+                    "posedge clk",
+                    "@(posedge clk);"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "9"
+        },
+        {
+            "answers": {
+                "text": [
+                    "10000"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "10"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "11"
+        },
+        {
+            "answers": {
+                "text": [
+                    "[1:0]",
+                    "1:0",
+                    "instr[1:0]"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "12"
+        },
+        {
+            "answers": {
+                "text": [
+                    "freeEntries = BUF_SIZE;",
+                    "BUF_SIZE"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "13"
+        },
+        {
+            "answers": {
+                "text": [
+                    "invalidBranch"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "14"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "15"
+        },
+        {
+            "answers": {
+                "text": [
+                    "(busy_latch & ~busy)",
+                    "busy_latch & ~busy",
+                    "o_fin <= (busy_latch & ~busy);"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "16"
+        },
+        {
+            "answers": {
+                "text": [
+                    "2'b01",
+                    "01"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "17"
+        },
+        {
+            "answers": {
+                "text": [
+                    "tx_cnt>7'd0"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "18"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "19"
+        },
+        {
+            "answers": {
+                "text": [
+                    "gnt5_received_in_32_cycles_Fail_C"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "20"
+        },
+        {
+            "answers": {
+                "text": [
+                    "hold_request_till_grant"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "21"
+        },
+        {
+            "answers": {
+                "text": [
+                    "gnt4_in_31_cycles_P1"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "22"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "23"
+        },
+        {
+            "answers": {
+                "text": [
+                    "posedge clk or posedge arst",
+                    "always_ff @ (posedge clk or posedge arst)"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "24"
+        },
+        {
+            "answers": {
+                "text": [
+                    "update_i",
+                    "if (update_i)"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "25"
+        },
+        {
+            "answers": {
+                "text": [
+                    "N_OF_INPUTS",
+                    "2",
+                    "N_OF_INPUTS = 2"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "26"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "27"
+        },
+        {
+            "answers": {
+                "text": [
+                    "cnt<(VGA_CLK_DIV-1))"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "28"
+        },
+        {
+            "answers": {
+                "text": [
+                    "cnt==10'h0",
+                    "10'h0",
+                    "h0",
+                    "0"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "29"
+        },
+        {
+            "answers": {
+                "text": [
+                    "req1",
+                    "if(req1)"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "30"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "31"
+        },
+        {
+            "answers": {
+                "text": [
+                    "assert property(@(posedge clk) disable iff (rst) !en |=> $stable(out));"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "32"
+        },
+        {
+            "answers": {
+                "text": [
+                    "register",
+                    "module register"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "33"
+        },
+        {
+            "answers": {
+                "text": [
+                    "assert property(@(posedge clk) disable iff (rst) en |=> out == $past(in,1));"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "34"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "35"
+        },
+        {
+            "answers": {
+                "text": [
+                    "req4_stable_on_stall_AT1"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "36"
+        },
+        {
+            "answers": {
+                "text": [
+                    "gnt4_in_31_cycles_C1"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "37"
+        },
+        {
+            "answers": {
+                "text": [
+                    "disable iff (cycle_after_reset)",
+                    "iff (cycle_after_reset)",
+                    "cycle_after_reset"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "38"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "39"
+        },
+        {
+            "answers": {
+                "text": [
+                    "(face == front)",
+                    "face == front"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "40"
+        },
+        {
+            "answers": {
+                "text": [
+                    "useOfIgn"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "41"
+        },
+        {
+            "answers": {
+                "text": [
+                    "cg.sample();"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "42"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "43"
+        },
+        {
+            "answers": {
+                "text": [
+                    "INPUT_WIDTH*2",
+                    "[INPUT_WIDTH*2-1:0]"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "44"
+        },
+        {
+            "answers": {
+                "text": [
+                    "mult3",
+                    "module mult3"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "45"
+        },
+        {
+            "answers": {
+                "text": [
+                    "generate"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "46"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "47"
+        },
+        {
+            "answers": {
+                "text": [
+                    "grant_1_6_5_C"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "48"
+        },
+        {
+            "answers": {
+                "text": [
+                    "grant_1_2_6_5_C"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "49"
+        },
+        {
+            "answers": {
+                "text": [
+                    "grant_1_5_S"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "50"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "51"
+        },
+        {
+            "answers": {
+                "text": [
+                    "3",
+                    "[*3]",
+                    "(!grant[4])[*3]"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "52"
+        },
+        {
+            "answers": {
+                "text": [
+                    "req4_and_not_gnt4_for_31_AT"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "53"
+        },
+        {
+            "answers": {
+                "text": [
+                    "req4_req5_gnt4_d1_3_gnt5_C"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "54"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "55"
+        },
+        {
+            "answers": {
+                "text": [
+                    "readToBuffer",
+                    "reg readToBuffer;"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "56"
+        },
+        {
+            "answers": {
+                "text": [
+                    "readBuffer[readBufferOutputIdx]"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "57"
+        },
+        {
+            "answers": {
+                "text": [
+                    "OUT_CACHE_data",
+                    "output reg[31:0] OUT_CACHE_data"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "58"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "59"
+        },
+        {
+            "answers": {
+                "text": [
+                    "FLAGS_TRAP"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "60"
+        },
+        {
+            "answers": {
+                "text": [
+                    "x",
+                    "'x",
+                    "OUT_trapInfo <= 'x;"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "61"
+        },
+        {
+            "answers": {
+                "text": [
+                    "IN_trapControl.stvec"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "62"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "63"
+        },
+        {
+            "answers": {
+                "text": [
+                    "1'b0",
+                    "0",
+                    "'b0"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "64"
+        },
+        {
+            "answers": {
+                "text": [
+                    "o_res",
+                    "output logic [31:0] o_res"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "65"
+        },
+        {
+            "answers": {
+                "text": [
+                    "17'b0100000_101_0110011",
+                    "0100000_101_0110011",
+                    "01000001010110011"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "66"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "67"
+        },
+        {
+            "answers": {
+                "text": [
+                    "assert property (@(posedge clk) DUT.valid_wr |-> !full);"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "68"
+        },
+        {
+            "answers": {
+                "text": [
+                    "10000"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "69"
+        },
+        {
+            "answers": {
+                "text": [
+                    "ADDR_WIDTH",
+                    "ADDR_WIDTH = $clog2(DEPTH)+1;",
+                    "localparam int            ADDR_WIDTH = $clog2(DEPTH)+1;"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "70"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "71"
+        },
+        {
+            "answers": {
+                "text": [
+                    "req_stable_AS1"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "72"
+        },
+        {
+            "answers": {
+                "text": [
+                    "grant_within_32_AT0"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "73"
+        },
+        {
+            "answers": {
+                "text": [
+                    "grant_within_32_AT3"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "74"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "75"
+        },
+        {
+            "answers": {
+                "text": [
+                    "o_pc",
+                    "npc <= o_pc;"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "76"
+        },
+        {
+            "answers": {
+                "text": [
+                    "1'b0",
+                    "0",
+                    "'b0",
+                    "bus_busy <= 1'b0;"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "77"
+        },
+        {
+            "answers": {
+                "text": [
+                    "o_pc + 4",
+                    "npc <= o_pc + 4;"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "78"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "79"
+        }
+    ]
+}

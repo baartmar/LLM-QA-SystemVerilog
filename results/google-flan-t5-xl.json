@@ -1,0 +1,1351 @@
+{
+    "predictions": [
+        {
+            "id": "0",
+            "prediction_text": "asynchronous_fifo#( BITSIZE = 8, MEMSIZE = 32, POINTERLENGTH = 6 ) ( input w_clk, input r_clk, input",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "1",
+            "prediction_text": "asynchronous_fifo#( BITSIZE = 8, MEMSIZE = 32, POINTERLENGTH = 6 ) ( input w_clk, input r_clk, input",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "2",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "3",
+            "prediction_text": "asynchronous_fifo#( BITSIZE = 8, MEMSIZE = 32, POINTERLENGTH = 6 ) ( input w_clk, input r_clk, input",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "4",
+            "prediction_text": "!rst",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "5",
+            "prediction_text": "resC",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "6",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "7",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "8",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "9",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "10",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "11",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "12",
+            "prediction_text": "if (instr[1:0] == 2'b11 && ((bufIndexOut + 1'b1)!= bufIndexIn) || subIndexOut!",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "13",
+            "prediction_text": "!OUT_full && IN_instrs.valid) begin buffer[bufIndexIn].pc = IN_instrs.pc; buffer[bufIndex",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "14",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "15",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "16",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "17",
+            "prediction_text": "cnt = (cntUART_TX_CLK_DIV-1)? cnt+1 : 0; always @ (posedge clk) if (",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "18",
+            "prediction_text": "tx_cnt = 0",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "19",
+            "prediction_text": "cnt = (cntUART_TX_CLK_DIV-1)? cnt+1 : 0; always @ (posedge clk) if (",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "20",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "21",
+            "prediction_text": "gnt5_received_in_31_cycles_S",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "22",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "23",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "24",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "25",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "26",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "27",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "28",
+            "prediction_text": "cnt = (cnt(VGA_CLK_DIV-1))? cnt + 10'h1 : 10'h0; if (cnt==",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "29",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "30",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "31",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "32",
+            "prediction_text": "assert property(@(posedge clk) disable iff (rst)!en |=> $stable(out)); always @(rst) #1 assert(out == '0); end",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "33",
+            "prediction_text": "register_tb2",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "34",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "35",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "36",
+            "prediction_text": "req4_wait_for_grant_P",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "37",
+            "prediction_text": "@(posedge clock) disable iff (cycle_after_reset) ( stall && request[4] |-> ##1 $stable(request[4]) ) ); req4",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "38",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "39",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "40",
+            "prediction_text": "guard expression",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "41",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "42",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "43",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "44",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "45",
+            "prediction_text": "mult1",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "46",
+            "prediction_text": "if (IS_SIGNED) begin : l_is_signed assign product = signed'(in0) * signed'(in1); end else begin : l_is_unsigned assign product =",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "47",
+            "prediction_text": "mult1",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "48",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "49",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "50",
+            "prediction_text": "grant_1_5_S",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "51",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "52",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "53",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "54",
+            "prediction_text": "request[4] &&!grant[4] |-> ##1 (!grant[4])[*0:29] ); req4_and_not_gnt4_with",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "55",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "56",
+            "prediction_text": "OUT_CACHE_ce",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "57",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "58",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "59",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "60",
+            "prediction_text": "FLAGS_XRET",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "61",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "62",
+            "prediction_text": "BPUpdate1",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "63",
+            "prediction_text": "if (IN_trapInstr.flags >= FLAGS_ILLEGAL_INSTR && IN_trapInstr.flags = FLAGS_ST_PF",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "64",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "65",
+            "prediction_text": "o_res = i_num1u & i_num2u;",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "66",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "67",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "68",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "69",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "70",
+            "prediction_text": "WIDTH",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "71",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "72",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "73",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "74",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "75",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "76",
+            "prediction_text": "bus_busy",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "77",
+            "prediction_text": [],
+            "no_answer_probability": 1.0,
+            "answer_start": []
+        },
+        {
+            "id": "78",
+            "prediction_text": "0; assign bus_master.wr_req = 1'b0; assign bus_master.wr_be = 4'h0; assign bus_master.wr_addr = 0; assign bus",
+            "no_answer_probability": 0.0
+        },
+        {
+            "id": "79",
+            "prediction_text": "0",
+            "no_answer_probability": 0.0
+        }
+    ],
+    "references": [
+        {
+            "answers": {
+                "text": [
+                    "dual_port_memory",
+                    "dual_port_memory_instance"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "0"
+        },
+        {
+            "answers": {
+                "text": [
+                    "ff_synchronizer_instance_write_to_read",
+                    "ff_synchronizer"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "1"
+        },
+        {
+            "answers": {
+                "text": [
+                    "if(wptr[POINTERLENGTH-2] == MEMSIZE-1) begin",
+                    "(wptr[POINTERLENGTH-2] == MEMSIZE-1)",
+                    "wptr[POINTERLENGTH-2] == MEMSIZE-1"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "2"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "3"
+        },
+        {
+            "answers": {
+                "text": [
+                    "input wire rst",
+                    "rst"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "4"
+        },
+        {
+            "answers": {
+                "text": [
+                    "resC = 32'bx;",
+                    "32'bx;",
+                    "default: resC = 32'bx;"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "5"
+        },
+        {
+            "answers": {
+                "text": [
+                    "wire[5:0] resLzTz;",
+                    "resLzTz"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "6"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "7"
+        },
+        {
+            "answers": {
+                "text": [
+                    "cout",
+                    "cout : coverpoint carry_out {bins one = {1}; option.at_least = 10;}"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "8"
+        },
+        {
+            "answers": {
+                "text": [
+                    "posedge clk",
+                    "@(posedge clk);"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "9"
+        },
+        {
+            "answers": {
+                "text": [
+                    "10000"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "10"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "11"
+        },
+        {
+            "answers": {
+                "text": [
+                    "[1:0]",
+                    "1:0",
+                    "instr[1:0]"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "12"
+        },
+        {
+            "answers": {
+                "text": [
+                    "freeEntries = BUF_SIZE;",
+                    "BUF_SIZE"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "13"
+        },
+        {
+            "answers": {
+                "text": [
+                    "invalidBranch"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "14"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "15"
+        },
+        {
+            "answers": {
+                "text": [
+                    "(busy_latch & ~busy)",
+                    "busy_latch & ~busy",
+                    "o_fin <= (busy_latch & ~busy);"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "16"
+        },
+        {
+            "answers": {
+                "text": [
+                    "2'b01",
+                    "01"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "17"
+        },
+        {
+            "answers": {
+                "text": [
+                    "tx_cnt>7'd0"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "18"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "19"
+        },
+        {
+            "answers": {
+                "text": [
+                    "gnt5_received_in_32_cycles_Fail_C"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "20"
+        },
+        {
+            "answers": {
+                "text": [
+                    "hold_request_till_grant"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "21"
+        },
+        {
+            "answers": {
+                "text": [
+                    "gnt4_in_31_cycles_P1"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "22"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "23"
+        },
+        {
+            "answers": {
+                "text": [
+                    "posedge clk or posedge arst",
+                    "always_ff @ (posedge clk or posedge arst)"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "24"
+        },
+        {
+            "answers": {
+                "text": [
+                    "update_i",
+                    "if (update_i)"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "25"
+        },
+        {
+            "answers": {
+                "text": [
+                    "N_OF_INPUTS",
+                    "2",
+                    "N_OF_INPUTS = 2"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "26"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "27"
+        },
+        {
+            "answers": {
+                "text": [
+                    "cnt<(VGA_CLK_DIV-1))"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "28"
+        },
+        {
+            "answers": {
+                "text": [
+                    "cnt==10'h0",
+                    "10'h0",
+                    "h0",
+                    "0"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "29"
+        },
+        {
+            "answers": {
+                "text": [
+                    "req1",
+                    "if(req1)"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "30"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "31"
+        },
+        {
+            "answers": {
+                "text": [
+                    "assert property(@(posedge clk) disable iff (rst) !en |=> $stable(out));"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "32"
+        },
+        {
+            "answers": {
+                "text": [
+                    "register",
+                    "module register"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "33"
+        },
+        {
+            "answers": {
+                "text": [
+                    "assert property(@(posedge clk) disable iff (rst) en |=> out == $past(in,1));"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "34"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "35"
+        },
+        {
+            "answers": {
+                "text": [
+                    "req4_stable_on_stall_AT1"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "36"
+        },
+        {
+            "answers": {
+                "text": [
+                    "gnt4_in_31_cycles_C1"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "37"
+        },
+        {
+            "answers": {
+                "text": [
+                    "disable iff (cycle_after_reset)",
+                    "iff (cycle_after_reset)",
+                    "cycle_after_reset"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "38"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "39"
+        },
+        {
+            "answers": {
+                "text": [
+                    "(face == front)",
+                    "face == front"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "40"
+        },
+        {
+            "answers": {
+                "text": [
+                    "useOfIgn"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "41"
+        },
+        {
+            "answers": {
+                "text": [
+                    "cg.sample();"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "42"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "43"
+        },
+        {
+            "answers": {
+                "text": [
+                    "INPUT_WIDTH*2",
+                    "[INPUT_WIDTH*2-1:0]"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "44"
+        },
+        {
+            "answers": {
+                "text": [
+                    "mult3",
+                    "module mult3"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "45"
+        },
+        {
+            "answers": {
+                "text": [
+                    "generate"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "46"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "47"
+        },
+        {
+            "answers": {
+                "text": [
+                    "grant_1_6_5_C"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "48"
+        },
+        {
+            "answers": {
+                "text": [
+                    "grant_1_2_6_5_C"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "49"
+        },
+        {
+            "answers": {
+                "text": [
+                    "grant_1_5_S"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "50"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "51"
+        },
+        {
+            "answers": {
+                "text": [
+                    "3",
+                    "[*3]",
+                    "(!grant[4])[*3]"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "52"
+        },
+        {
+            "answers": {
+                "text": [
+                    "req4_and_not_gnt4_for_31_AT"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "53"
+        },
+        {
+            "answers": {
+                "text": [
+                    "req4_req5_gnt4_d1_3_gnt5_C"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "54"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "55"
+        },
+        {
+            "answers": {
+                "text": [
+                    "readToBuffer",
+                    "reg readToBuffer;"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "56"
+        },
+        {
+            "answers": {
+                "text": [
+                    "readBuffer[readBufferOutputIdx]"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "57"
+        },
+        {
+            "answers": {
+                "text": [
+                    "OUT_CACHE_data",
+                    "output reg[31:0] OUT_CACHE_data"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "58"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "59"
+        },
+        {
+            "answers": {
+                "text": [
+                    "FLAGS_TRAP"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "60"
+        },
+        {
+            "answers": {
+                "text": [
+                    "x",
+                    "'x",
+                    "OUT_trapInfo <= 'x;"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "61"
+        },
+        {
+            "answers": {
+                "text": [
+                    "IN_trapControl.stvec"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "62"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "63"
+        },
+        {
+            "answers": {
+                "text": [
+                    "1'b0",
+                    "0",
+                    "'b0"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "64"
+        },
+        {
+            "answers": {
+                "text": [
+                    "o_res",
+                    "output logic [31:0] o_res"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "65"
+        },
+        {
+            "answers": {
+                "text": [
+                    "17'b0100000_101_0110011",
+                    "0100000_101_0110011",
+                    "01000001010110011"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "66"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "67"
+        },
+        {
+            "answers": {
+                "text": [
+                    "assert property (@(posedge clk) DUT.valid_wr |-> !full);"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "68"
+        },
+        {
+            "answers": {
+                "text": [
+                    "10000"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "69"
+        },
+        {
+            "answers": {
+                "text": [
+                    "ADDR_WIDTH",
+                    "ADDR_WIDTH = $clog2(DEPTH)+1;",
+                    "localparam int            ADDR_WIDTH = $clog2(DEPTH)+1;"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "70"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "71"
+        },
+        {
+            "answers": {
+                "text": [
+                    "req_stable_AS1"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "72"
+        },
+        {
+            "answers": {
+                "text": [
+                    "grant_within_32_AT0"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "73"
+        },
+        {
+            "answers": {
+                "text": [
+                    "grant_within_32_AT3"
+                ],
+                "answer_start": [
+                    0
+                ]
+            },
+            "id": "74"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "75"
+        },
+        {
+            "answers": {
+                "text": [
+                    "o_pc",
+                    "npc <= o_pc;"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "76"
+        },
+        {
+            "answers": {
+                "text": [
+                    "1'b0",
+                    "0",
+                    "'b0",
+                    "bus_busy <= 1'b0;"
+                ],
+                "answer_start": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "77"
+        },
+        {
+            "answers": {
+                "text": [
+                    "o_pc + 4",
+                    "npc <= o_pc + 4;"
+                ],
+                "answer_start": [
+                    0,
+                    0
+                ]
+            },
+            "id": "78"
+        },
+        {
+            "answers": {
+                "text": [],
+                "answer_start": []
+            },
+            "id": "79"
+        }
+    ]
+}
